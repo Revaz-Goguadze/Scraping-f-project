@@ -1,0 +1,150 @@
+# E-Commerce Price Monitoring System - Scrapers Configuration
+# Site-specific scraping configurations for Amazon, eBay, and Walmart
+
+sites:
+  amazon:
+    name: "Amazon"
+    base_url: "https://www.amazon.com"
+    scraper_class: "AmazonScraper"
+    scraper_type: "static"
+    rate_limit: 2.0
+    requires_selenium: false
+    selectors:
+      title: "#productTitle"
+      price: ".a-price-whole, .a-price-fraction"
+      price_symbol: ".a-price-symbol"
+      availability: "#availability span"
+      image: "#landingImage"
+      rating: ".a-icon-alt"
+      reviews_count: "#acrCustomerReviewText"
+      brand: "#bylineInfo"
+    headers:
+      User-Agent: "Mozilla/5.0 (compatible; PriceMonitor/1.0)"
+      Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+      Accept-Language: "en-US,en;q=0.5"
+      Accept-Encoding: "gzip, deflate"
+      DNT: "1"
+      Connection: "keep-alive"
+    
+  ebay:
+    name: "eBay"
+    base_url: "https://www.ebay.com"
+    scraper_class: "EbayScraper"
+    scraper_type: "static"
+    rate_limit: 1.5
+    requires_selenium: false
+    selectors:
+      title: ".x-item-title__mainTitle"
+      price: ".x-price-primary"
+      availability: ".u-flL.condText"
+      image: "#icImg"
+      condition: ".u-flL.condText"
+      shipping: ".vi-price .notranslate"
+      seller: ".mbg-nw"
+      location: ".ux-textspans--SECONDARY"
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+      Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+    
+  walmart:
+    name: "Walmart"
+    base_url: "https://www.walmart.com"
+    scraper_class: "WalmartScraper"
+    scraper_type: "selenium"
+    rate_limit: 2.5
+    requires_selenium: true
+    selectors:
+      title: "[data-automation-id='product-title']"
+      price: "[itemprop='price']"
+      availability: "[data-automation-id='fulfillment-add-to-cart']"
+      image: "[data-testid='hero-image-container'] img"
+      rating: "[data-testid='reviews-section'] .average-rating"
+      reviews_count: "[data-testid='reviews-section'] .review-count"
+      brand: "[data-automation-id='product-brand']"
+      model: "[data-automation-id='product-model']"
+    selenium_options:
+      wait_for_element: "[data-automation-id='product-title']"
+      scroll_pause: 2
+      max_wait_time: 15
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+
+# Product categories and search configurations
+product_categories:
+  electronics:
+    smartphones:
+      keywords: ["iPhone", "Samsung Galaxy", "Google Pixel", "OnePlus", "Xiaomi"]
+      min_price: 100
+      max_price: 2000
+      search_terms:
+        amazon: ["smartphone", "mobile phone", "cell phone"]
+        ebay: ["smartphone", "mobile phone"]
+        walmart: ["smartphone", "cell phone"]
+    laptops:
+      keywords: ["MacBook", "ThinkPad", "Dell XPS", "HP Spectre", "Surface Laptop"]
+      min_price: 500
+      max_price: 3000
+      search_terms:
+        amazon: ["laptop", "notebook", "ultrabook"]
+        ebay: ["laptop", "notebook"]
+        walmart: ["laptop", "notebook computer"]
+    tablets:
+      keywords: ["iPad", "Surface", "Galaxy Tab", "Fire Tablet", "Lenovo Tab"]
+      min_price: 100
+      max_price: 1500
+      search_terms:
+        amazon: ["tablet", "ipad", "android tablet"]
+        ebay: ["tablet", "ipad"]
+        walmart: ["tablet", "ipad"]
+
+# Scraping rules and compliance
+scraping_rules:
+  respect_robots_txt: true
+  max_pages_per_session: 100
+  session_cooldown: 300  # seconds
+  error_threshold: 5  # max errors before stopping
+  retry_delays: [1, 2, 4, 8, 16]  # exponential backoff in seconds
+  
+# Error handling configuration
+error_handling:
+  network_timeout: 30
+  max_redirects: 5
+  retry_on_status_codes: [429, 500, 502, 503, 504]
+  skip_on_status_codes: [404, 403, 401]
+  
+# Data validation rules
+validation:
+  price:
+    min_value: 0.01
+    max_value: 10000.00
+    currency_symbols: ["$", "USD", "€", "EUR", "£", "GBP"]
+  title:
+    min_length: 5
+    max_length: 500
+    required_fields: ["title"]
+  availability:
+    valid_statuses: ["in_stock", "out_of_stock", "limited", "unknown"]
+
+# Sample product URLs for testing (replace with real URLs for production)
+sample_products:
+  smartphones:
+    amazon:
+      - "https://www.amazon.com/dp/B0863FR3S9"  # iPhone example
+    ebay:
+      - "https://www.ebay.com/itm/335930354247"  # Samsung example
+    walmart:
+      - "https://www.walmart.com/ip/123456789"   # Google Pixel example
+  laptops:
+    amazon:
+      - "https://www.amazon.com/dp/B08N5WRWNW"  # MacBook example
+    ebay:
+      - "https://www.ebay.com/itm/123456789"    # ThinkPad example
+    walmart:
+      - "https://www.walmart.com/ip/987654321"   # Dell XPS example
+  tablets:
+    amazon:
+      - "https://www.amazon.com/dp/B09G9FPHY6"  # iPad example
+    ebay:
+      - "https://www.ebay.com/itm/456789123"    # Surface example
+    walmart:
+      - "https://www.walmart.com/ip/159753486"   # Galaxy Tab example
