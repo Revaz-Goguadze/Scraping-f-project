@@ -9,7 +9,7 @@ from pathlib import Path
 # Add src to path for imports
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
-from src.scrapers import ScraperFactory
+from src.scrapers.factory import ScraperFactory
 from src.scrapers.static_scraper import AmazonScraper, EbayScraper
 from src.scrapers.selenium_scraper import WalmartSeleniumScraper
 

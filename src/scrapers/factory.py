@@ -1,8 +1,8 @@
 """
-This package contains the scrapers for the E-Commerce Price Monitoring System.
+Scraper factory for creating scraper instances.
 """
 
-from typing import Dict, Type, Optional
+from typing import Dict, Type
 from .base_scraper import AbstractScraper
 from .static_scraper import AmazonScraper, EbayScraper, WalmartStaticScraper
 from .selenium_scraper import WalmartSeleniumScraper
@@ -175,19 +175,4 @@ def create_walmart_scraper() -> WalmartSeleniumScraper:
 def create_all_scrapers() -> Dict[str, AbstractScraper]:
     """Create scrapers for all supported sites."""
     sites = ['amazon', 'ebay', 'walmart']
-    return ScraperFactory.get_scrapers_for_sites(sites)
-
-
-# Export main classes and functions
-__all__ = [
-    'ScraperFactory',
-    'AbstractScraper',
-    'AmazonScraper',
-    'EbayScraper',
-    'WalmartSeleniumScraper',
-    'WalmartStaticScraper',
-    'create_amazon_scraper',
-    'create_ebay_scraper',
-    'create_walmart_scraper',
-    'create_all_scrapers'
-]
+    return ScraperFactory.get_scrapers_for_sites(sites) 

@@ -6,7 +6,7 @@ Implements data cleaning, validation, and normalization based on configurable ru
 from typing import Dict, Any, Optional
 import re
 
-from ..scrapers.base_scraper import ProductData
+from ..scrapers.data_models import ProductData
 from ..cli.utils.config import config_manager
 from ..cli.utils.logger import get_logger
 
@@ -125,7 +125,9 @@ class DataProcessor:
         if product_data.rating is not None:
             try:
                 rating = float(product_data.rating)
-                if not (0 <= rating <= 5):
+                if 0 <= rating <= 5:
+                    product_data.rating = rating
+                else:
                     product_data.rating = None
             except (ValueError, TypeError):
                 product_data.rating = None
@@ -133,7 +135,8 @@ class DataProcessor:
         # Normalize reviews count (ensure it's an integer)
         if product_data.reviews_count is not None:
             try:
-                product_data.reviews_count = int(product_data.reviews_count)
+                reviews_count_str = str(product_data.reviews_count).replace(',', '')
+                product_data.reviews_count = int(reviews_count_str)
             except (ValueError, TypeError):
                 product_data.reviews_count = None
 
@@ -155,10 +158,10 @@ class DataProcessor:
         status_lower = status.lower()
         valid_statuses = self.validation_rules.get('availability', {}).get('valid_statuses', [])
 
-        if any(term in status_lower for term in ['in stock', 'available', 'ships', 'add to cart']):
-            return 'in_stock'
         if any(term in status_lower for term in ['out of stock', 'unavailable']):
             return 'out_of_stock'
+        if any(term in status_lower for term in ['in stock', 'available', 'ships', 'add to cart']):
+            return 'in_stock'
         if 'limited' in status_lower:
             return 'limited'
 

@@ -14,10 +14,11 @@ from dataclasses import dataclass
 from datetime import datetime
 
 from .base_scraper import AbstractScraper, ProductData, ScrapingError
-from . import ScraperFactory
+from .factory import ScraperFactory
 from ..cli.utils.config import config_manager
 from ..cli.utils.logger import get_logger
 from ..data.database import db_manager
+from ..data.processors import DataProcessor
 
 
 @dataclass
@@ -93,6 +94,9 @@ class ConcurrentScrapingManager:
         
         self.logger.info(f"Concurrent manager initialized: {self.max_workers} workers, "
                         f"{'multiprocessing' if use_multiprocessing else 'threading'} mode")
+        
+        # Initialize data processor
+        self.processor = DataProcessor()
     
     def add_job(self, site_name: str, url: str, priority: int = 1) -> str:
         """
@@ -246,10 +250,13 @@ class ConcurrentScrapingManager:
             processing_time = time.time() - start_time
             
             if product_data:
+                # Process the raw data
+                processed_data = self.processor.process(product_data)
+                
                 result = ScrapingResult(
                     job_id=job.job_id,
                     success=True,
-                    product_data=product_data,
+                    product_data=processed_data,
                     processing_time=processing_time,
                     worker_id=worker_id
                 )

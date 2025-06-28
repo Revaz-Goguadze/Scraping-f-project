@@ -24,7 +24,7 @@ from src.data.database import db_manager
 from src.data.models import Product, Site, ProductURL, PriceHistory
 from src.cli.utils.config import config_manager
 from src.cli.utils.logger import logger_manager, get_logger
-from src.scrapers import ScraperFactory, create_all_scrapers
+from src.scrapers.factory import ScraperFactory, create_all_scrapers
 
 
 def test_database_setup():
