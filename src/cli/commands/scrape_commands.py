@@ -8,7 +8,7 @@ from typing import List
 from ...scrapers.concurrent_manager import ConcurrentScrapingManager
 from ...cli.utils.logger import get_logger
 from ...data.database import db_manager
-from ...data.models import ProductURL
+from ...data.models import ProductURL, Site
 
 logger = get_logger(__name__)
 
