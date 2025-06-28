@@ -38,24 +38,29 @@ def run(site: List[str], workers: int, use_multiprocessing: bool, limit: int):
         query = session.query(ProductURL).filter(ProductURL.is_active == True)
         
         if site:
-            query = query.join(ProductURL.site).filter(Site.name.in_(site))
+            # Convert site names to match database format (capitalize first letter)
+            site_names = [s.capitalize() for s in site]
+            query = query.join(ProductURL.site).filter(Site.name.in_(site_names))
             
         urls_to_scrape = query.all()
+        
+        # Extract the data we need before leaving the session context
+        jobs = []
+        for product_url in urls_to_scrape:
+            if limit and len(jobs) >= limit:
+                break
+            # Eagerly load the site name to avoid session issues
+            site_name = product_url.site.name.lower()
+            jobs.append({
+                'site_name': site_name,
+                'url': product_url.url
+            })
 
-    if not urls_to_scrape:
+    if not jobs:
         logger.warning("No active URLs found in the database to scrape.")
         return
 
     # Add jobs to manager
-    jobs = []
-    for product_url in urls_to_scrape:
-        if limit and len(jobs) >= limit:
-            break
-        jobs.append({
-            'site_name': product_url.site.name.lower(),
-            'url': product_url.url
-        })
-
     manager.add_bulk_jobs(jobs)
     
     # Run scrapers

@@ -175,24 +175,26 @@ class ConcurrentScrapingManager:
         
         self.logger.info("Concurrent scraping workers started")
     
-    def stop_workers(self, timeout: float = 30.0) -> None:
-        """
-        Stop all workers gracefully.
-        
-        Args:
-            timeout: Maximum time to wait for workers to finish
-        """
-        if not self.workers_active:
+    def stop_workers(self, timeout: int = 30) -> None:
+        """Stop all workers and clean up resources."""
+        if not self.executor:
             return
-        
+            
         self.logger.info("Stopping concurrent workers...")
-        self.shutdown_event.set()
-        self.workers_active = False
         
-        if self.executor:
-            self.executor.shutdown(wait=True, timeout=timeout)
-        
-        self.logger.info("Concurrent workers stopped")
+        try:
+            # Signal workers to stop
+            self.shutdown_event.set()
+            
+            # Shutdown executor without timeout parameter for compatibility
+            self.executor.shutdown(wait=True)
+            
+            self.executor = None
+            self.logger.info("All workers stopped successfully")
+            
+        except Exception as e:
+            self.logger.error(f"Error stopping workers: {e}")
+            self.executor = None
     
     def _job_dispatcher(self) -> None:
         """Dispatch jobs to workers (runs in separate thread)."""
