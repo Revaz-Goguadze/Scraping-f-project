@@ -15,6 +15,7 @@ from requests.packages.urllib3.util.retry import Retry
 
 from ..cli.utils.config import config_manager
 from ..cli.utils.logger import get_logger
+from ..data.processors import DataProcessor, DataValidationError
 
 
 class ProductData:
@@ -88,6 +89,9 @@ class AbstractScraper(ABC):
         
         # Initialize session with retry strategy
         self.session = self._create_session()
+        
+        # Initialize data processor
+        self.processor = DataProcessor()
         
         # Rate limiting
         self.last_request_time = 0
@@ -192,63 +196,14 @@ class AbstractScraper(ABC):
         """
         pass
     
-    def validate_data(self, product_data: ProductData) -> bool:
-        """
-        Validate scraped product data.
-        Can be overridden by subclasses for site-specific validation.
-        """
-        if not product_data.is_valid():
-            return False
-        
-        # Validate price if present
-        if product_data.price is not None:
-            validation_rules = config_manager.get_validation_rules()
-            price_rules = validation_rules.get('price', {})
-            
-            min_price = price_rules.get('min_value', 0.01)
-            max_price = price_rules.get('max_value', 10000.0)
-            
-            if not (min_price <= product_data.price <= max_price):
-                self.logger.warning(
-                    f"Price validation failed: {product_data.price} not in range "
-                    f"[{min_price}, {max_price}]"
-                )
-                return False
-        
-        return True
-    
-    def normalize_data(self, product_data: ProductData) -> ProductData:
-        """
-        Normalize and clean product data.
-        Can be overridden by subclasses for site-specific normalization.
-        """
-        if product_data.title:
-            # Clean title
-            product_data.title = ' '.join(product_data.title.split())
-            product_data.title = product_data.title.strip()
-        
-        if product_data.availability:
-            # Normalize availability status
-            availability_lower = product_data.availability.lower()
-            if any(term in availability_lower for term in ['in stock', 'available', 'ships']):
-                product_data.availability = 'in_stock'
-            elif any(term in availability_lower for term in ['out of stock', 'unavailable']):
-                product_data.availability = 'out_of_stock'
-            elif 'limited' in availability_lower:
-                product_data.availability = 'limited'
-            else:
-                product_data.availability = 'unknown'
-        
-        return product_data
-    
     def handle_error(self, error: Exception, url: str) -> None:
         """
         Handle scraping errors with appropriate logging and classification.
         Can be overridden by subclasses for site-specific error handling.
         """
-        if isinstance(error, ScrapingError):
+        if isinstance(error, (ScrapingError, DataValidationError)):
             self.logger.error(
-                f"Scraping error for {url}: {error.error_type} - {str(error)}"
+                f"Scraping error for {url}: {getattr(error, 'error_type', 'processing')} - {str(error)}"
             )
         else:
             self.logger.error(f"Unexpected error for {url}: {str(error)}")
@@ -273,16 +228,12 @@ class AbstractScraper(ABC):
             if not product_data:
                 raise ScrapingError("Failed to parse product data", "parsing", url)
             
-            # Step 3: Validate data
-            if not self.validate_data(product_data):
-                raise ScrapingError("Product data validation failed", "validation", url)
+            # Step 3: Process (validate and normalize) data
+            processed_data = self.processor.process(product_data)
             
-            # Step 4: Normalize data
-            product_data = self.normalize_data(product_data)
-            
-            # Step 5: Add metadata
+            # Step 4: Add metadata
             elapsed_time = time.time() - start_time
-            product_data.metadata.update({
+            processed_data.metadata.update({
                 'scraper_class': self.__class__.__name__,
                 'site_name': self.site_name,
                 'scraping_time_seconds': elapsed_time,
@@ -290,11 +241,11 @@ class AbstractScraper(ABC):
             })
             
             self.logger.info(
-                f"Successfully scraped product: {product_data.title[:50]}... "
-                f"(Price: {product_data.price}, Time: {elapsed_time:.2f}s)"
+                f"Successfully scraped product: {processed_data.title[:50]}... "
+                f"(Price: {processed_data.price}, Time: {elapsed_time:.2f}s)"
             )
             
-            return product_data
+            return processed_data
             
         except Exception as e:
             self.handle_error(e, url)
