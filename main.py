@@ -1,29 +1,12 @@
-from src.scrapers.static_scraper import AmazonStaticScraper, EbayStaticScraper
+"""Main entry point for the E-Commerce Price Monitoring System."""
 
-def main():
-    # Replace with a valid Amazon product URL
-    amazon_url = "https://www.amazon.com/dp/B0863FR3S9"
-    
-    amazon_scraper = AmazonStaticScraper(amazon_url)
-    amazon_scraper.fetch_page()
-    amazon_product_info = amazon_scraper.get_product_info()
-    
-    if amazon_product_info:
-        print("Amazon Product Information:")
-        print(f"  Name: {amazon_product_info['name']}")
-        print(f"  Price: {amazon_product_info['price']}")
+import sys
+from pathlib import Path
 
-    # Replace with a valid eBay product URL
-    ebay_url = "https://www.ebay.com/itm/335930354247" # Replace with a real eBay URL
-    
-    ebay_scraper = EbayStaticScraper(ebay_url)
-    ebay_scraper.fetch_page()
-    ebay_product_info = ebay_scraper.get_product_info()
+# Add src to path for imports to ensure modules are found
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-    if ebay_product_info:
-        print("\nEbay Product Information:")
-        print(f"  Name: {ebay_product_info['name']}")
-        print(f"  Price: {ebay_product_info['price']}")
+from src.cli.interface import cli
 
-if __name__ == "__main__":
-    main()
+if __name__ == '__main__':
+    cli()
