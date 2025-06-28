@@ -1,0 +1,12 @@
+beautifulsoup4
+selenium
+scrapy
+pandas
+numpy
+matplotlib
+seaborn
+requests
+PyYAML
+click
+pytest
+schedule
