@@ -1,0 +1,71 @@
+# E-Commerce Price Monitoring System - Main Configuration
+# This file contains all system-wide settings and configurations
+
+database:
+  type: sqlite
+  path: data/price_monitor.db
+  connection_pool_size: 5
+  backup_enabled: true
+  backup_interval: 24  # hours
+  max_connections: 10
+
+scraping:
+  concurrent_workers: 3
+  default_delay: 2.0
+  max_retries: 3
+  timeout: 30
+  backoff_factor: 2.0
+  user_agents:
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+    - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+    - "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+
+monitoring:
+  schedule: "daily"
+  schedule_time: "09:00"
+  price_change_threshold: 0.05  # 5% change threshold
+  max_price_history_days: 365
+  cleanup_old_data: true
+
+reporting:
+  output_formats: ["html", "csv", "json"]
+  chart_types: ["line", "bar", "comparison"]
+  email_notifications: false
+  report_directory: "data_output/reports"
+
+logging:
+  level: INFO
+  file_path: logs/price_monitor.log
+  max_file_size: 10MB
+  backup_count: 5
+  console_output: true
+  format: "[%(asctime)s] [%(levelname)s] [%(name)s] [%(session_id)s] - %(message)s"
+
+selenium:
+  headless: true
+  window_size: "1920,1080"
+  page_load_timeout: 30
+  implicit_wait: 10
+  chrome_options:
+    - "--no-sandbox"
+    - "--disable-dev-shm-usage"
+    - "--disable-gpu"
+    - "--disable-blink-features=AutomationControlled"
+    - "--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+
+proxy:
+  enabled: false
+  rotation: false
+  proxy_list: []
+
+security:
+  respect_robots_txt: true
+  rate_limiting: true
+  max_requests_per_minute: 30
+  session_cooldown: 300  # seconds
+
+performance:
+  cache_enabled: true
+  cache_duration: 3600  # seconds
+  memory_limit: 512  # MB
+  cpu_cores: null  # null = auto-detect

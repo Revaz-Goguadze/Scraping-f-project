@@ -1,0 +1,1 @@
+# This package contains the Scrapy spiders for e-commerce price monitoring

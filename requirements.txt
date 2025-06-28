@@ -10,3 +10,6 @@ PyYAML
 click
 pytest
 schedule
+sqlalchemy
+alembic
+python-dotenv
