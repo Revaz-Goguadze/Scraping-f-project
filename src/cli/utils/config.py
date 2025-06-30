@@ -109,7 +109,7 @@ class ConfigManager:
         Get scraper configuration for a specific site.
         
         Args:
-            site_name: Name of the site (amazon, ebay, walmart)
+            site_name: Name of the site (amazon, ebay)
             
         Returns:
             Scraper configuration dictionary
@@ -203,7 +203,7 @@ class ConfigManager:
         
         # Validate sites configuration
         sites = self.scrapers_config.get('sites', {})
-        required_sites = ['amazon', 'ebay', 'walmart']
+        required_sites = ['amazon', 'ebay', 'shopge']
         for site in required_sites:
             if site not in sites:
                 logger.error(f"Required site configuration missing: {site}")
@@ -253,11 +253,17 @@ class ConfigManager:
                     'scraper_type': 'static',
                     'rate_limit': 1.5
                 },
-                'walmart': {
-                    'name': 'Walmart',
-                    'base_url': 'https://www.walmart.com',
-                    'scraper_type': 'selenium',
-                    'rate_limit': 2.5
+                'shopge': {
+                    'name': 'Shop.ge', 
+                    'base_url': 'https://www.shop.ge',
+                    'scraper_type': 'static',
+                    'rate_limit': 1.5
+                },
+                'shop.ge': {
+                    'name': 'Shop.ge',
+                    'base_url': 'https://www.shop.ge', 
+                    'scraper_type': 'static',
+                    'rate_limit': 1.5
                 }
             }
         }

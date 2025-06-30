@@ -1,0 +1,151 @@
+# .dockerignore - Optimize Docker builds by excluding unnecessary files
+
+# Version control
+.git
+.gitignore
+.gitattributes
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# Development tools
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Application specific
+logs/
+*.log
+data_output/
+# Keep data directory structure but exclude actual database files
+data/*.db
+data/*.sqlite3
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Documentation (keep essential docs)
+Project.md
+IMPLEMENTATION_SUMMARY.md
+docs/examples/
+docs/screenshots/
+
+# Test files (optional - comment out if you want tests in container)
+test_*.py
+*_test.py
+tests/
+
+# Large dependencies that should be installed via pip
+node_modules/
+
+# Environment files (security)
+.env
+.env.local
+.env.production
+.env.test
+
+# Docker files (prevent recursion)
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+.circleci/
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Editor backup files
+*~
+*.orig
+
+# Scraped data that may be large
+data_output/raw/
+data_output/processed/
+httpcache/
+
+# Selenium downloads
+*.crdownload
+
+# Certificates and keys (security)
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx 

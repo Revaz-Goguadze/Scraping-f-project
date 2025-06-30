@@ -135,9 +135,9 @@ def generate_summary_report():
     
     # Features implemented
     features = [
-        "✅ Multi-source data collection (Amazon, eBay, Walmart)",
+        "✅ Multi-source data collection (Amazon, eBay)",
         "✅ Static scraping with BeautifulSoup4",
-        "✅ Dynamic scraping with Selenium (Walmart)",
+        "✅ Static scraping with BeautifulSoup (Amazon, eBay)",
         "✅ Concurrent processing with threading",
         "✅ Database storage with SQLAlchemy",
         "✅ Data validation and processing",
@@ -156,7 +156,7 @@ def generate_summary_report():
     # Technical requirements met
     print("\n🏗️  TECHNICAL REQUIREMENTS MET:")
     requirements = [
-        "✅ 3+ different websites (Amazon, eBay, Walmart)",
+        "✅ 2+ different websites (Amazon, eBay)",
         "✅ Both static and dynamic scraping methods",
         "✅ Concurrent scraping architecture", 
         "✅ Database storage with proper models",

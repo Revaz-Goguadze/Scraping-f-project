@@ -30,11 +30,12 @@ def main():
     while True:
         print("\nChoose a site to scrape:")
         print("1. eBay")
-        print("2. Amazon") 
-        print("3. Both sites")
-        print("4. Exit")
+        print("2. Amazon")
+        print("3. Shop.ge")
+        print("4. All sites")
+        print("5. Exit")
         
-        choice = input("\nEnter your choice (1-4): ").strip()
+        choice = input("\nEnter your choice (1-5): ").strip()
         
         if choice == "1":
             print("\n🏪 Running eBay scraper...")
@@ -43,14 +44,17 @@ def main():
             print("\n🛍️ Running Amazon scraper...")
             run_scraper_site("amazon")
         elif choice == "3":
-            print("\n🔄 Running both eBay and Amazon scrapers...")
-            run_scraper_site("ebay")
-            run_scraper_site("amazon")
+            print("\n🏬 Running Shop.ge scraper...")
+            run_scraper_site("shopge")
         elif choice == "4":
+            print("\n🔄 Running all scrapers (Amazon, eBay, Shop.ge)...")
+            for site in ["amazon", "ebay", "shopge"]:
+                run_scraper_site(site)
+        elif choice == "5":
             print("\n👋 Goodbye!")
             break
         else:
-            print("\n❌ Invalid choice. Please enter 1, 2, 3, or 4.")
+            print("\n❌ Invalid choice. Please enter 1, 2, 3, 4, or 5.")
 
 def run_scraper_site(site_name):
     """Run scraper for a specific site."""
@@ -64,8 +68,10 @@ def run_scraper_site(site_name):
         db = DatabaseManager()
         with db.get_session() as session:
             query = session.query(ProductURL).filter(ProductURL.is_active == True)
+            # Normalize site name in DB (remove dots) for matching
+            normalized_db_name = func.replace(func.lower(Site.name), '.', '')
             query = query.join(ProductURL.site).filter(
-                func.lower(Site.name) == site_name.lower()
+                normalized_db_name == site_name.lower()
             )
             urls_to_scrape = query.all()
             

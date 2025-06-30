@@ -1,5 +1,5 @@
 # E-Commerce Price Monitoring System - Scrapers Configuration
-# Site-specific scraping configurations for Amazon, eBay, and Walmart
+# Site-specific scraping configurations for Amazon and eBay
 
 sites:
   amazon:
@@ -55,29 +55,34 @@ sites:
       Sec-Fetch-Site: "none"
       Sec-Fetch-User: "?1"
       Upgrade-Insecure-Requests: "1"
-    
-  walmart:
-    name: "Walmart"
-    base_url: "https://www.walmart.com"
-    scraper_class: "WalmartScraper"
-    scraper_type: "selenium"
-    rate_limit: 2.5
-    requires_selenium: true
+
+  shopge:
+    name: "Shop.ge"
+    base_url: "https://www.shop.ge"
+    scraper_class: "ShopGeScraper"
+    scraper_type: "static"
+    rate_limit: 1.5
+    requires_selenium: false
     selectors:
-      title: "[data-automation-id='product-title']"
-      price: "[itemprop='price']"
-      availability: "[data-automation-id='fulfillment-add-to-cart']"
-      image: "[data-testid='hero-image-container'] img"
-      rating: "[data-testid='reviews-section'] .average-rating"
-      reviews_count: "[data-testid='reviews-section'] .review-count"
-      brand: "[data-automation-id='product-brand']"
-      model: "[data-automation-id='product-model']"
-    selenium_options:
-      wait_for_element: "[data-automation-id='product-title']"
-      scroll_pause: 2
-      max_wait_time: 15
+      title: "h1"
+      price: "span:contains('₾')"
+      availability: "body"
     headers:
-      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+  
+  shop.ge:
+    name: "Shop.ge"
+    base_url: "https://www.shop.ge"
+    scraper_class: "ShopGeScraper"
+    scraper_type: "static"
+    rate_limit: 1.5
+    requires_selenium: false
+    selectors:
+      title: "h1"
+      price: "span:contains('₾')"
+      availability: "body"
+    headers:
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 
 # Product categories and search configurations
 product_categories:
@@ -89,7 +94,6 @@ product_categories:
       search_terms:
         amazon: ["smartphone", "mobile phone", "cell phone"]
         ebay: ["smartphone", "mobile phone"]
-        walmart: ["smartphone", "cell phone"]
     laptops:
       keywords: ["MacBook", "ThinkPad", "Dell XPS", "HP Spectre", "Surface Laptop"]
       min_price: 500
@@ -97,7 +101,6 @@ product_categories:
       search_terms:
         amazon: ["laptop", "notebook", "ultrabook"]
         ebay: ["laptop", "notebook"]
-        walmart: ["laptop", "notebook computer"]
     tablets:
       keywords: ["iPad", "Surface", "Galaxy Tab", "Fire Tablet", "Lenovo Tab"]
       min_price: 100
@@ -105,7 +108,6 @@ product_categories:
       search_terms:
         amazon: ["tablet", "ipad", "android tablet"]
         ebay: ["tablet", "ipad"]
-        walmart: ["tablet", "ipad"]
 
 # Scraping rules and compliance
 scraping_rules:
@@ -142,19 +144,15 @@ sample_products:
       - "https://www.amazon.com/dp/B0863FR3S9"  # Sony headphones (working)
     ebay:
       - "https://www.ebay.com/itm/335930354247"  # Invicta watch (working)
-    walmart:
-      - "https://www.walmart.com/ip/123456789"   # Google Pixel example
   laptops:
     amazon:
       - "https://www.amazon.com/dp/B08N5WRWNW"  # MacBook example
     ebay:
       - "https://www.ebay.com/itm/123456789"    # ThinkPad example
-    walmart:
-      - "https://www.walmart.com/ip/987654321"   # Dell XPS example
   tablets:
     amazon:
       - "https://www.amazon.com/dp/B09G9FPHY6"  # iPad example
     ebay:
       - "https://www.ebay.com/itm/456789123"    # Surface example
-    walmart:
-      - "https://www.walmart.com/ip/159753486"   # Galaxy Tab example
+    shopge:
+      - "https://www.shop.ge/online-shop/sakancelario-nivtebi/saweri-kalami/troika-kalami-troika-construction-liliput-697455.html"

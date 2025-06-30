@@ -28,7 +28,7 @@ def generate_comprehensive_test_data():
         sites_data = [
             {'name': 'Amazon', 'base_url': 'https://www.amazon.com', 'scraper_type': 'static', 'rate_limit': 2.0},
             {'name': 'eBay', 'base_url': 'https://www.ebay.com', 'scraper_type': 'static', 'rate_limit': 2.0},
-            {'name': 'Walmart', 'base_url': 'https://www.walmart.com', 'scraper_type': 'selenium', 'rate_limit': 3.0},
+            
             {'name': 'Best Buy', 'base_url': 'https://www.bestbuy.com', 'scraper_type': 'static', 'rate_limit': 2.5},
             {'name': 'Target', 'base_url': 'https://www.target.com', 'scraper_type': 'selenium', 'rate_limit': 2.5},
         ]
@@ -106,8 +106,7 @@ def generate_comprehensive_test_data():
                     url = f"https://www.amazon.com/dp/B{random.randint(10000000, 99999999)}"
                 elif site.name == 'eBay':
                     url = f"https://www.ebay.com/itm/{random.randint(100000000000, 999999999999)}"
-                elif site.name == 'Walmart':
-                    url = f"https://www.walmart.com/ip/{random.randint(100000000, 999999999)}"
+                
                 elif site.name == 'Best Buy':
                     url = f"https://www.bestbuy.com/site/product/{random.randint(1000000, 9999999)}.p"
                 else:  # Target

@@ -1302,3 +1302,598 @@ ModuleNotFoundError: No module named 'src.scrapers.scrapy_crawler.extensions'
 [2025-06-30 12:55:20,087] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
 [2025-06-30 12:55:20,087] [INFO] [src.analysis.statistics] [NO_SESSION] - StatisticsAnalyzer initialized.
 [2025-06-30 12:55:20,126] [INFO] [src.analysis.statistics] [NO_SESSION] - No price history found for product ID 2.
+[2025-06-30 13:29:05,727] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 13:29:09,085] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-30 13:29:09,086] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 13:29:09,086] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 5 scrapers
+[2025-06-30 13:29:09,086] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 13:29:09,086] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 13:29:09,087] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 13:29:09,087] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 13:29:09,087] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 1 workers, threading mode
+[2025-06-30 13:29:09,088] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 13:29:09,088] [INFO] [src.analysis.trends] [NO_SESSION] - TrendAnalyzer initialized.
+[2025-06-30 13:29:09,088] [INFO] [src.analysis.statistics] [NO_SESSION] - StatisticsAnalyzer initialized.
+[2025-06-30 13:29:09,088] [INFO] [src.analysis.trends] [NO_SESSION] - TrendAnalyzer initialized.
+[2025-06-30 13:29:09,090] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-30 13:29:09,090] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 13:29:09,378] [INFO] [src.analysis.statistics] [NO_SESSION] - StatisticsAnalyzer initialized.
+[2025-06-30 13:29:09,379] [INFO] [src.analysis.reports] [NO_SESSION] - ReportGenerator initialized
+[2025-06-30 13:29:09,379] [INFO] [src.analysis.reports] [NO_SESSION] - Generating summary HTML report
+[2025-06-30 13:29:09,678] [INFO] [src.analysis.statistics] [NO_SESSION] - No price history found for product ID 2.
+[2025-06-30 13:29:09,684] [INFO] [src.analysis.statistics] [NO_SESSION] - No price history found for product ID 4.
+[2025-06-30 13:29:09,687] [INFO] [src.analysis.statistics] [NO_SESSION] - No price history found for product ID 5.
+[2025-06-30 13:29:09,693] [INFO] [src.analysis.statistics] [NO_SESSION] - No price history found for product ID 7.
+[2025-06-30 13:29:09,695] [INFO] [src.analysis.statistics] [NO_SESSION] - No price history found for product ID 8.
+[2025-06-30 13:29:09,697] [INFO] [src.analysis.statistics] [NO_SESSION] - No price history found for product ID 9.
+[2025-06-30 13:29:09,699] [INFO] [src.analysis.statistics] [NO_SESSION] - No price history found for product ID 10.
+[2025-06-30 13:29:11,500] [INFO] [src.analysis.reports] [NO_SESSION] - HTML report generated: data_output/reports/summary_report_20250630_132911.html
+[2025-06-30 13:29:11,522] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-30 13:29:11,523] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 13:29:11,523] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 2 bulk jobs to queue
+[2025-06-30 13:29:11,523] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-06-30 13:29:11,524] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 13:29:11,524] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-30 13:29:11,524] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-30 13:29:11,524] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 13:29:11,525] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-30 13:29:11,525] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0863FR3S9
+[2025-06-30 13:29:11,525] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-30 13:29:15,866] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: Sony WH-1000XM4 Wireless Premium Noise Canceling O...
+[2025-06-30 13:29:15,888] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 06bae4d6 completed successfully (4.34s) - ThreadPoolExecutor-0_0-06bae4d6
+[2025-06-30 13:29:21,556] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-30 13:29:23,412] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-30 13:29:23,418] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-30 13:29:33,669] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 13:29:33,835] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 13:29:34,241] [INFO] [src.data.database] [3df17a83] - Database tables created successfully
+[2025-06-30 13:29:34,241] [INFO] [src.data.database] [3df17a83] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 13:29:34,241] [INFO] [__main__] [3df17a83] - CLI initialized with session ID: 3df17a83
+[2025-06-30 13:29:34,242] [INFO] [src.cli.commands.analysis_commands] [3df17a83] - Generating comprehensive report...
+[2025-06-30 13:29:35,257] [INFO] [src.analysis.statistics] [3df17a83] - StatisticsAnalyzer initialized.
+[2025-06-30 13:29:35,258] [INFO] [src.analysis.reports] [3df17a83] - ReportGenerator initialized
+[2025-06-30 13:29:35,258] [INFO] [src.analysis.reports] [3df17a83] - Generating comprehensive HTML report
+[2025-06-30 13:29:35,557] [INFO] [src.analysis.statistics] [3df17a83] - No price history found for product ID 2.
+[2025-06-30 13:29:35,562] [INFO] [src.analysis.statistics] [3df17a83] - No price history found for product ID 4.
+[2025-06-30 13:29:35,564] [INFO] [src.analysis.statistics] [3df17a83] - No price history found for product ID 5.
+[2025-06-30 13:29:35,569] [INFO] [src.analysis.statistics] [3df17a83] - No price history found for product ID 7.
+[2025-06-30 13:29:35,571] [INFO] [src.analysis.statistics] [3df17a83] - No price history found for product ID 8.
+[2025-06-30 13:29:35,573] [INFO] [src.analysis.statistics] [3df17a83] - No price history found for product ID 9.
+[2025-06-30 13:29:35,575] [INFO] [src.analysis.statistics] [3df17a83] - No price history found for product ID 10.
+[2025-06-30 13:29:36,992] [INFO] [src.analysis.reports] [3df17a83] - HTML report generated: data_output/reports/comprehensive_report_20250630_132936.html
+[2025-06-30 13:45:07,309] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 13:45:09,254] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-30 13:45:09,255] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 13:45:09,255] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 5 scrapers
+[2025-06-30 13:45:09,255] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 13:45:09,256] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 13:45:09,257] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 13:45:09,258] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 13:45:09,258] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 1 workers, threading mode
+[2025-06-30 13:45:09,258] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 13:45:09,259] [INFO] [src.analysis.trends] [NO_SESSION] - TrendAnalyzer initialized.
+[2025-06-30 13:45:09,259] [INFO] [src.analysis.statistics] [NO_SESSION] - StatisticsAnalyzer initialized.
+[2025-06-30 13:45:09,259] [INFO] [src.analysis.trends] [NO_SESSION] - TrendAnalyzer initialized.
+[2025-06-30 13:45:09,260] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-30 13:45:09,261] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 13:45:09,563] [INFO] [src.analysis.statistics] [NO_SESSION] - StatisticsAnalyzer initialized.
+[2025-06-30 13:45:09,564] [INFO] [src.analysis.reports] [NO_SESSION] - ReportGenerator initialized
+[2025-06-30 13:45:09,564] [INFO] [src.analysis.reports] [NO_SESSION] - Generating summary HTML report
+[2025-06-30 13:45:09,887] [INFO] [src.analysis.statistics] [NO_SESSION] - No price history found for product ID 2.
+[2025-06-30 13:45:09,896] [INFO] [src.analysis.statistics] [NO_SESSION] - No price history found for product ID 4.
+[2025-06-30 13:45:09,898] [INFO] [src.analysis.statistics] [NO_SESSION] - No price history found for product ID 5.
+[2025-06-30 13:45:09,908] [INFO] [src.analysis.statistics] [NO_SESSION] - No price history found for product ID 7.
+[2025-06-30 13:45:09,910] [INFO] [src.analysis.statistics] [NO_SESSION] - No price history found for product ID 8.
+[2025-06-30 13:45:09,912] [INFO] [src.analysis.statistics] [NO_SESSION] - No price history found for product ID 9.
+[2025-06-30 13:45:09,915] [INFO] [src.analysis.statistics] [NO_SESSION] - No price history found for product ID 10.
+[2025-06-30 13:45:11,375] [INFO] [src.analysis.reports] [NO_SESSION] - HTML report generated: data_output/reports/summary_report_20250630_134511.html
+[2025-06-30 13:45:11,383] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-30 13:45:11,383] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 13:45:11,383] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 2 bulk jobs to queue
+[2025-06-30 13:45:11,384] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-06-30 13:45:11,384] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 13:45:11,384] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-30 13:45:11,384] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-30 13:45:11,386] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 13:45:11,387] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-30 13:45:11,387] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0863FR3S9
+[2025-06-30 13:45:11,388] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-30 13:45:13,176] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-30 13:45:13,205] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 6519ed1d completed successfully (1.79s) - ThreadPoolExecutor-0_1-6519ed1d
+[2025-06-30 13:45:13,761] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: Sony WH-1000XM4 Wireless Premium Noise Canceling O...
+[2025-06-30 13:45:13,783] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job ba3ed550 completed successfully (2.38s) - ThreadPoolExecutor-0_0-ba3ed550
+[2025-06-30 13:45:13,811] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-30 13:45:13,811] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-30 21:40:35,445] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 21:40:35,575] [INFO] [WalmartSeleniumScraper] [NO_SESSION] - Initialized walmart scraper
+[2025-06-30 21:40:38,581] [INFO] [WalmartSeleniumScraper] [NO_SESSION] - Selenium WebDriver initialized successfully
+[2025-06-30 21:41:01,419] [WARNING] [WalmartSeleniumScraper] [NO_SESSION] - Timeout waiting for element: [data-automation-id='product-title']
+[2025-06-30 21:42:33,949] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64bf260650>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:33,951] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64bed641a0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:33,953] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be613fe0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:33,954] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be6343e0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:33,956] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be6345c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:33,957] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be6347a0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:33,958] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be634bc0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:33,959] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be634da0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:33,960] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be634f80>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:33,962] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be6353a0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:33,963] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be6355b0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:33,964] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be6357f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:33,967] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be635d00>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:33,968] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be6108c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:33,969] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be635340>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:33,970] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be635850>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:33,971] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be6354c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:33,973] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be634b30>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:33,974] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be634f50>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:33,975] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be634bf0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:33,976] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be6344a0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:33,979] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be634710>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:33,980] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be634470>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:33,981] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be634140>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:33,983] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be636270>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:33,984] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be613f80>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:33,984] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be636390>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:33,986] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be635f10>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:33,987] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be634290>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:33,988] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be6348f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,003] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be634920>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,005] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be634c20>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,006] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be635130>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,008] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be635040>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,009] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be635430>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,010] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be635a90>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,011] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be635340>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,012] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be613f20>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,012] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be634e90>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,013] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be635bb0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,014] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be635250>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,015] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be634890>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,015] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be635ac0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,016] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be634ad0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,017] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be635f40>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,020] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be6351c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,023] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be634470>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,027] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be636090>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,036] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be6362a0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,039] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be613e60>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,040] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be6111f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,042] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be634830>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,044] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be635d90>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,048] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be634e30>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,053] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be634200>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,055] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be634920>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,058] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be635370>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,062] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be634350>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,063] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be635040>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,064] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be635730>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,066] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be6365a0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,067] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be613f50>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,068] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be795f10>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,069] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be635cd0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,070] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be635040>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,071] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be634d70>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b/element
+[2025-06-30 21:42:34,072] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be634b30>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b
+[2025-06-30 21:42:34,073] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be635970>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b
+[2025-06-30 21:42:34,073] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64be634ad0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b
+[2025-06-30 21:42:34,088] [INFO] [WalmartSeleniumScraper] [NO_SESSION] - WebDriver closed successfully
+[2025-06-30 21:42:34,124] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64bf6ebc20>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b
+[2025-06-30 21:42:34,124] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64c0249dc0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b
+[2025-06-30 21:42:34,125] [WARNING] [urllib3.connectionpool] [NO_SESSION] - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f64c09f1460>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b3468234fc723f1022ad8dc3fc4eb68b
+[2025-06-30 21:42:34,126] [INFO] [WalmartSeleniumScraper] [NO_SESSION] - WebDriver closed successfully
+[2025-06-30 21:48:03,583] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 21:48:33,784] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 21:48:33,839] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 2 scrapers
+[2025-06-30 21:48:33,840] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 21:48:33,840] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 21:48:33,840] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-30 21:48:33,840] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-30 21:48:49,876] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 21:48:49,933] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 2 scrapers
+[2025-06-30 21:48:49,934] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 21:48:49,934] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 21:48:49,934] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-30 21:48:49,934] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-30 21:48:49,934] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 21:48:49,934] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 21:48:49,934] [INFO] [src.scrapers.factory] [NO_SESSION] - Created scraper for amazon
+[2025-06-30 21:48:49,934] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-30 21:48:49,935] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-30 21:48:49,935] [INFO] [src.scrapers.factory] [NO_SESSION] - Created scraper for ebay
+[2025-06-30 21:48:55,683] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 21:48:56,070] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 21:48:56,237] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-30 21:48:56,238] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 21:49:10,494] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-30 21:49:10,494] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 21:49:10,530] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 123 bulk jobs to queue
+[2025-06-30 21:49:10,531] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-06-30 21:49:10,534] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 2 scrapers
+[2025-06-30 21:49:10,537] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-30 21:49:10,537] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-30 21:49:10,538] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-30 21:49:10,538] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-30 21:49:12,226] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-30 21:49:12,254] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job f2ee1771 completed successfully (1.69s) - ThreadPoolExecutor-0_0-f2ee1771
+[2025-06-30 21:49:13,553] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-30 21:49:13,554] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-30 21:49:13,554] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/491785922799
+[2025-06-30 21:49:14,420] [WARNING] [EbayScraper] [NO_SESSION] - Request failed for https://www.ebay.com/itm/491785922799: 404 Client Error: Not Found for url: https://www.ebay.com/itm/491785922799
+[2025-06-30 21:49:14,420] [INFO] [EbayScraper] [NO_SESSION] - Retrying in 1 seconds...
+[2025-06-30 21:49:15,998] [WARNING] [EbayScraper] [NO_SESSION] - Request failed for https://www.ebay.com/itm/491785922799: 404 Client Error: Not Found for url: https://www.ebay.com/itm/491785922799
+[2025-06-30 21:49:16,000] [INFO] [EbayScraper] [NO_SESSION] - Retrying in 2 seconds...
+[2025-06-30 21:49:16,558] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-30 21:49:16,559] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-30 21:49:16,560] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/734013936205
+[2025-06-30 21:49:17,408] [WARNING] [EbayScraper] [NO_SESSION] - Request failed for https://www.ebay.com/itm/734013936205: 404 Client Error: Not Found for url: https://www.ebay.com/itm/734013936205
+[2025-06-30 21:49:17,408] [INFO] [EbayScraper] [NO_SESSION] - Retrying in 1 seconds...
+[2025-06-30 21:49:18,620] [WARNING] [EbayScraper] [NO_SESSION] - Request failed for https://www.ebay.com/itm/491785922799: 404 Client Error: Not Found for url: https://www.ebay.com/itm/491785922799
+[2025-06-30 21:49:18,620] [INFO] [EbayScraper] [NO_SESSION] - Retrying in 4 seconds...
+[2025-06-30 21:49:19,060] [WARNING] [EbayScraper] [NO_SESSION] - Request failed for https://www.ebay.com/itm/734013936205: 404 Client Error: Not Found for url: https://www.ebay.com/itm/734013936205
+[2025-06-30 21:49:19,061] [INFO] [EbayScraper] [NO_SESSION] - Retrying in 2 seconds...
+[2025-06-30 21:49:19,566] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-30 21:49:19,567] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-30 21:49:19,567] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/937208509582
+[2025-06-30 21:49:20,349] [WARNING] [EbayScraper] [NO_SESSION] - Request failed for https://www.ebay.com/itm/937208509582: 404 Client Error: Not Found for url: https://www.ebay.com/itm/937208509582
+[2025-06-30 21:49:20,349] [INFO] [EbayScraper] [NO_SESSION] - Retrying in 1 seconds...
+[2025-06-30 21:49:21,729] [WARNING] [EbayScraper] [NO_SESSION] - Request failed for https://www.ebay.com/itm/734013936205: 404 Client Error: Not Found for url: https://www.ebay.com/itm/734013936205
+[2025-06-30 21:49:21,730] [INFO] [EbayScraper] [NO_SESSION] - Retrying in 4 seconds...
+[2025-06-30 21:49:22,073] [WARNING] [EbayScraper] [NO_SESSION] - Request failed for https://www.ebay.com/itm/937208509582: 404 Client Error: Not Found for url: https://www.ebay.com/itm/937208509582
+[2025-06-30 21:49:22,074] [INFO] [EbayScraper] [NO_SESSION] - Retrying in 2 seconds...
+[2025-06-30 21:49:22,573] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Error in job dispatcher: cannot schedule new futures after interpreter shutdown
+[2025-06-30 21:54:32,796] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 21:54:33,043] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 21:54:33,214] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-30 21:54:33,214] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 21:54:54,732] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 21:54:54,972] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 21:54:55,127] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-30 21:54:55,128] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 21:58:22,220] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 21:58:23,749] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 3 scrapers
+[2025-06-30 21:58:23,749] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 21:58:23,750] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 21:58:23,750] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 21:58:23,750] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 21:58:23,751] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 1 workers, threading mode
+[2025-06-30 21:58:23,751] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 21:58:23,753] [INFO] [src.analysis.trends] [NO_SESSION] - TrendAnalyzer initialized.
+[2025-06-30 21:58:23,754] [INFO] [src.analysis.statistics] [NO_SESSION] - StatisticsAnalyzer initialized.
+[2025-06-30 21:58:23,754] [INFO] [src.analysis.trends] [NO_SESSION] - TrendAnalyzer initialized.
+[2025-06-30 21:58:23,764] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-30 21:58:23,764] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 21:58:23,944] [INFO] [src.analysis.statistics] [NO_SESSION] - StatisticsAnalyzer initialized.
+[2025-06-30 21:58:23,945] [INFO] [src.analysis.reports] [NO_SESSION] - ReportGenerator initialized
+[2025-06-30 21:58:23,945] [INFO] [src.analysis.reports] [NO_SESSION] - Generating summary HTML report
+[2025-06-30 21:58:24,238] [INFO] [src.analysis.statistics] [NO_SESSION] - No price history found for product ID 2.
+[2025-06-30 21:58:24,243] [INFO] [src.analysis.statistics] [NO_SESSION] - No price history found for product ID 4.
+[2025-06-30 21:58:24,245] [INFO] [src.analysis.statistics] [NO_SESSION] - No price history found for product ID 5.
+[2025-06-30 21:58:24,250] [INFO] [src.analysis.statistics] [NO_SESSION] - No price history found for product ID 7.
+[2025-06-30 21:58:24,252] [INFO] [src.analysis.statistics] [NO_SESSION] - No price history found for product ID 8.
+[2025-06-30 21:58:24,253] [INFO] [src.analysis.statistics] [NO_SESSION] - No price history found for product ID 9.
+[2025-06-30 21:58:24,255] [INFO] [src.analysis.statistics] [NO_SESSION] - No price history found for product ID 10.
+[2025-06-30 21:58:25,433] [INFO] [src.analysis.reports] [NO_SESSION] - HTML report generated: data_output/reports/summary_report_20250630_215825.html
+[2025-06-30 21:58:25,443] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-30 21:58:25,443] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 21:58:25,444] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 2 bulk jobs to queue
+[2025-06-30 21:58:25,444] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-06-30 21:58:25,444] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 21:58:25,445] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-30 21:58:25,445] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-30 21:58:25,445] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 21:58:25,446] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-30 21:58:25,446] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0863FR3S9
+[2025-06-30 21:58:25,446] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-30 21:58:27,677] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-30 21:58:27,697] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 2697e236 completed successfully (2.23s) - ThreadPoolExecutor-0_1-2697e236
+[2025-06-30 21:58:28,998] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: Sony WH-1000XM4 Wireless Premium Noise Canceling O...
+[2025-06-30 21:58:29,011] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 5ae9c8a8 completed successfully (3.55s) - ThreadPoolExecutor-0_0-5ae9c8a8
+[2025-06-30 21:58:29,065] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-30 21:58:29,065] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-30 21:58:29,870] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 2 workers, threading mode
+[2025-06-30 21:58:29,870] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 21:58:29,870] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 1 bulk jobs to queue
+[2025-06-30 21:58:29,870] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 2 threading workers
+[2025-06-30 21:58:29,871] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-30 21:58:29,871] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-30 21:58:29,871] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-30 21:58:29,872] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-30 21:58:31,427] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-30 21:58:31,447] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 7a9ffa11 completed successfully (1.56s) - ThreadPoolExecutor-1_0-7a9ffa11
+[2025-06-30 21:58:31,483] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-30 21:58:31,484] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-30 21:58:31,484] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 2 workers, threading mode
+[2025-06-30 21:58:31,484] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 21:58:31,484] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 1 bulk jobs to queue
+[2025-06-30 21:58:31,484] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 2 threading workers
+[2025-06-30 21:58:31,485] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 21:58:31,485] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-30 21:58:31,485] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 21:58:31,485] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0863FR3S9
+[2025-06-30 21:58:34,049] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: Sony WH-1000XM4 Wireless Premium Noise Canceling O...
+[2025-06-30 21:58:34,071] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job cfd8a26e completed successfully (2.57s) - ThreadPoolExecutor-2_0-cfd8a26e
+[2025-06-30 21:58:34,103] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-30 21:58:34,104] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-30 21:58:34,107] [INFO] [src.analysis.statistics] [NO_SESSION] - StatisticsAnalyzer initialized.
+[2025-06-30 21:58:34,180] [INFO] [src.analysis.statistics] [NO_SESSION] - No price history found for product ID 2.
+[2025-06-30 21:58:34,189] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 21:58:34,190] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 21:58:34,191] [ERROR] [src.data.processors] [NO_SESSION] - Data validation failed for URL http://example.com/product: Title is too short (min: 5).
+[2025-06-30 21:58:34,192] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 21:58:34,192] [ERROR] [src.data.processors] [NO_SESSION] - Data validation failed for URL http://example.com/product: Price is out of range (15000.0).
+[2025-06-30 21:58:34,193] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 21:58:34,196] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 21:58:34,196] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 21:58:34,197] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-30 21:58:34,198] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-30 21:58:34,199] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: shopge -> ShopGeScraper
+[2025-06-30 21:58:34,200] [INFO] [ShopGeScraper] [NO_SESSION] - Initialized shopge scraper
+[2025-06-30 21:58:34,201] [ERROR] [src.cli.utils.config] [NO_SESSION] - Scraper configuration not found for site: unknown_site
+[2025-06-30 21:59:13,318] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 21:59:13,582] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 21:59:13,749] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-30 21:59:13,749] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 21:59:15,309] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-30 21:59:15,309] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 22:00:08,722] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 22:00:08,736] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-30 22:00:08,737] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 22:00:08,770] [INFO] [src.data.database] [NO_SESSION] - Created site: <Site(id=8, name='Shop.ge', scraper_type='static')>
+[2025-06-30 22:00:08,805] [ERROR] [src.data.database] [NO_SESSION] - Database session error: Instance '<Site at 0x7fc1933c09e0>' is not persistent within this Session
+[2025-06-30 22:00:30,200] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 22:00:30,211] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-30 22:00:30,212] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 22:00:30,260] [INFO] [src.data.database] [NO_SESSION] - Created product: <Product(id=223, name='Troika Construction Liliput Pen', brand='Troika')>
+[2025-06-30 22:00:30,281] [ERROR] [src.data.database] [NO_SESSION] - Database session error: Instance '<Product at 0x7f3571057ad0>' is not persistent within this Session
+[2025-06-30 22:00:52,545] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 22:00:52,554] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-30 22:00:52,554] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 22:00:52,576] [INFO] [src.data.database] [NO_SESSION] - Created product URL: <ProductURL(id=610, product_id=223, site_id=8)>
+[2025-06-30 22:01:25,637] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 22:01:25,646] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-30 22:01:25,646] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 22:01:29,122] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 22:01:29,339] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 22:01:29,486] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-30 22:01:29,486] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 22:01:30,661] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-30 22:01:30,661] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 22:03:58,709] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 22:03:58,924] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 22:03:59,064] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-30 22:03:59,065] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 22:04:00,818] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-30 22:04:00,818] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 22:04:00,839] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 1 bulk jobs to queue
+[2025-06-30 22:04:00,839] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-06-30 22:04:00,840] [ERROR] [src.cli.utils.config] [NO_SESSION] - Scraper configuration not found for site: shop.ge
+[2025-06-30 22:04:00,840] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-30 22:04:00,840] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 3 scrapers
+[2025-06-30 22:04:00,841] [ERROR] [src.cli.utils.config] [NO_SESSION] - Scraper configuration not found for site: shop.ge
+[2025-06-30 22:04:00,841] [WARNING] [ConcurrentScrapingManager] [NO_SESSION] - Retrying job af7bfb6c (attempt 1)
+[2025-06-30 22:04:02,844] [ERROR] [src.cli.utils.config] [NO_SESSION] - Scraper configuration not found for site: shop.ge
+[2025-06-30 22:04:02,845] [WARNING] [ConcurrentScrapingManager] [NO_SESSION] - Retrying job af7bfb6c (attempt 2)
+[2025-06-30 22:05:18,274] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 22:05:18,326] [INFO] [ShopGeScraper] [NO_SESSION] - Initialized shopge scraper
+[2025-06-30 22:06:05,702] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 22:06:05,755] [INFO] [ShopGeScraper] [NO_SESSION] - Initialized shopge scraper
+[2025-06-30 22:06:18,907] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 22:06:18,958] [INFO] [ShopGeScraper] [NO_SESSION] - Initialized shopge scraper
+[2025-06-30 22:06:49,362] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 22:06:49,419] [INFO] [ShopGeScraper] [NO_SESSION] - Initialized shopge scraper
+[2025-06-30 22:07:01,779] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 22:07:01,991] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 22:07:02,120] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-30 22:07:02,120] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 22:07:18,676] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-30 22:07:18,685] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 22:07:18,886] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 1 bulk jobs to queue
+[2025-06-30 22:07:18,889] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-06-30 22:07:18,895] [ERROR] [src.cli.utils.config] [NO_SESSION] - Scraper configuration not found for site: shop.ge
+[2025-06-30 22:07:18,903] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-30 22:07:18,906] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 3 scrapers
+[2025-06-30 22:07:18,910] [ERROR] [src.cli.utils.config] [NO_SESSION] - Scraper configuration not found for site: shop.ge
+[2025-06-30 22:07:18,913] [WARNING] [ConcurrentScrapingManager] [NO_SESSION] - Retrying job ee362c67 (attempt 1)
+[2025-06-30 22:07:45,013] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 22:07:45,261] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 22:07:45,448] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-30 22:07:45,448] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 22:07:46,331] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-30 22:07:46,331] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 22:07:46,363] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 124 bulk jobs to queue
+[2025-06-30 22:07:46,363] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-06-30 22:07:46,364] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 4 scrapers
+[2025-06-30 22:07:46,364] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-30 22:07:46,364] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 22:07:46,364] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 22:07:46,365] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0863FR3S9
+[2025-06-30 22:07:48,370] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 22:07:48,371] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 22:07:48,372] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B80172237
+[2025-06-30 22:07:48,733] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B80172237: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B80172237
+[2025-06-30 22:07:48,734] [INFO] [AmazonScraper] [NO_SESSION] - Retrying in 1 seconds...
+[2025-06-30 22:07:49,122] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: Sony WH-1000XM4 Wireless Premium Noise Canceling O...
+[2025-06-30 22:07:49,146] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job f87d8a8c completed successfully (2.76s) - ThreadPoolExecutor-0_0-f87d8a8c
+[2025-06-30 22:07:49,958] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B80172237: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B80172237
+[2025-06-30 22:07:49,959] [INFO] [AmazonScraper] [NO_SESSION] - Retrying in 2 seconds...
+[2025-06-30 22:07:50,388] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 22:07:50,389] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 22:07:50,389] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B92950852
+[2025-06-30 22:07:50,719] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B92950852: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B92950852
+[2025-06-30 22:07:50,719] [INFO] [AmazonScraper] [NO_SESSION] - Retrying in 1 seconds...
+[2025-06-30 22:07:51,386] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 22:07:51,467] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 4 scrapers
+[2025-06-30 22:07:51,467] [ERROR] [src.cli.utils.config] [NO_SESSION] - Scraper configuration not found for site: shop.ge
+[2025-06-30 22:07:51,934] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B92950852: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B92950852
+[2025-06-30 22:07:51,934] [INFO] [AmazonScraper] [NO_SESSION] - Retrying in 2 seconds...
+[2025-06-30 22:07:52,175] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B80172237: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B80172237
+[2025-06-30 22:07:52,175] [INFO] [AmazonScraper] [NO_SESSION] - Retrying in 4 seconds...
+[2025-06-30 22:07:52,395] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 22:07:52,396] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 22:07:52,396] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B81332699
+[2025-06-30 22:07:52,758] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B81332699: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B81332699
+[2025-06-30 22:07:52,758] [INFO] [AmazonScraper] [NO_SESSION] - Retrying in 1 seconds...
+[2025-06-30 22:07:53,972] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B81332699: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B81332699
+[2025-06-30 22:07:53,973] [INFO] [AmazonScraper] [NO_SESSION] - Retrying in 2 seconds...
+[2025-06-30 22:07:54,146] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B92950852: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B92950852
+[2025-06-30 22:07:54,146] [INFO] [AmazonScraper] [NO_SESSION] - Retrying in 4 seconds...
+[2025-06-30 22:07:56,196] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B81332699: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B81332699
+[2025-06-30 22:07:56,197] [INFO] [AmazonScraper] [NO_SESSION] - Retrying in 4 seconds...
+[2025-06-30 22:07:56,386] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B80172237: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B80172237
+[2025-06-30 22:07:56,387] [ERROR] [AmazonScraper] [NO_SESSION] - Scraping error for https://www.amazon.com/dp/B80172237: network - Failed to fetch page after 4 attempts
+[2025-06-30 22:07:56,388] [WARNING] [ConcurrentScrapingManager] [NO_SESSION] - Retrying job 627e0174 (attempt 1)
+[2025-06-30 22:07:56,389] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 22:07:56,390] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 22:07:56,391] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B46668326
+[2025-06-30 22:07:56,726] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B46668326: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B46668326
+[2025-06-30 22:07:56,728] [INFO] [AmazonScraper] [NO_SESSION] - Retrying in 1 seconds...
+[2025-06-30 22:07:57,945] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B46668326: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B46668326
+[2025-06-30 22:07:57,947] [INFO] [AmazonScraper] [NO_SESSION] - Retrying in 2 seconds...
+[2025-06-30 22:07:58,363] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B92950852: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B92950852
+[2025-06-30 22:07:58,364] [ERROR] [AmazonScraper] [NO_SESSION] - Scraping error for https://www.amazon.com/dp/B92950852: network - Failed to fetch page after 4 attempts
+[2025-06-30 22:07:58,364] [WARNING] [ConcurrentScrapingManager] [NO_SESSION] - Retrying job de99507a (attempt 1)
+[2025-06-30 22:07:58,364] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 22:07:58,365] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 22:07:58,365] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B64328774
+[2025-06-30 22:07:58,705] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B64328774: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B64328774
+[2025-06-30 22:07:58,706] [INFO] [AmazonScraper] [NO_SESSION] - Retrying in 1 seconds...
+[2025-06-30 22:07:59,930] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B64328774: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B64328774
+[2025-06-30 22:07:59,931] [INFO] [AmazonScraper] [NO_SESSION] - Retrying in 2 seconds...
+[2025-06-30 22:08:00,154] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B46668326: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B46668326
+[2025-06-30 22:08:00,155] [INFO] [AmazonScraper] [NO_SESSION] - Retrying in 4 seconds...
+[2025-06-30 22:08:00,412] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B81332699: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B81332699
+[2025-06-30 22:08:00,412] [ERROR] [AmazonScraper] [NO_SESSION] - Scraping error for https://www.amazon.com/dp/B81332699: network - Failed to fetch page after 4 attempts
+[2025-06-30 22:08:00,412] [WARNING] [ConcurrentScrapingManager] [NO_SESSION] - Retrying job ad792f9e (attempt 1)
+[2025-06-30 22:08:00,413] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 22:08:00,413] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 22:08:00,413] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B81333352
+[2025-06-30 22:08:00,418] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Error in job dispatcher: cannot schedule new futures after interpreter shutdown
+[2025-06-30 22:08:00,731] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B81333352: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B81333352
+[2025-06-30 22:08:00,732] [INFO] [AmazonScraper] [NO_SESSION] - Retrying in 1 seconds...
+[2025-06-30 22:08:01,966] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B81333352: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B81333352
+[2025-06-30 22:08:01,966] [INFO] [AmazonScraper] [NO_SESSION] - Retrying in 2 seconds...
+[2025-06-30 22:08:02,146] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B64328774: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B64328774
+[2025-06-30 22:08:02,147] [INFO] [AmazonScraper] [NO_SESSION] - Retrying in 4 seconds...
+[2025-06-30 22:08:02,420] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Error in job dispatcher: cannot schedule new futures after interpreter shutdown
+[2025-06-30 22:08:04,182] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B81333352: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B81333352
+[2025-06-30 22:08:04,183] [INFO] [AmazonScraper] [NO_SESSION] - Retrying in 4 seconds...
+[2025-06-30 22:08:04,386] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B46668326: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B46668326
+[2025-06-30 22:08:04,386] [ERROR] [AmazonScraper] [NO_SESSION] - Scraping error for https://www.amazon.com/dp/B46668326: network - Failed to fetch page after 4 attempts
+[2025-06-30 22:08:04,387] [WARNING] [ConcurrentScrapingManager] [NO_SESSION] - Retrying job fcf2236e (attempt 1)
+[2025-06-30 22:08:04,423] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Error in job dispatcher: cannot schedule new futures after shutdown
+[2025-06-30 22:08:06,365] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B64328774: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B64328774
+[2025-06-30 22:08:06,366] [ERROR] [AmazonScraper] [NO_SESSION] - Scraping error for https://www.amazon.com/dp/B64328774: network - Failed to fetch page after 4 attempts
+[2025-06-30 22:08:06,367] [WARNING] [ConcurrentScrapingManager] [NO_SESSION] - Retrying job 2b9ae06b (attempt 1)
+[2025-06-30 22:08:06,425] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Error in job dispatcher: cannot schedule new futures after shutdown
+[2025-06-30 22:12:06,962] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 22:12:07,020] [INFO] [ShopGeScraper] [NO_SESSION] - Initialized shopge scraper
+[2025-06-30 22:12:07,021] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 22:12:07,021] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-30 22:12:21,054] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 22:12:21,310] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 22:12:21,662] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-30 22:12:21,662] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 22:12:21,663] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-30 22:12:21,663] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 22:12:21,681] [ERROR] [src.data.database] [NO_SESSION] - Database session error: (sqlite3.OperationalError) no such column: product_urls.selector_config
+[SQL: SELECT product_urls.id AS product_urls_id, product_urls.product_id AS product_urls_product_id, product_urls.site_id AS product_urls_site_id, product_urls.url AS product_urls_url, product_urls.selector_config AS product_urls_selector_config, product_urls.is_active AS product_urls_is_active, product_urls.created_at AS product_urls_created_at 
+FROM product_urls JOIN sites ON sites.id = product_urls.site_id 
+WHERE product_urls.is_active = 1 AND replace(lower(sites.name), ?, ?) = ?]
+[parameters: ('.', '', 'shopge')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-06-30 22:12:33,888] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 22:12:34,117] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 22:12:34,276] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-30 22:12:34,276] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 22:15:20,443] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-30 22:15:20,451] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 22:15:20,482] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 1 bulk jobs to queue
+[2025-06-30 22:15:20,484] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-06-30 22:15:20,484] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 4 scrapers
+[2025-06-30 22:15:20,485] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-30 22:15:20,485] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: shop.ge -> ShopGeScraper
+[2025-06-30 22:15:20,486] [INFO] [ShopGeScraper] [NO_SESSION] - Initialized shopge scraper
+[2025-06-30 22:15:20,487] [INFO] [ShopGeScraper] [NO_SESSION] - Starting to scrape product: https://www.shop.ge/online-shop/sakancelario-nivtebi/saweri-kalami/troika-kalami-troika-construction-liliput-697455.html
+[2025-06-30 22:15:22,404] [INFO] [ShopGeScraper] [NO_SESSION] - Successfully scraped raw data for: Troika, კალამი "ტროიკა" - CONSTRUCTION LILIPUT...
+[2025-06-30 22:15:22,410] [ERROR] [src.data.database] [NO_SESSION] - Database session error: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products 
+WHERE products.name = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('Troika, კალამი "ტროიკა" - CONSTRUCTION LILIPUT', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-06-30 22:15:22,410] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Database storage failed: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products 
+WHERE products.name = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('Troika, კალამი "ტროიკა" - CONSTRUCTION LILIPUT', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-06-30 22:15:22,410] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 34c5f774 completed successfully (1.92s) - ThreadPoolExecutor-0_0-34c5f774
+[2025-06-30 22:15:22,493] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-30 22:15:22,493] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-30 22:15:24,975] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-30 22:15:24,976] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 22:15:24,984] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 1 bulk jobs to queue
+[2025-06-30 22:15:24,985] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-06-30 22:15:24,986] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-30 22:15:24,987] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-30 22:15:24,988] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-30 22:15:24,988] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/365662264378?_trksid=p4375194.c101959.m146925
+[2025-06-30 22:15:26,426] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Google Pixel 8a, Fully Unlocked | 128 GB, Blue, 6....
+[2025-06-30 22:15:26,436] [ERROR] [src.data.database] [NO_SESSION] - Database session error: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products 
+WHERE products.name = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('Google Pixel 8a, Fully Unlocked | 128 GB, Blue, 6.1 in | B- Grade | GA04432-US', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-06-30 22:15:26,437] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Database storage failed: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products 
+WHERE products.name = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('Google Pixel 8a, Fully Unlocked | 128 GB, Blue, 6.1 in | B- Grade | GA04432-US', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-06-30 22:15:26,438] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 9249e71a completed successfully (1.44s) - ThreadPoolExecutor-1_0-9249e71a
+[2025-06-30 22:15:26,500] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-30 22:15:26,501] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-30 22:15:27,519] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-30 22:15:27,520] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 22:15:27,524] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 1 bulk jobs to queue
+[2025-06-30 22:15:27,525] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-06-30 22:15:27,525] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 22:15:27,526] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-30 22:15:27,527] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 22:15:27,527] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/BERIBES-Bluetooth-Headphones-Microphone-Lightweight/dp/B09LYF2ST7?_encoding=UTF8&content-id=amzn1.sym.f0670b1b-e1fd-4c67-a2b1-b8a347243628&dib=eyJ2IjoiMSJ9.Pfix3I77yjMkN8wajdeQJx6zpcL_ntk5tWSLbZ9poiySHVVFus7OVw0EceEy_TaU-ITLULZcoxv0rXyPyX74Ups2mrVGaE6yAGEpTtourXld-fUJ7-1b82y0x-uk2MaQRD9-gabhvG7z76MH_BbUIuFrVGMXvx4dNNl3Lo_meQdPIpuoRivAYSwGCDiwU4Jm4OJ9w9JCRYu1JEVEUe6owWcCg3p1XF7XOvgEzXT1j_k.Skt0ZSDfpMJzhlvvZr3tN1KYLFJJSA4p1yxzgwLZRMs&dib_tag=se&keywords=headphones&pd_rd_r=ac801a6a-d84e-4903-9acf-52d1d479b268&pd_rd_w=h1ur4&pd_rd_wg=xSuye&qid=1751306960&sr=8-1
+[2025-06-30 22:15:30,400] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: BERIBES Bluetooth Headphones Over Ear, 65H Playtim...
+[2025-06-30 22:15:30,402] [ERROR] [src.data.database] [NO_SESSION] - Database session error: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products 
+WHERE products.name = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('BERIBES Bluetooth Headphones Over Ear, 65H Playtime and 6 EQ Music Modes Wireless Headphones with Microphone, HiFi Stereo Foldable Lightweight Headsets, Deep Bass for Home Office Cellphone PC Ect.', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-06-30 22:15:30,403] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Database storage failed: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products 
+WHERE products.name = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('BERIBES Bluetooth Headphones Over Ear, 65H Playtime and 6 EQ Music Modes Wireless Headphones with Microphone, HiFi Stereo Foldable Lightweight Headsets, Deep Bass for Home Office Cellphone PC Ect.', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-06-30 22:15:30,403] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 0e5febb1 completed successfully (2.88s) - ThreadPoolExecutor-2_0-0e5febb1
+[2025-06-30 22:15:30,445] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-30 22:15:30,446] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-30 22:15:32,901] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 22:15:33,006] [INFO] [ShopGeScraper] [NO_SESSION] - Initialized shopge scraper
+[2025-06-30 22:18:07,810] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 22:18:08,099] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 22:18:08,406] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-30 22:18:08,406] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 22:20:20,493] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 22:20:20,861] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 22:20:20,862] [INFO] [ShopGeScraper] [NO_SESSION] - Initialized shopge scraper
+[2025-06-30 22:20:53,892] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 22:20:53,912] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-30 22:20:53,912] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db

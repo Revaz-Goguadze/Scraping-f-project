@@ -4,8 +4,7 @@ Scraper factory for creating scraper instances.
 
 from typing import Dict, Type
 from .base_scraper import AbstractScraper
-from .static_scraper import AmazonScraper, EbayScraper, WalmartStaticScraper
-from .selenium_scraper import WalmartSeleniumScraper
+from .static_scraper import AmazonScraper, EbayScraper, ShopGeScraper
 from ..cli.utils.config import config_manager
 from ..cli.utils.logger import get_logger
 
@@ -30,11 +29,8 @@ class ScraperFactory:
         # Register static scrapers
         cls._scrapers['amazon'] = AmazonScraper
         cls._scrapers['ebay'] = EbayScraper
-        cls._scrapers['walmart_static'] = WalmartStaticScraper
-        
-        # Register selenium scrapers
-        cls._scrapers['walmart'] = WalmartSeleniumScraper
-        cls._scrapers['walmart_selenium'] = WalmartSeleniumScraper
+        cls._scrapers['shopge'] = ShopGeScraper
+        cls._scrapers['shop.ge'] = ShopGeScraper  # Allow both shopge and shop.ge
         
         cls._initialized = True
         logger.info(f"ScraperFactory initialized with {len(cls._scrapers)} scrapers")
@@ -62,7 +58,7 @@ class ScraperFactory:
         Create a scraper instance for the specified site.
         
         Args:
-            site_name: Name of the site (amazon, ebay, walmart)
+            site_name: Name of the site (amazon, ebay)
             
         Returns:
             Scraper instance
@@ -167,12 +163,12 @@ def create_ebay_scraper() -> EbayScraper:
     return ScraperFactory.create_scraper('ebay')
 
 
-def create_walmart_scraper() -> WalmartSeleniumScraper:
-    """Create Walmart scraper instance (Selenium-based)."""
-    return ScraperFactory.create_scraper('walmart')
+def create_shopge_scraper() -> ShopGeScraper:
+    """Create ShopGe scraper instance."""
+    return ScraperFactory.create_scraper('shopge')
 
 
 def create_all_scrapers() -> Dict[str, AbstractScraper]:
     """Create scrapers for all supported sites."""
-    sites = ['amazon', 'ebay', 'walmart']
+    sites = ['amazon', 'ebay', 'shopge']
     return ScraperFactory.get_scrapers_for_sites(sites) 

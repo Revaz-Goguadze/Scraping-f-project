@@ -10,8 +10,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
 from src.scrapers.factory import ScraperFactory
-from src.scrapers.static_scraper import AmazonScraper, EbayScraper
-from src.scrapers.selenium_scraper import WalmartSeleniumScraper
+from src.scrapers.static_scraper import AmazonScraper, EbayScraper, ShopGeScraper
 
 
 def test_get_available_scrapers():
@@ -20,7 +19,7 @@ def test_get_available_scrapers():
     assert isinstance(scrapers, dict)
     assert 'amazon' in scrapers
     assert 'ebay' in scrapers
-    assert 'walmart' in scrapers
+    assert 'shopge' in scrapers
 
 
 def test_create_amazon_scraper():
@@ -35,13 +34,10 @@ def test_create_ebay_scraper():
     assert isinstance(scraper, EbayScraper)
 
 
-def test_create_walmart_scraper():
-    """Test creating a Walmart scraper."""
-    scraper = ScraperFactory.create_scraper('walmart')
-    assert isinstance(scraper, WalmartSeleniumScraper)
-    # Clean up the driver
-    if hasattr(scraper, 'driver') and scraper.driver:
-        scraper.driver.quit()
+def test_create_shopge_scraper():
+    """Test creating a Shop.ge scraper."""
+    scraper = ScraperFactory.create_scraper('shopge')
+    assert isinstance(scraper, ShopGeScraper)
 
 
 def test_create_unknown_scraper_raises_error():

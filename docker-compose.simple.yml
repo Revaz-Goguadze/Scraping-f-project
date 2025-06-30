@@ -1,0 +1,25 @@
+# Simplified Docker Compose for testing
+version: '3.8'
+
+services:
+  # Main application service only
+  price-monitor:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: price-monitor-test
+    volumes:
+      # Persistent data storage
+      - ./data:/app/data
+      - ./data_output:/app/data_output
+      - ./logs:/app/logs
+      - ./config:/app/config:ro
+    environment:
+      - PYTHONPATH=/app
+      - DATABASE_URL=sqlite:///data/price_monitor.db
+      - LOG_LEVEL=INFO
+      - SELENIUM_HEADLESS=true
+    ports:
+      - "8080:8080"
+    # Test command - run the main application
+    command: ["python", "main.py"] 

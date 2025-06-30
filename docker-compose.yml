@@ -1,0 +1,152 @@
+# E-Commerce Price Monitoring System - Docker Compose Configuration
+version: '3.8'
+
+services:
+  # Main application service
+  price-monitor:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: price-monitor-app
+    restart: unless-stopped
+    volumes:
+      # Persistent data storage
+      - ./data:/app/data
+      - ./data_output:/app/data_output
+      - ./logs:/app/logs
+      - ./config:/app/config:ro  # Read-only config
+    environment:
+      - PYTHONPATH=/app
+      - DATABASE_URL=sqlite:///data/price_monitor.db
+      - LOG_LEVEL=INFO
+      - SELENIUM_HEADLESS=true
+    depends_on:
+      - postgres
+    networks:
+      - price-monitor-network
+    ports:
+      - "8080:8080"  # For future web interface
+    # Override command for different modes
+    command: ["python", "main.py"]
+    
+  # PostgreSQL database (optional upgrade from SQLite)
+  postgres:
+    image: postgres:15-alpine
+    container_name: price-monitor-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: price_monitor
+      POSTGRES_USER: price_monitor_user
+      POSTGRES_PASSWORD: price_monitor_password
+      POSTGRES_INITDB_ARGS: "--encoding=UTF-8"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./docker/init-db.sql:/docker-entrypoint-initdb.d/init-db.sql:ro
+    ports:
+      - "5432:5432"
+    networks:
+      - price-monitor-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U price_monitor_user -d price_monitor"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Redis for caching (optional enhancement)
+  redis:
+    image: redis:7-alpine
+    container_name: price-monitor-cache
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - price-monitor-network
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Scheduled scraper service
+  scheduler:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: price-monitor-scheduler
+    restart: unless-stopped
+    volumes:
+      - ./data:/app/data
+      - ./data_output:/app/data_output
+      - ./logs:/app/logs
+      - ./config:/app/config:ro
+    environment:
+      - PYTHONPATH=/app
+      - DATABASE_URL=postgresql://price_monitor_user:price_monitor_password@postgres:5432/price_monitor
+      - LOG_LEVEL=INFO
+      - SELENIUM_HEADLESS=true
+      - SCHEDULER_MODE=true
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - price-monitor-network
+    command: ["python", "-c", "import schedule, time; schedule.every().day.at('09:00').do(lambda: __import__('os').system('python -m src.cli.interface scrape run')); [time.sleep(1) for _ in iter(int, 1)]"]
+
+  # Report generator service
+  reporter:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: price-monitor-reporter
+    restart: unless-stopped
+    volumes:
+      - ./data:/app/data
+      - ./data_output:/app/data_output
+      - ./logs:/app/logs
+      - ./config:/app/config:ro
+    environment:
+      - PYTHONPATH=/app
+      - DATABASE_URL=postgresql://price_monitor_user:price_monitor_password@postgres:5432/price_monitor
+      - LOG_LEVEL=INFO
+    depends_on:
+      - postgres
+    networks:
+      - price-monitor-network
+    command: ["python", "-c", "import schedule, time; schedule.every().day.at('10:00').do(lambda: __import__('os').system('python -m src.cli.interface analyze generate-report --type comprehensive')); [time.sleep(1) for _ in iter(int, 1)]"]
+
+# Named volumes for persistent data
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+
+# Custom network for service communication
+networks:
+  price-monitor-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+
+# Alternative compose configurations for different environments
+---
+# Development override: docker-compose -f docker-compose.yml -f docker-compose.dev.yml up
+version: '3.8'
+
+services:
+  price-monitor:
+    volumes:
+      # Mount source code for development
+      - .:/app
+    environment:
+      - LOG_LEVEL=DEBUG
+      - DEVELOPMENT=true
+    command: ["python", "main.py"]
+    
+  postgres:
+    ports:
+      - "5433:5432"  # Different port for dev 

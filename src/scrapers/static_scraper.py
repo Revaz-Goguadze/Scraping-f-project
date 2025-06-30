@@ -1,6 +1,6 @@
 """
 Static scrapers for e-commerce sites using BeautifulSoup.
-Implements concrete scrapers for Amazon, eBay, and Walmart.
+Implements concrete scrapers for Amazon and eBay.
 """
 
 import re
@@ -212,100 +212,64 @@ class EbayScraper(AbstractScraper):
         return time_element.get_text().strip() if time_element else None
 
 
-class WalmartStaticScraper(AbstractScraper):
-    """
-    Walmart scraper using BeautifulSoup for static content.
-    Note: Walmart heavily uses JavaScript, so this may have limited success.
-    The selenium scraper should be preferred for Walmart.
-    """
-    
+class ShopGeScraper(AbstractScraper):
+    """Static scraper for https://www.shop.ge product pages (Georgian)."""
+
     def __init__(self):
-        super().__init__('walmart')
-    
+        super().__init__('shopge')
+
     def parse_page(self, html_content: str, url: str) -> ProductData:
-        """Parse Walmart product page and extract product information."""
-        try:
-            soup = BeautifulSoup(html_content, 'html.parser')
-            product_data = ProductData(url)
-            
-            # Extract title
-            title_selectors = [
-                '[data-automation-id="product-title"]',
-                'h1[data-testid="product-title"]',
-                '.prod-ProductTitle'
-            ]
-            
-            for selector in title_selectors:
-                title_element = soup.select_one(selector)
-                if title_element:
-                    product_data.title = title_element.get_text().strip()
-                    break
-            
-            # Extract price
-            product_data.price = self._extract_walmart_price(soup)
-            
-            # Extract availability
-            availability_selectors = [
-                '[data-automation-id="fulfillment-add-to-cart"]',
-                '.prod-ProductCTA',
-                '[data-testid="add-to-cart"]'
-            ]
-            
-            for selector in availability_selectors:
-                availability_element = soup.select_one(selector)
-                if availability_element:
-                    if 'add to cart' in availability_element.get_text().lower():
-                        product_data.availability = 'in_stock'
-                    break
-            
-            # Extract brand
-            brand_element = soup.select_one('[data-automation-id="product-brand"]')
-            if brand_element:
-                product_data.brand = brand_element.get_text().strip()
-            
-            # Add Walmart-specific metadata
-            product_data.metadata.update({
-                'item_id': self._extract_item_id(url),
-                'department': self._extract_walmart_department(soup)
-            })
-            
-            return product_data
-            
-        except Exception as e:
-            raise ScrapingError(f"Failed to parse Walmart page: {str(e)}", "parsing", url)
-    
-    def _extract_walmart_price(self, soup: BeautifulSoup) -> Optional[float]:
-        """Extract price from Walmart page with multiple fallback selectors."""
-        price_selectors = [
-            '[itemprop="price"]',
-            '.price-current',
-            '[data-testid="price"]',
-            '.price .visuallyhidden'
+        """Parse shop.ge product page and extract key fields."""
+        soup = BeautifulSoup(html_content, 'html.parser')
+        product = ProductData(url)
+
+        # Title
+        h1 = soup.find('h1')
+        if h1:
+            product.title = h1.get_text(strip=True)
+
+        # Price - look for Georgian Lari (₾) prices, skip cart/header prices (0 ₾)
+        page_text = soup.get_text()
+        price_patterns = [
+            r'(\d+\.?\d*)\s*₾',  # Direct price like "35.00 ₾"
+            r'(\d+[.,]\d+)\s*₾',  # Price with comma/decimal like "35,00 ₾"
         ]
         
-        for selector in price_selectors:
-            price_element = soup.select_one(selector)
-            if price_element:
-                price_text = price_element.get_text().strip()
-                price_match = re.search(r'[\d,]+\.?\d*', price_text.replace(',', ''))
-                if price_match:
-                    try:
-                        return float(price_match.group().replace(',', ''))
-                    except ValueError:
-                        continue
-        
-        return None
-    
-    def _extract_item_id(self, url: str) -> Optional[str]:
-        """Extract item ID from Walmart URL."""
-        item_match = re.search(r'/ip/.*?/(\d+)', url)
-        return item_match.group(1) if item_match else None
-    
-    def _extract_walmart_department(self, soup: BeautifulSoup) -> Optional[str]:
-        """Extract product department from breadcrumbs."""
-        breadcrumb = soup.select_one('[data-testid="breadcrumb"]')
-        if breadcrumb:
-            links = breadcrumb.select('a')
-            if len(links) > 1:
-                return links[1].get_text().strip()
-        return None
+        for pattern in price_patterns:
+            # Find all matches and filter out zero prices
+            all_matches = re.findall(pattern, page_text)
+            valid_prices = []
+            
+            for match in all_matches:
+                try:
+                    price_value = float(match.replace(',', '.'))
+                    if price_value > 0:  # Skip cart prices and zero values
+                        valid_prices.append(price_value)
+                except ValueError:
+                    continue
+            
+            if valid_prices:
+                # Take the last valid price (usually the actual product price)
+                product.price = valid_prices[-1]
+                product.currency = '₾'
+                break
+
+        # Availability sign – word "მარაგშია" means "in stock"
+        page_text = soup.get_text().lower()
+        if 'მარაგშია' in page_text:
+            product.availability = 'in_stock'
+        elif 'არ არის მარაგში' in page_text or 'არ არის ხელმისაწვდომი' in page_text:
+            product.availability = 'out_of_stock'
+        else:
+            product.availability = 'unknown'
+
+        # Brand – table row where first td text is "მწარმოებელი"
+        brand_cell = soup.find(string=lambda t: t and 'მწარმოებელი' in t)
+        if brand_cell and brand_cell.parent:
+            next_td = brand_cell.parent.find_next('td')
+            if next_td:
+                product.brand = next_td.get_text(strip=True)
+
+        return product
+
+
