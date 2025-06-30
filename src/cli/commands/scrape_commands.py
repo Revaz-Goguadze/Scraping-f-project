@@ -4,6 +4,7 @@ CLI commands for running scrapers.
 
 import click
 from typing import List
+from sqlalchemy import func
 
 from ...scrapers.concurrent_manager import ConcurrentScrapingManager
 from ...cli.utils.logger import get_logger
@@ -38,9 +39,11 @@ def run(site: List[str], workers: int, use_multiprocessing: bool, limit: int):
         query = session.query(ProductURL).filter(ProductURL.is_active == True)
         
         if site:
-            # Convert site names to match database format (capitalize first letter)
-            site_names = [s.capitalize() for s in site]
-            query = query.join(ProductURL.site).filter(Site.name.in_(site_names))
+            # Create a case-insensitive filter for site names
+            site_names_lower = [s.lower() for s in site]
+            query = query.join(ProductURL.site).filter(
+                func.lower(Site.name).in_(site_names_lower)
+            )
             
         urls_to_scrape = query.all()
         

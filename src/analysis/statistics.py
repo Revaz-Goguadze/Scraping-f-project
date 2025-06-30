@@ -123,28 +123,46 @@ class StatisticsAnalyzer:
             A pandas DataFrame with the most volatile products, or None.
         """
         with db_manager.get_session() as session:
-            # Query to get mean and std dev of prices for each product
+            # Query to get price data for each product (SQLite compatible)
             query = session.query(
                 Product.id.label('product_id'),
                 Product.name.label('product_name'),
-                func.avg(PriceHistory.price).label('mean_price'),
-                func.stddev(PriceHistory.price).label('std_dev_price'),
-                func.count(PriceHistory.id).label('data_points')
+                PriceHistory.price,
+                func.count(PriceHistory.id).over(partition_by=Product.id).label('data_points')
             ).join(ProductURL, Product.id == ProductURL.product_id)\
-             .join(PriceHistory, ProductURL.id == PriceHistory.product_url_id)\
-             .group_by(Product.id, Product.name)\
-             .having(func.count(PriceHistory.id) > 5)  # Ensure enough data points
+             .join(PriceHistory, ProductURL.id == PriceHistory.product_url_id)
 
             df = pd.read_sql(query.statement, query.session.bind)
 
             if df.empty:
                 return None
 
+            # Filter for products with enough data points
+            df = df[df['data_points'] > 5]
+            
+            if df.empty:
+                return None
+
+            # Calculate statistics using pandas (which has better statistical functions)
+            volatility_stats = df.groupby(['product_id', 'product_name']).agg({
+                'price': ['mean', 'std', 'count']
+            }).reset_index()
+            
+            # Flatten column names
+            volatility_stats.columns = ['product_id', 'product_name', 'mean_price', 'std_dev_price', 'data_points']
+            
             # Calculate coefficient of variation
-            df['volatility_coeff'] = df['std_dev_price'] / df['mean_price']
+            volatility_stats['volatility_coeff'] = volatility_stats['std_dev_price'] / volatility_stats['mean_price']
+            
+            # Remove invalid entries (where std_dev is 0 or mean is 0)
+            volatility_stats = volatility_stats[
+                (volatility_stats['std_dev_price'] > 0) & 
+                (volatility_stats['mean_price'] > 0) &
+                (volatility_stats['volatility_coeff'].notna())
+            ]
             
             # Sort by volatility and return top N
-            most_volatile = df.sort_values('volatility_coeff', ascending=False).head(top_n)
+            most_volatile = volatility_stats.sort_values('volatility_coeff', ascending=False).head(top_n)
             
             return most_volatile
 

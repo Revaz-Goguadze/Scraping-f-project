@@ -4,6 +4,7 @@ CLI commands for running data analysis.
 
 import click
 import pandas as pd
+import os
 
 from ...analysis.statistics import StatisticsAnalyzer
 from ...analysis.trends import TrendAnalyzer
@@ -68,4 +69,29 @@ def trend(product_id: int):
     click.echo(f"--- Price Trend for Product ID: {product_id} ---")
     click.echo(f"  Trend Direction: {trend_data['trend_direction']}")
     click.echo(f"  Slope (Price Change/Day): ${trend_data['slope']:.4f}")
-    click.echo(f"  Analysis Period: {trend_data['start_date'].date()} to {trend_data['end_date'].date()}") 
+    click.echo(f"  Analysis Period: {trend_data['start_date'].date()} to {trend_data['end_date'].date()}")
+
+
+@analyze.command()
+@click.option('--type', default='comprehensive', help='Report type (comprehensive, summary, trends)')
+def generate_report(type):
+    """Generate HTML report with charts and visualizations."""
+    logger = get_logger(__name__)
+    logger.info(f"Generating {type} report...")
+    
+    try:
+        from src.analysis.reports import ReportGenerator
+        
+        generator = ReportGenerator()
+        report_path = generator.generate_html_report(type)
+        
+        print(f"✅ Report generated successfully!")
+        print(f"📄 Location: {report_path}")
+        print(f"🌐 Open in browser: file://{os.path.abspath(report_path)}")
+        
+    except ImportError as e:
+        print(f"❌ Missing dependencies for report generation: {e}")
+        print("Install with: pip install matplotlib seaborn jinja2")
+    except Exception as e:
+        logger.error(f"Report generation failed: {e}")
+        print(f"❌ Report generation failed: {e}") 
