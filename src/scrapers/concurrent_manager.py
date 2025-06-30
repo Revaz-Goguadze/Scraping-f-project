@@ -14,10 +14,11 @@ from dataclasses import dataclass
 from datetime import datetime
 
 from .base_scraper import AbstractScraper, ProductData, ScrapingError
-from . import ScraperFactory
+from .factory import ScraperFactory
 from ..cli.utils.config import config_manager
 from ..cli.utils.logger import get_logger
 from ..data.database import db_manager
+from ..data.processors import DataProcessor
 
 
 @dataclass
@@ -93,6 +94,9 @@ class ConcurrentScrapingManager:
         
         self.logger.info(f"Concurrent manager initialized: {self.max_workers} workers, "
                         f"{'multiprocessing' if use_multiprocessing else 'threading'} mode")
+        
+        # Initialize data processor
+        self.processor = DataProcessor()
     
     def add_job(self, site_name: str, url: str, priority: int = 1) -> str:
         """
@@ -171,24 +175,26 @@ class ConcurrentScrapingManager:
         
         self.logger.info("Concurrent scraping workers started")
     
-    def stop_workers(self, timeout: float = 30.0) -> None:
-        """
-        Stop all workers gracefully.
-        
-        Args:
-            timeout: Maximum time to wait for workers to finish
-        """
-        if not self.workers_active:
+    def stop_workers(self, timeout: int = 30) -> None:
+        """Stop all workers and clean up resources."""
+        if not self.executor:
             return
-        
+            
         self.logger.info("Stopping concurrent workers...")
-        self.shutdown_event.set()
-        self.workers_active = False
         
-        if self.executor:
-            self.executor.shutdown(wait=True, timeout=timeout)
-        
-        self.logger.info("Concurrent workers stopped")
+        try:
+            # Signal workers to stop
+            self.shutdown_event.set()
+            
+            # Shutdown executor without timeout parameter for compatibility
+            self.executor.shutdown(wait=True)
+            
+            self.executor = None
+            self.logger.info("All workers stopped successfully")
+            
+        except Exception as e:
+            self.logger.error(f"Error stopping workers: {e}")
+            self.executor = None
     
     def _job_dispatcher(self) -> None:
         """Dispatch jobs to workers (runs in separate thread)."""
@@ -246,10 +252,13 @@ class ConcurrentScrapingManager:
             processing_time = time.time() - start_time
             
             if product_data:
+                # Process the raw data
+                processed_data = self.processor.process(product_data)
+                
                 result = ScrapingResult(
                     job_id=job.job_id,
                     success=True,
-                    product_data=product_data,
+                    product_data=processed_data,
                     processing_time=processing_time,
                     worker_id=worker_id
                 )
@@ -329,8 +338,16 @@ class ConcurrentScrapingManager:
         else:
             self.session_stats['jobs_failed'] += 1
             
-            # Handle retry logic
-            if job.retries < 3:  # Max 3 retries
+            # Handle retry logic - but not for validation errors or 404s
+            should_retry = (
+                job.retries < 3 and
+                result.error and
+                "404" not in result.error and
+                "validation failed" not in result.error.lower() and
+                "title is missing" not in result.error.lower()
+            )
+            
+            if should_retry:
                 job.retries += 1
                 # Re-queue with lower priority
                 self.job_queue.put((job.priority + 10, time.time(), job))
@@ -383,45 +400,76 @@ class ConcurrentScrapingManager:
             site_name: Name of the site
         """
         try:
-            # Get or create site
-            site = db_manager.get_site_by_name(site_name)
-            if not site:
-                site = db_manager.create_site(
-                    name=site_name,
-                    base_url=f"https://www.{site_name.lower()}.com",
-                    scraper_type="concurrent",
-                    rate_limit=self.site_rate_limits.get(site_name, 2.0)
-                )
+            # Use fresh database manager with proper session management
+            from src.data.database import DatabaseManager
+            from src.data.models import Site, Product, ProductURL, PriceHistory
+            from sqlalchemy.exc import IntegrityError
+            from sqlalchemy import func
             
-            # Create or find product
-            product = db_manager.create_product(
-                name=product_data.title,
-                category=product_data.metadata.get('category', 'electronics'),
-                brand=product_data.brand,
-                model=product_data.model
-            )
+            db = DatabaseManager()
             
-            # Create product URL
-            product_url = db_manager.create_product_url(
-                product_id=product.id,
-                site_id=site.id,
-                url=product_data.url,
-                selector_config='{}'
-            )
-            
-            # Add price record
-            if product_data.price is not None:
-                db_manager.add_price_record(
-                    product_url_id=product_url.id,
-                    price=product_data.price,
-                    currency=product_data.currency,
-                    availability=product_data.availability,
-                    scraper_metadata=str(product_data.metadata)
-                )
+            with db.get_session() as session:
+                # Get or create site
+                site = session.query(Site).filter(func.lower(Site.name) == site_name.lower()).first()
+                if not site:
+                    site = Site(
+                        name=site_name,
+                        base_url=f"https://www.{site_name.lower()}.com",
+                        scraper_type="concurrent",
+                        rate_limit=self.site_rate_limits.get(site_name, 2.0)
+                    )
+                    session.add(site)
+                    session.flush()  # Get the ID
+                
+                # Create or find product
+                product = session.query(Product).filter(
+                    Product.name == product_data.title
+                ).first()
+                
+                if not product:
+                    product = Product(
+                        name=product_data.title,
+                        category=product_data.metadata.get('category', 'electronics'),
+                        brand=product_data.brand or 'None',
+                        model=product_data.model or 'None'
+                    )
+                    session.add(product)
+                    session.flush()  # Get the ID
+                
+                # Create or find product URL - check by URL directly
+                product_url = session.query(ProductURL).filter(
+                    ProductURL.url == product_data.url
+                ).first()
+                
+                if not product_url:
+                    product_url = ProductURL(
+                        product_id=product.id,
+                        site_id=site.id,
+                        url=product_data.url,
+                        selector_config='{}',
+                        is_active=True
+                    )
+                    session.add(product_url)
+                    session.flush()  # Get the ID
+                
+                # Add price record
+                if product_data.price is not None:
+                    price_history = PriceHistory(
+                        product_url_id=product_url.id,
+                        price=float(product_data.price),
+                        currency=product_data.currency or 'USD',
+                        availability=product_data.availability or 'unknown',
+                        scraper_metadata=str(product_data.metadata)
+                    )
+                    session.add(price_history)
+                
+                # Commit all changes
+                session.commit()
+                self.logger.debug(f"Successfully stored product data for: {product_data.title}")
             
         except Exception as e:
             self.logger.error(f"Database storage failed: {e}")
-            raise
+            # Don't re-raise to avoid breaking the scraping process
     
     def wait_completion(self, timeout: Optional[float] = None) -> bool:
         """

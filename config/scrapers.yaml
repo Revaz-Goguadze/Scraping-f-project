@@ -31,11 +31,11 @@ sites:
     base_url: "https://www.ebay.com"
     scraper_class: "EbayScraper"
     scraper_type: "static"
-    rate_limit: 1.5
+    rate_limit: 3.0
     requires_selenium: false
     selectors:
-      title: ".x-item-title__mainTitle"
-      price: ".x-price-primary"
+      title: "h1[id='x-title-label-lbl'], .x-item-title__mainTitle, h1.it-ttl, h1"
+      price: ".x-price-primary, .notranslate, .u-flL.notranslate, .x-price-approx__price"
       availability: ".u-flL.condText"
       image: "#icImg"
       condition: ".u-flL.condText"
@@ -43,8 +43,18 @@ sites:
       seller: ".mbg-nw"
       location: ".ux-textspans--SECONDARY"
     headers:
-      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
-      Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8"
+      Accept-Language: "en-US,en;q=0.9"
+      Accept-Encoding: "gzip, deflate, br"
+      Sec-Ch-Ua: '"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"'
+      Sec-Ch-Ua-Mobile: "?0"
+      Sec-Ch-Ua-Platform: '"Windows"'
+      Sec-Fetch-Dest: "document"
+      Sec-Fetch-Mode: "navigate"
+      Sec-Fetch-Site: "none"
+      Sec-Fetch-User: "?1"
+      Upgrade-Insecure-Requests: "1"
     
   walmart:
     name: "Walmart"
@@ -129,9 +139,9 @@ validation:
 sample_products:
   smartphones:
     amazon:
-      - "https://www.amazon.com/dp/B0863FR3S9"  # iPhone example
+      - "https://www.amazon.com/dp/B0863FR3S9"  # Sony headphones (working)
     ebay:
-      - "https://www.ebay.com/itm/335930354247"  # Samsung example
+      - "https://www.ebay.com/itm/335930354247"  # Invicta watch (working)
     walmart:
       - "https://www.walmart.com/ip/123456789"   # Google Pixel example
   laptops:

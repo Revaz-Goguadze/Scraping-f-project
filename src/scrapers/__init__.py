@@ -1,6 +1,5 @@
 """
-Scrapers package initialization and factory implementation.
-Implements the Factory pattern for creating scrapers dynamically.
+This package contains the scrapers for the E-Commerce Price Monitoring System.
 """
 
 from typing import Dict, Type, Optional
