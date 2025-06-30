@@ -287,3 +287,1018 @@
 [2025-06-28 18:42:46,568] [INFO] [ConcurrentScrapingManager] [34ada577] - Stopping concurrent workers...
 [2025-06-28 18:42:46,568] [INFO] [ConcurrentScrapingManager] [34ada577] - All workers stopped successfully
 [2025-06-28 18:42:46,568] [INFO] [src.cli.commands.scrape_commands] [34ada577] - Scraping run completed. Results: {'started_at': datetime.datetime(2025, 6, 28, 14, 42, 44, 106583), 'jobs_queued': 1, 'jobs_completed': 1, 'jobs_failed': 0, 'total_processing_time': 2.294034004211426, 'sites_processed': ['amazon'], 'elapsed_time': 2.461991, 'jobs_active': 0, 'queue_size': 0, 'avg_processing_time': 2.294034004211426, 'throughput': 0.40617532720468924}
+[2025-06-28 18:44:07,540] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-28 18:44:07,553] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-28 18:44:07,554] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-28 18:44:12,133] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-28 18:44:12,461] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-28 18:44:12,918] [INFO] [src.data.database] [ab049cf3] - Database tables created successfully
+[2025-06-28 18:44:12,918] [INFO] [src.data.database] [ab049cf3] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-28 18:44:12,919] [INFO] [src.cli.interface] [ab049cf3] - CLI initialized with session ID: ab049cf3
+[2025-06-28 18:44:12,919] [INFO] [src.cli.commands.scrape_commands] [ab049cf3] - Starting concurrent scraping run with 3 workers.
+[2025-06-28 18:44:12,919] [INFO] [ConcurrentScrapingManager] [ab049cf3] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-28 18:44:12,919] [INFO] [src.data.processors] [ab049cf3] - DataProcessor initialized with validation rules.
+[2025-06-28 18:44:12,980] [WARNING] [src.cli.commands.scrape_commands] [ab049cf3] - No active URLs found in the database to scrape.
+[2025-06-28 19:19:44,015] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-28 19:19:44,469] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-28 19:19:45,059] [INFO] [src.data.database] [9c21c259] - Database tables created successfully
+[2025-06-28 19:19:45,060] [INFO] [src.data.database] [9c21c259] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-28 19:19:45,060] [INFO] [src.cli.interface] [9c21c259] - CLI initialized with session ID: 9c21c259
+[2025-06-28 19:19:45,061] [INFO] [src.cli.commands.scrape_commands] [9c21c259] - Starting concurrent scraping run with 3 workers.
+[2025-06-28 19:19:45,061] [INFO] [ConcurrentScrapingManager] [9c21c259] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-28 19:19:45,061] [INFO] [src.data.processors] [9c21c259] - DataProcessor initialized with validation rules.
+[2025-06-28 19:19:45,165] [WARNING] [src.cli.commands.scrape_commands] [9c21c259] - No active URLs found in the database to scrape.
+[2025-06-28 19:20:14,020] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-28 19:20:14,248] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-28 19:20:14,725] [INFO] [src.data.database] [8affea6c] - Database tables created successfully
+[2025-06-28 19:20:14,725] [INFO] [src.data.database] [8affea6c] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-28 19:20:14,725] [INFO] [src.cli.interface] [8affea6c] - CLI initialized with session ID: 8affea6c
+[2025-06-28 19:20:14,726] [INFO] [src.cli.commands.scrape_commands] [8affea6c] - Starting concurrent scraping run with 3 workers.
+[2025-06-28 19:20:14,726] [INFO] [ConcurrentScrapingManager] [8affea6c] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-28 19:20:14,726] [INFO] [src.data.processors] [8affea6c] - DataProcessor initialized with validation rules.
+[2025-06-28 19:20:14,821] [INFO] [ConcurrentScrapingManager] [8affea6c] - Added 1 bulk jobs to queue
+[2025-06-28 19:20:14,822] [INFO] [ConcurrentScrapingManager] [8affea6c] - Started 3 threading workers
+[2025-06-28 19:20:14,822] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 5 scrapers
+[2025-06-28 19:20:14,823] [INFO] [ConcurrentScrapingManager] [8affea6c] - Concurrent scraping workers started
+[2025-06-28 19:20:14,823] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-28 19:20:14,825] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-28 19:20:14,825] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-28 19:20:16,297] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-28 19:20:16,323] [INFO] [src.data.database] [NO_SESSION] - Created site: <Site(id=5, name='ebay', scraper_type='concurrent')>
+[2025-06-28 19:20:16,355] [INFO] [src.data.database] [NO_SESSION] - Created product: <Product(id=6, name='Invicta Men's Pro Diver 45mm Quartz Rubber Strap Watch - Choice of Color', brand='None')>
+[2025-06-28 19:20:16,375] [INFO] [src.data.database] [NO_SESSION] - Created product URL: <ProductURL(id=5, product_id=6, site_id=5)>
+[2025-06-28 19:20:16,409] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job b6c21e2e completed successfully (1.48s) - ThreadPoolExecutor-0_0-b6c21e2e
+[2025-06-28 19:20:16,438] [INFO] [ConcurrentScrapingManager] [8affea6c] - Stopping concurrent workers...
+[2025-06-28 19:20:16,440] [INFO] [ConcurrentScrapingManager] [8affea6c] - All workers stopped successfully
+[2025-06-28 19:20:16,444] [INFO] [src.cli.commands.scrape_commands] [8affea6c] - Scraping run completed. Results: {'started_at': datetime.datetime(2025, 6, 28, 15, 20, 14, 726338), 'jobs_queued': 1, 'jobs_completed': 1, 'jobs_failed': 0, 'total_processing_time': 1.4756884574890137, 'sites_processed': ['ebay'], 'elapsed_time': 1.718178, 'jobs_active': 0, 'queue_size': 0, 'avg_processing_time': 1.4756884574890137, 'throughput': 0.5820118753703051}
+[2025-06-28 19:20:46,723] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-28 19:20:46,978] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-28 19:20:47,464] [INFO] [src.data.database] [b602eb89] - Database tables created successfully
+[2025-06-28 19:20:47,465] [INFO] [src.data.database] [b602eb89] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-28 19:20:47,465] [INFO] [src.cli.interface] [b602eb89] - CLI initialized with session ID: b602eb89
+[2025-06-28 19:20:51,737] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-28 19:20:51,949] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-28 19:20:52,305] [INFO] [src.data.database] [d5fff51d] - Database tables created successfully
+[2025-06-28 19:20:52,306] [INFO] [src.data.database] [d5fff51d] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-28 19:20:52,306] [INFO] [src.cli.interface] [d5fff51d] - CLI initialized with session ID: d5fff51d
+[2025-06-28 19:20:56,780] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-28 19:20:56,994] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-28 19:20:57,345] [INFO] [src.data.database] [1e1a62f3] - Database tables created successfully
+[2025-06-28 19:20:57,346] [INFO] [src.data.database] [1e1a62f3] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-28 19:20:57,346] [INFO] [src.cli.interface] [1e1a62f3] - CLI initialized with session ID: 1e1a62f3
+[2025-06-28 19:21:01,611] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-28 19:21:01,764] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-28 19:21:02,007] [INFO] [src.data.database] [bfa80727] - Database tables created successfully
+[2025-06-28 19:21:02,007] [INFO] [src.data.database] [bfa80727] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-28 19:21:02,008] [INFO] [src.cli.interface] [bfa80727] - CLI initialized with session ID: bfa80727
+[2025-06-28 19:21:06,873] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-28 19:21:07,097] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-28 19:21:07,450] [INFO] [src.data.database] [dad80f46] - Database tables created successfully
+[2025-06-28 19:21:07,451] [INFO] [src.data.database] [dad80f46] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-28 19:21:07,451] [INFO] [src.cli.interface] [dad80f46] - CLI initialized with session ID: dad80f46
+[2025-06-28 19:21:07,453] [INFO] [src.analysis.statistics] [dad80f46] - StatisticsAnalyzer initialized.
+[2025-06-28 19:21:13,220] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-28 19:21:13,435] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-28 19:21:13,787] [INFO] [src.data.database] [55d9fdec] - Database tables created successfully
+[2025-06-28 19:21:13,787] [INFO] [src.data.database] [55d9fdec] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-28 19:21:13,787] [INFO] [src.cli.interface] [55d9fdec] - CLI initialized with session ID: 55d9fdec
+[2025-06-28 19:21:13,788] [INFO] [src.cli.commands.scrape_commands] [55d9fdec] - Starting concurrent scraping run with 3 workers.
+[2025-06-28 19:21:13,788] [INFO] [ConcurrentScrapingManager] [55d9fdec] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-28 19:21:13,788] [INFO] [src.data.processors] [55d9fdec] - DataProcessor initialized with validation rules.
+[2025-06-28 19:21:13,878] [INFO] [ConcurrentScrapingManager] [55d9fdec] - Added 3 bulk jobs to queue
+[2025-06-28 19:21:13,878] [INFO] [ConcurrentScrapingManager] [55d9fdec] - Started 3 threading workers
+[2025-06-28 19:21:13,880] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 5 scrapers
+[2025-06-28 19:21:13,881] [INFO] [ConcurrentScrapingManager] [55d9fdec] - Concurrent scraping workers started
+[2025-06-28 19:21:13,882] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-28 19:21:13,882] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-28 19:21:13,882] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0863FR3S9
+[2025-06-28 19:21:15,887] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-28 19:21:15,895] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-28 19:21:15,935] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0CHX1W1XY
+[2025-06-28 19:21:16,112] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: Sony WH-1000XM4 Wireless Premium Noise Canceling O...
+[2025-06-28 19:21:16,121] [INFO] [src.data.database] [NO_SESSION] - Created product: <Product(id=7, name='Sony WH-1000XM4 Wireless Premium Noise Canceling Overhead Headphones with Mic for Phone-Call and Alexa Voice Control, Silver WH1000XM4', brand='None')>
+[2025-06-28 19:21:16,146] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Database storage failed: Instance <Site at 0x7f9bd5bae6f0> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:21:16,146] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Failed to store product data: Instance <Site at 0x7f9bd5bae6f0> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:21:16,147] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job bab02c4a completed successfully (2.24s) - ThreadPoolExecutor-0_0-bab02c4a
+[2025-06-28 19:21:16,535] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B0CHX1W1XY: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B0CHX1W1XY
+[2025-06-28 19:21:16,535] [INFO] [AmazonScraper] [NO_SESSION] - Retrying in 1 seconds...
+[2025-06-28 19:21:17,756] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: N/A...
+[2025-06-28 19:21:17,756] [ERROR] [src.data.processors] [NO_SESSION] - Data validation failed for URL https://www.amazon.com/dp/B0CHX1W1XY: Title is missing.
+[2025-06-28 19:21:17,756] [WARNING] [ConcurrentScrapingManager] [NO_SESSION] - Retrying job aad0563c (attempt 1)
+[2025-06-28 19:21:17,900] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-28 19:21:17,901] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-28 19:21:17,901] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0863FR3S9
+[2025-06-28 19:21:19,904] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-28 19:21:19,905] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-28 19:21:19,905] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0CHX1W1XY
+[2025-06-28 19:21:20,152] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: Sony WH-1000XM4 Wireless Premium Noise Canceling O...
+[2025-06-28 19:21:20,156] [INFO] [src.data.database] [NO_SESSION] - Created product: <Product(id=8, name='Sony WH-1000XM4 Wireless Premium Noise Canceling Overhead Headphones with Mic for Phone-Call and Alexa Voice Control, Silver WH1000XM4', brand='None')>
+[2025-06-28 19:21:20,190] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Database storage failed: Instance <Site at 0x7f9bd5bd9940> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:21:20,192] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Failed to store product data: Instance <Site at 0x7f9bd5bd9940> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:21:20,192] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 6150caa9 completed successfully (2.25s) - ThreadPoolExecutor-0_0-6150caa9
+[2025-06-28 19:21:20,345] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B0CHX1W1XY: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B0CHX1W1XY
+[2025-06-28 19:21:20,345] [INFO] [AmazonScraper] [NO_SESSION] - Retrying in 1 seconds...
+[2025-06-28 19:21:21,561] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: N/A...
+[2025-06-28 19:21:21,561] [ERROR] [src.data.processors] [NO_SESSION] - Data validation failed for URL https://www.amazon.com/dp/B0CHX1W1XY: Title is missing.
+[2025-06-28 19:21:21,562] [WARNING] [ConcurrentScrapingManager] [NO_SESSION] - Retrying job aad0563c (attempt 2)
+[2025-06-28 19:21:21,963] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-28 19:21:21,963] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-28 19:21:21,963] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0CHX1W1XY
+[2025-06-28 19:21:22,364] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B0CHX1W1XY: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B0CHX1W1XY
+[2025-06-28 19:21:22,365] [INFO] [AmazonScraper] [NO_SESSION] - Retrying in 1 seconds...
+[2025-06-28 19:21:23,581] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: N/A...
+[2025-06-28 19:21:23,581] [ERROR] [src.data.processors] [NO_SESSION] - Data validation failed for URL https://www.amazon.com/dp/B0CHX1W1XY: Title is missing.
+[2025-06-28 19:21:23,581] [WARNING] [ConcurrentScrapingManager] [NO_SESSION] - Retrying job aad0563c (attempt 3)
+[2025-06-28 19:21:23,983] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-28 19:21:23,983] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-28 19:21:23,983] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0CHX1W1XY
+[2025-06-28 19:21:24,383] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B0CHX1W1XY: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B0CHX1W1XY
+[2025-06-28 19:21:24,384] [INFO] [AmazonScraper] [NO_SESSION] - Retrying in 1 seconds...
+[2025-06-28 19:21:25,591] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: N/A...
+[2025-06-28 19:21:25,592] [ERROR] [src.data.processors] [NO_SESSION] - Data validation failed for URL https://www.amazon.com/dp/B0CHX1W1XY: Title is missing.
+[2025-06-28 19:21:25,593] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Job aad0563c failed permanently: Data validation failed for URL https://www.amazon.com/dp/B0CHX1W1XY: Title is missing.
+[2025-06-28 19:21:25,615] [INFO] [ConcurrentScrapingManager] [55d9fdec] - Stopping concurrent workers...
+[2025-06-28 19:21:25,616] [INFO] [ConcurrentScrapingManager] [55d9fdec] - All workers stopped successfully
+[2025-06-28 19:21:25,617] [INFO] [src.cli.commands.scrape_commands] [55d9fdec] - Scraping run completed. Results: {'started_at': datetime.datetime(2025, 6, 28, 15, 21, 13, 788793), 'jobs_queued': 3, 'jobs_completed': 2, 'jobs_failed': 4, 'total_processing_time': 11.24331521987915, 'sites_processed': ['amazon'], 'elapsed_time': 11.828107, 'jobs_active': 0, 'queue_size': 0, 'avg_processing_time': 5.621657609939575, 'throughput': 0.169088764584223}
+[2025-06-28 19:21:33,053] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-28 19:21:33,278] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-28 19:21:33,638] [INFO] [src.data.database] [a3c30f4f] - Database tables created successfully
+[2025-06-28 19:21:33,638] [INFO] [src.data.database] [a3c30f4f] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-28 19:21:33,638] [INFO] [src.cli.interface] [a3c30f4f] - CLI initialized with session ID: a3c30f4f
+[2025-06-28 19:21:33,639] [INFO] [src.analysis.statistics] [a3c30f4f] - StatisticsAnalyzer initialized.
+[2025-06-28 19:21:33,731] [ERROR] [src.data.database] [a3c30f4f] - Database session error: (sqlite3.OperationalError) no such function: stddev
+[SQL: SELECT products.id AS product_id, products.name AS product_name, avg(price_history.price) AS mean_price, stddev(price_history.price) AS std_dev_price, count(price_history.id) AS data_points 
+FROM products JOIN product_urls ON products.id = product_urls.product_id JOIN price_history ON product_urls.id = price_history.product_url_id GROUP BY products.id, products.name 
+HAVING count(price_history.id) > ?]
+[parameters: (5,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-06-28 19:25:47,820] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-28 19:25:48,313] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-28 19:25:48,837] [INFO] [src.data.database] [43323ab1] - Database tables created successfully
+[2025-06-28 19:25:48,837] [INFO] [src.data.database] [43323ab1] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-28 19:25:48,837] [INFO] [__main__] [43323ab1] - CLI initialized with session ID: 43323ab1
+[2025-06-28 19:25:54,324] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-28 19:25:54,589] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-28 19:25:54,932] [INFO] [src.data.database] [8f5ebcb5] - Database tables created successfully
+[2025-06-28 19:25:54,932] [INFO] [src.data.database] [8f5ebcb5] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-28 19:25:54,932] [INFO] [__main__] [8f5ebcb5] - CLI initialized with session ID: 8f5ebcb5
+[2025-06-28 19:25:58,720] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-28 19:25:58,893] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-28 19:25:59,200] [INFO] [src.data.database] [58ae476c] - Database tables created successfully
+[2025-06-28 19:25:59,201] [INFO] [src.data.database] [58ae476c] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-28 19:25:59,201] [INFO] [__main__] [58ae476c] - CLI initialized with session ID: 58ae476c
+[2025-06-28 19:26:36,356] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-28 19:26:36,520] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-28 19:26:36,854] [INFO] [src.data.database] [50c7b0da] - Database tables created successfully
+[2025-06-28 19:26:36,854] [INFO] [src.data.database] [50c7b0da] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-28 19:26:36,854] [INFO] [__main__] [50c7b0da] - CLI initialized with session ID: 50c7b0da
+[2025-06-28 19:26:36,855] [INFO] [src.cli.commands.scrape_commands] [50c7b0da] - Starting concurrent scraping run with 3 workers.
+[2025-06-28 19:26:36,855] [INFO] [ConcurrentScrapingManager] [50c7b0da] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-28 19:26:36,855] [INFO] [src.data.processors] [50c7b0da] - DataProcessor initialized with validation rules.
+[2025-06-28 19:26:36,902] [INFO] [ConcurrentScrapingManager] [50c7b0da] - Added 2 bulk jobs to queue
+[2025-06-28 19:26:36,903] [INFO] [ConcurrentScrapingManager] [50c7b0da] - Started 3 threading workers
+[2025-06-28 19:26:36,903] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 5 scrapers
+[2025-06-28 19:26:36,903] [INFO] [ConcurrentScrapingManager] [50c7b0da] - Concurrent scraping workers started
+[2025-06-28 19:26:36,903] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-28 19:26:36,904] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-28 19:26:36,904] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-28 19:26:38,416] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-28 19:26:38,421] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-28 19:26:38,463] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-28 19:26:38,544] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-28 19:26:38,550] [INFO] [src.data.database] [NO_SESSION] - Created product: <Product(id=9, name='Invicta Men's Pro Diver 45mm Quartz Rubber Strap Watch - Choice of Color', brand='None')>
+[2025-06-28 19:26:38,559] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Database storage failed: Instance <Site at 0x7f26b6822300> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:26:38,560] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Failed to store product data: Instance <Site at 0x7f26b6822300> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:26:38,560] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 2788a86b completed successfully (1.64s) - ThreadPoolExecutor-0_0-2788a86b
+[2025-06-28 19:26:39,889] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-28 19:26:39,892] [INFO] [src.data.database] [NO_SESSION] - Created product: <Product(id=10, name='Invicta Men's Pro Diver 45mm Quartz Rubber Strap Watch - Choice of Color', brand='None')>
+[2025-06-28 19:26:39,905] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Database storage failed: Instance <Site at 0x7f26b40fdf10> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:26:39,905] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Failed to store product data: Instance <Site at 0x7f26b40fdf10> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:26:39,905] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 318cb0e0 completed successfully (1.47s) - ThreadPoolExecutor-0_1-318cb0e0
+[2025-06-28 19:26:39,926] [INFO] [ConcurrentScrapingManager] [50c7b0da] - Stopping concurrent workers...
+[2025-06-28 19:26:39,926] [INFO] [ConcurrentScrapingManager] [50c7b0da] - All workers stopped successfully
+[2025-06-28 19:26:39,927] [INFO] [src.cli.commands.scrape_commands] [50c7b0da] - Scraping run completed. Results: {'started_at': datetime.datetime(2025, 6, 28, 15, 26, 36, 855506), 'jobs_queued': 2, 'jobs_completed': 2, 'jobs_failed': 0, 'total_processing_time': 3.114946126937866, 'sites_processed': ['ebay'], 'elapsed_time': 3.071588, 'jobs_active': 0, 'queue_size': 0, 'avg_processing_time': 1.557473063468933, 'throughput': 0.6511289925602001}
+[2025-06-28 19:27:13,572] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-28 19:27:13,738] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-28 19:27:14,091] [INFO] [src.data.database] [b9a42339] - Database tables created successfully
+[2025-06-28 19:27:14,091] [INFO] [src.data.database] [b9a42339] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-28 19:27:14,091] [INFO] [__main__] [b9a42339] - CLI initialized with session ID: b9a42339
+[2025-06-28 19:27:14,092] [INFO] [src.cli.commands.scrape_commands] [b9a42339] - Starting concurrent scraping run with 3 workers.
+[2025-06-28 19:27:14,092] [INFO] [ConcurrentScrapingManager] [b9a42339] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-28 19:27:14,092] [INFO] [src.data.processors] [b9a42339] - DataProcessor initialized with validation rules.
+[2025-06-28 19:27:14,161] [INFO] [ConcurrentScrapingManager] [b9a42339] - Added 2 bulk jobs to queue
+[2025-06-28 19:27:14,161] [INFO] [ConcurrentScrapingManager] [b9a42339] - Started 3 threading workers
+[2025-06-28 19:27:14,162] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 5 scrapers
+[2025-06-28 19:27:14,162] [INFO] [ConcurrentScrapingManager] [b9a42339] - Concurrent scraping workers started
+[2025-06-28 19:27:14,162] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-28 19:27:14,162] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-28 19:27:14,163] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-28 19:27:15,679] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-28 19:27:15,723] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-28 19:27:15,746] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-28 19:27:15,748] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-28 19:27:15,757] [INFO] [src.data.database] [NO_SESSION] - Created product: <Product(id=11, name='Invicta Men's Pro Diver 45mm Quartz Rubber Strap Watch - Choice of Color', brand='None')>
+[2025-06-28 19:27:15,767] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Database storage failed: Instance <Site at 0x7f59936695b0> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:27:15,767] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Failed to store product data: Instance <Site at 0x7f59936695b0> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:27:15,767] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job aff77719 completed successfully (1.59s) - ThreadPoolExecutor-0_0-aff77719
+[2025-06-28 19:27:17,156] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-28 19:27:17,158] [INFO] [src.data.database] [NO_SESSION] - Created product: <Product(id=12, name='Invicta Men's Pro Diver 45mm Quartz Rubber Strap Watch - Choice of Color', brand='None')>
+[2025-06-28 19:27:17,172] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Database storage failed: Instance <Site at 0x7f5993668800> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:27:17,173] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Failed to store product data: Instance <Site at 0x7f5993668800> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:27:17,173] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job b9edfd56 completed successfully (1.48s) - ThreadPoolExecutor-0_1-b9edfd56
+[2025-06-28 19:27:17,191] [INFO] [ConcurrentScrapingManager] [b9a42339] - Stopping concurrent workers...
+[2025-06-28 19:27:17,193] [INFO] [ConcurrentScrapingManager] [b9a42339] - All workers stopped successfully
+[2025-06-28 19:27:17,194] [INFO] [src.cli.commands.scrape_commands] [b9a42339] - Scraping run completed. Results: {'started_at': datetime.datetime(2025, 6, 28, 15, 27, 14, 92329), 'jobs_queued': 2, 'jobs_completed': 2, 'jobs_failed': 0, 'total_processing_time': 3.0654752254486084, 'sites_processed': ['ebay'], 'elapsed_time': 3.101707, 'jobs_active': 0, 'queue_size': 0, 'avg_processing_time': 1.5327376127243042, 'throughput': 0.6448062308915703}
+[2025-06-28 19:29:31,362] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-28 19:29:31,656] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-28 19:30:02,009] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-28 19:30:02,388] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-28 19:30:02,865] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-28 19:30:02,866] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-28 19:30:02,866] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-28 19:30:02,866] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-28 19:30:02,899] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 2 bulk jobs to queue
+[2025-06-28 19:30:02,899] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-06-28 19:30:02,900] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 5 scrapers
+[2025-06-28 19:30:02,900] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-28 19:30:02,900] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-28 19:30:02,901] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-28 19:30:02,901] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-28 19:30:04,418] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-28 19:30:04,463] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-28 19:30:04,468] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-28 19:30:04,468] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-28 19:30:04,482] [INFO] [src.data.database] [NO_SESSION] - Created product: <Product(id=13, name='Invicta Men's Pro Diver 45mm Quartz Rubber Strap Watch - Choice of Color', brand='None')>
+[2025-06-28 19:30:04,493] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Database storage failed: Instance <Site at 0x7fd6aa7a5460> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:30:04,494] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Failed to store product data: Instance <Site at 0x7fd6aa7a5460> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:30:04,494] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job c2ad87fa completed successfully (1.57s) - ThreadPoolExecutor-0_0-c2ad87fa
+[2025-06-28 19:30:06,108] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-28 19:30:06,111] [INFO] [src.data.database] [NO_SESSION] - Created product: <Product(id=14, name='Invicta Men's Pro Diver 45mm Quartz Rubber Strap Watch - Choice of Color', brand='None')>
+[2025-06-28 19:30:06,139] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Database storage failed: Instance <Site at 0x7fd6a940e330> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:30:06,140] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Failed to store product data: Instance <Site at 0x7fd6a940e330> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:30:06,140] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 1a44b10f completed successfully (1.69s) - ThreadPoolExecutor-0_1-1a44b10f
+[2025-06-28 19:30:06,225] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-28 19:30:06,225] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-28 19:30:16,455] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-28 19:30:16,884] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-28 19:30:17,166] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-28 19:30:17,167] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-28 19:30:38,016] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-28 19:30:38,346] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-28 19:30:38,606] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-28 19:30:38,607] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-28 19:30:38,607] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-28 19:30:38,608] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-28 19:30:38,638] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 2 bulk jobs to queue
+[2025-06-28 19:30:38,640] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-06-28 19:30:38,641] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 5 scrapers
+[2025-06-28 19:30:38,641] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-28 19:30:38,644] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-28 19:30:38,645] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-28 19:30:38,647] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-28 19:30:40,147] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-28 19:30:40,149] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-28 19:30:40,149] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-28 19:30:40,458] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-28 19:30:40,468] [INFO] [src.data.database] [NO_SESSION] - Created product: <Product(id=15, name='Invicta Men's Pro Diver 45mm Quartz Rubber Strap Watch - Choice of Color', brand='None')>
+[2025-06-28 19:30:40,486] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Database storage failed: Instance <Site at 0x7fdbd84209e0> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:30:40,486] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Failed to store product data: Instance <Site at 0x7fdbd84209e0> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:30:40,486] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 7e4082a4 completed successfully (1.82s) - ThreadPoolExecutor-0_0-7e4082a4
+[2025-06-28 19:30:41,818] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-28 19:30:41,826] [INFO] [src.data.database] [NO_SESSION] - Created product: <Product(id=16, name='Invicta Men's Pro Diver 45mm Quartz Rubber Strap Watch - Choice of Color', brand='None')>
+[2025-06-28 19:30:41,846] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Database storage failed: Instance <Site at 0x7fdbd8422b40> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:30:41,846] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Failed to store product data: Instance <Site at 0x7fdbd8422b40> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:30:41,846] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 5a5d6282 completed successfully (1.67s) - ThreadPoolExecutor-0_1-5a5d6282
+[2025-06-28 19:30:41,870] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-28 19:30:41,872] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-28 19:30:41,874] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-28 19:30:41,874] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-28 19:30:41,878] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 3 bulk jobs to queue
+[2025-06-28 19:30:41,880] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-06-28 19:30:41,880] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-28 19:30:41,881] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-28 19:30:41,881] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-28 19:30:41,881] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0863FR3S9
+[2025-06-28 19:30:43,884] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-28 19:30:43,885] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-28 19:30:43,885] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0CHX1W1XY
+[2025-06-28 19:30:44,267] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: Sony WH-1000XM4 Wireless Premium Noise Canceling O...
+[2025-06-28 19:30:44,277] [INFO] [src.data.database] [NO_SESSION] - Created product: <Product(id=17, name='Sony WH-1000XM4 Wireless Premium Noise Canceling Overhead Headphones with Mic for Phone-Call and Alexa Voice Control, Silver WH1000XM4', brand='None')>
+[2025-06-28 19:30:44,296] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Database storage failed: Instance <Site at 0x7fdbd8d13500> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:30:44,296] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Failed to store product data: Instance <Site at 0x7fdbd8d13500> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:30:44,296] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 46076e72 completed successfully (2.39s) - ThreadPoolExecutor-1_0-46076e72
+[2025-06-28 19:30:44,353] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B0CHX1W1XY: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B0CHX1W1XY
+[2025-06-28 19:30:44,355] [INFO] [AmazonScraper] [NO_SESSION] - Retrying in 1 seconds...
+[2025-06-28 19:30:45,588] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: N/A...
+[2025-06-28 19:30:45,590] [ERROR] [src.data.processors] [NO_SESSION] - Data validation failed for URL https://www.amazon.com/dp/B0CHX1W1XY: Title is missing.
+[2025-06-28 19:30:45,591] [WARNING] [ConcurrentScrapingManager] [NO_SESSION] - Retrying job 626e0190 (attempt 1)
+[2025-06-28 19:30:45,902] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-28 19:30:45,905] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-28 19:30:45,905] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0863FR3S9
+[2025-06-28 19:30:47,907] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-28 19:30:47,908] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-28 19:30:47,908] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0CHX1W1XY
+[2025-06-28 19:30:48,287] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: Sony WH-1000XM4 Wireless Premium Noise Canceling O...
+[2025-06-28 19:30:48,290] [INFO] [src.data.database] [NO_SESSION] - Created product: <Product(id=18, name='Sony WH-1000XM4 Wireless Premium Noise Canceling Overhead Headphones with Mic for Phone-Call and Alexa Voice Control, Silver WH1000XM4', brand='None')>
+[2025-06-28 19:30:48,312] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Database storage failed: Instance <Site at 0x7fdbd889ae40> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:30:48,313] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Failed to store product data: Instance <Site at 0x7fdbd889ae40> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:30:48,313] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job e85e5c16 completed successfully (2.39s) - ThreadPoolExecutor-1_0-e85e5c16
+[2025-06-28 19:30:48,441] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B0CHX1W1XY: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B0CHX1W1XY
+[2025-06-28 19:30:48,441] [INFO] [AmazonScraper] [NO_SESSION] - Retrying in 1 seconds...
+[2025-06-28 19:30:49,693] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: N/A...
+[2025-06-28 19:30:49,693] [ERROR] [src.data.processors] [NO_SESSION] - Data validation failed for URL https://www.amazon.com/dp/B0CHX1W1XY: Title is missing.
+[2025-06-28 19:30:49,694] [WARNING] [ConcurrentScrapingManager] [NO_SESSION] - Retrying job 626e0190 (attempt 2)
+[2025-06-28 19:30:49,994] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-28 19:30:49,995] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-28 19:30:49,995] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0CHX1W1XY
+[2025-06-28 19:30:50,433] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B0CHX1W1XY: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B0CHX1W1XY
+[2025-06-28 19:30:50,434] [INFO] [AmazonScraper] [NO_SESSION] - Retrying in 1 seconds...
+[2025-06-28 19:30:51,646] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: N/A...
+[2025-06-28 19:30:51,647] [ERROR] [src.data.processors] [NO_SESSION] - Data validation failed for URL https://www.amazon.com/dp/B0CHX1W1XY: Title is missing.
+[2025-06-28 19:30:51,648] [WARNING] [ConcurrentScrapingManager] [NO_SESSION] - Retrying job 626e0190 (attempt 3)
+[2025-06-28 19:30:52,052] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-28 19:30:52,053] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-28 19:30:52,053] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0CHX1W1XY
+[2025-06-28 19:30:52,491] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B0CHX1W1XY: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B0CHX1W1XY
+[2025-06-28 19:30:52,491] [INFO] [AmazonScraper] [NO_SESSION] - Retrying in 1 seconds...
+[2025-06-28 19:30:53,706] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: N/A...
+[2025-06-28 19:30:53,706] [ERROR] [src.data.processors] [NO_SESSION] - Data validation failed for URL https://www.amazon.com/dp/B0CHX1W1XY: Title is missing.
+[2025-06-28 19:30:53,706] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Job 626e0190 failed permanently: Data validation failed for URL https://www.amazon.com/dp/B0CHX1W1XY: Title is missing.
+[2025-06-28 19:30:53,725] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-28 19:30:53,725] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-28 19:32:48,956] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-28 19:32:49,395] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-28 19:32:49,797] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-28 19:32:49,798] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-28 19:32:52,057] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-28 19:32:52,058] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-28 19:32:52,081] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 2 bulk jobs to queue
+[2025-06-28 19:32:52,082] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-06-28 19:32:52,085] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 5 scrapers
+[2025-06-28 19:32:52,085] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-28 19:32:52,085] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-28 19:32:52,087] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-28 19:32:52,088] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-28 19:32:53,607] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-28 19:32:53,659] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-28 19:32:53,668] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-28 19:32:53,668] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-28 19:32:53,675] [INFO] [src.data.database] [NO_SESSION] - Created product: <Product(id=19, name='Invicta Men's Pro Diver 45mm Quartz Rubber Strap Watch - Choice of Color', brand='None')>
+[2025-06-28 19:32:53,685] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Database storage failed: Instance <Site at 0x7fc92470b2c0> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:32:53,685] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Failed to store product data: Instance <Site at 0x7fc92470b2c0> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:32:53,685] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job e804a340 completed successfully (1.58s) - ThreadPoolExecutor-0_0-e804a340
+[2025-06-28 19:32:55,063] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-28 19:32:55,066] [INFO] [src.data.database] [NO_SESSION] - Created product: <Product(id=20, name='Invicta Men's Pro Diver 45mm Quartz Rubber Strap Watch - Choice of Color', brand='None')>
+[2025-06-28 19:32:55,076] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Database storage failed: Instance <Site at 0x7fc92470aae0> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:32:55,076] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Failed to store product data: Instance <Site at 0x7fc92470aae0> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:32:55,076] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job fd9d9d0a completed successfully (1.46s) - ThreadPoolExecutor-0_1-fd9d9d0a
+[2025-06-28 19:32:55,109] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-28 19:32:55,110] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-28 19:32:58,608] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-28 19:32:58,608] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-28 19:32:58,611] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 3 bulk jobs to queue
+[2025-06-28 19:32:58,611] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-06-28 19:32:58,612] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-28 19:32:58,612] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-28 19:32:58,613] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-28 19:32:58,613] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0863FR3S9
+[2025-06-28 19:33:00,623] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-28 19:33:00,651] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-28 19:33:00,683] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0CHX1W1XY
+[2025-06-28 19:33:00,821] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: Sony WH-1000XM4 Wireless Premium Noise Canceling O...
+[2025-06-28 19:33:00,823] [INFO] [src.data.database] [NO_SESSION] - Created product: <Product(id=21, name='Sony WH-1000XM4 Wireless Premium Noise Canceling Overhead Headphones with Mic for Phone-Call and Alexa Voice Control, Silver WH1000XM4', brand='None')>
+[2025-06-28 19:33:00,842] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Database storage failed: Instance <Site at 0x7fc9250622a0> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:33:00,843] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Failed to store product data: Instance <Site at 0x7fc9250622a0> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:33:00,843] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 65beaa42 completed successfully (2.21s) - ThreadPoolExecutor-1_0-65beaa42
+[2025-06-28 19:33:01,336] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B0CHX1W1XY: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B0CHX1W1XY
+[2025-06-28 19:33:01,337] [INFO] [AmazonScraper] [NO_SESSION] - Retrying in 1 seconds...
+[2025-06-28 19:33:02,553] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: N/A...
+[2025-06-28 19:33:02,554] [ERROR] [src.data.processors] [NO_SESSION] - Data validation failed for URL https://www.amazon.com/dp/B0CHX1W1XY: Title is missing.
+[2025-06-28 19:33:02,554] [WARNING] [ConcurrentScrapingManager] [NO_SESSION] - Retrying job bff422c8 (attempt 1)
+[2025-06-28 19:33:02,654] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-28 19:33:02,654] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-28 19:33:02,654] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0863FR3S9
+[2025-06-28 19:33:04,656] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-28 19:33:04,657] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-28 19:33:04,657] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0CHX1W1XY
+[2025-06-28 19:33:04,858] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: Sony WH-1000XM4 Wireless Premium Noise Canceling O...
+[2025-06-28 19:33:04,860] [INFO] [src.data.database] [NO_SESSION] - Created product: <Product(id=22, name='Sony WH-1000XM4 Wireless Premium Noise Canceling Overhead Headphones with Mic for Phone-Call and Alexa Voice Control, Silver WH1000XM4', brand='None')>
+[2025-06-28 19:33:04,877] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Database storage failed: Instance <Site at 0x7fc925060a70> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:33:04,877] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Failed to store product data: Instance <Site at 0x7fc925060a70> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-28 19:33:04,877] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 5efcd65b completed successfully (2.20s) - ThreadPoolExecutor-1_0-5efcd65b
+[2025-06-28 19:33:05,246] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B0CHX1W1XY: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B0CHX1W1XY
+[2025-06-28 19:33:05,246] [INFO] [AmazonScraper] [NO_SESSION] - Retrying in 1 seconds...
+[2025-06-28 19:33:06,463] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: N/A...
+[2025-06-28 19:33:06,463] [ERROR] [src.data.processors] [NO_SESSION] - Data validation failed for URL https://www.amazon.com/dp/B0CHX1W1XY: Title is missing.
+[2025-06-28 19:33:06,464] [WARNING] [ConcurrentScrapingManager] [NO_SESSION] - Retrying job bff422c8 (attempt 2)
+[2025-06-28 19:33:06,664] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-28 19:33:06,665] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-28 19:33:06,665] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0CHX1W1XY
+[2025-06-28 19:33:07,077] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B0CHX1W1XY: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B0CHX1W1XY
+[2025-06-28 19:33:07,078] [INFO] [AmazonScraper] [NO_SESSION] - Retrying in 1 seconds...
+[2025-06-28 19:33:08,296] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: N/A...
+[2025-06-28 19:33:08,297] [ERROR] [src.data.processors] [NO_SESSION] - Data validation failed for URL https://www.amazon.com/dp/B0CHX1W1XY: Title is missing.
+[2025-06-28 19:33:08,297] [WARNING] [ConcurrentScrapingManager] [NO_SESSION] - Retrying job bff422c8 (attempt 3)
+[2025-06-28 19:33:08,698] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-28 19:33:08,699] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-28 19:33:08,699] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0CHX1W1XY
+[2025-06-28 19:33:09,097] [WARNING] [AmazonScraper] [NO_SESSION] - Request failed for https://www.amazon.com/dp/B0CHX1W1XY: 404 Client Error: Not Found for url: https://www.amazon.com/dp/B0CHX1W1XY
+[2025-06-28 19:33:09,097] [INFO] [AmazonScraper] [NO_SESSION] - Retrying in 1 seconds...
+[2025-06-28 19:33:10,313] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: N/A...
+[2025-06-28 19:33:10,313] [ERROR] [src.data.processors] [NO_SESSION] - Data validation failed for URL https://www.amazon.com/dp/B0CHX1W1XY: Title is missing.
+[2025-06-28 19:33:10,314] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Job bff422c8 failed permanently: Data validation failed for URL https://www.amazon.com/dp/B0CHX1W1XY: Title is missing.
+[2025-06-28 19:34:27,506] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-28 19:34:27,768] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-28 19:34:27,980] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-28 19:34:27,980] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-28 19:34:27,980] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-28 19:34:27,980] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-28 19:34:27,996] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 2 bulk jobs to queue
+[2025-06-28 19:34:27,996] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-06-28 19:34:27,997] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 5 scrapers
+[2025-06-28 19:34:27,997] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-28 19:34:27,997] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-28 19:34:27,997] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-28 19:34:27,998] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-28 19:34:29,043] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-28 19:34:29,286] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-28 19:34:29,438] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-28 19:34:29,439] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-28 19:34:29,499] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-28 19:34:29,500] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-28 19:34:29,511] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-28 19:34:29,718] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-28 19:34:29,736] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 2bdcc964 completed successfully (1.72s) - ThreadPoolExecutor-0_0-2bdcc964
+[2025-06-28 19:34:31,495] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-28 19:34:31,516] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job a0774216 completed successfully (2.00s) - ThreadPoolExecutor-0_1-a0774216
+[2025-06-28 19:34:31,522] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-28 19:34:31,522] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-28 19:34:36,530] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-28 19:34:36,771] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-28 19:34:37,027] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-28 19:34:37,027] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-28 19:34:37,028] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-28 19:34:37,028] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-28 19:34:37,044] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 2 bulk jobs to queue
+[2025-06-28 19:34:37,044] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-06-28 19:34:37,045] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 5 scrapers
+[2025-06-28 19:34:37,045] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-28 19:34:37,045] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-28 19:34:37,046] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-28 19:34:37,046] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0863FR3S9
+[2025-06-28 19:34:39,048] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-28 19:34:39,049] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-28 19:34:39,049] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0863FR3S9
+[2025-06-28 19:34:39,408] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: Sony WH-1000XM4 Wireless Premium Noise Canceling O...
+[2025-06-28 19:34:39,433] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job d44b1e24 completed successfully (2.36s) - ThreadPoolExecutor-0_0-d44b1e24
+[2025-06-28 19:34:41,384] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: Sony WH-1000XM4 Wireless Premium Noise Canceling O...
+[2025-06-28 19:34:41,404] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 2bb9cd0c completed successfully (2.34s) - ThreadPoolExecutor-0_1-2bb9cd0c
+[2025-06-28 19:34:41,471] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-28 19:34:41,472] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-28 19:35:10,417] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-28 19:35:10,417] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-28 19:35:10,442] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 3 bulk jobs to queue
+[2025-06-28 19:35:10,443] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-06-28 19:35:10,443] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 5 scrapers
+[2025-06-28 19:35:10,443] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-28 19:35:10,443] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-28 19:35:10,444] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-28 19:35:10,444] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-28 19:35:11,946] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-28 19:35:11,947] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-28 19:35:11,947] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-28 19:35:13,109] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-28 19:35:13,136] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job de80da40 completed successfully (2.67s) - ThreadPoolExecutor-0_0-de80da40
+[2025-06-28 19:35:13,441] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-28 19:35:13,467] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job deec1c93 completed successfully (1.50s) - ThreadPoolExecutor-0_1-deec1c93
+[2025-06-28 19:35:13,468] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-28 19:35:13,469] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-28 19:35:13,469] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-28 19:35:15,223] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-28 19:35:15,245] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 865f84c6 completed successfully (1.75s) - ThreadPoolExecutor-0_0-865f84c6
+[2025-06-28 19:35:15,280] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-28 19:35:15,282] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-28 19:35:27,389] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-28 19:35:27,390] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-28 19:35:27,392] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 3 bulk jobs to queue
+[2025-06-28 19:35:27,393] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-06-28 19:35:27,393] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-28 19:35:27,393] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-28 19:35:27,394] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-28 19:35:27,394] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-28 19:35:28,950] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-28 19:35:29,002] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-28 19:35:29,023] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-28 19:35:29,024] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-28 19:35:29,045] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 726925c5 completed successfully (1.63s) - ThreadPoolExecutor-1_0-726925c5
+[2025-06-28 19:35:30,467] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-28 19:35:30,469] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-28 19:35:30,470] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-28 19:35:30,470] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-28 19:35:30,488] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job d02cb0f5 completed successfully (1.52s) - ThreadPoolExecutor-1_1-d02cb0f5
+[2025-06-28 19:35:32,060] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-28 19:35:32,088] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 305c26bd completed successfully (1.59s) - ThreadPoolExecutor-1_0-305c26bd
+[2025-06-28 19:35:32,164] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-28 19:35:32,164] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-28 19:36:25,344] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-28 19:36:25,786] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-28 19:36:26,123] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-28 19:36:26,125] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-28 19:36:26,125] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-28 19:36:26,126] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-28 19:36:26,155] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 1 bulk jobs to queue
+[2025-06-28 19:36:26,155] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-06-28 19:36:26,157] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 5 scrapers
+[2025-06-28 19:36:26,157] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-28 19:36:26,158] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-28 19:36:26,159] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-28 19:36:26,160] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-28 19:36:27,063] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: N/A...
+[2025-06-28 19:36:27,063] [ERROR] [src.data.processors] [NO_SESSION] - Data validation failed for URL https://www.ebay.com/itm/335930354247: Title is missing.
+[2025-06-28 19:36:27,063] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Job 80b5ba24 failed permanently: Data validation failed for URL https://www.ebay.com/itm/335930354247: Title is missing.
+[2025-06-28 19:36:27,163] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-28 19:36:27,163] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-28 19:36:33,874] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-28 19:36:34,199] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-28 19:36:34,443] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-28 19:36:34,443] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-28 19:36:34,445] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-28 19:36:34,445] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-28 19:36:34,472] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 1 bulk jobs to queue
+[2025-06-28 19:36:34,472] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-06-28 19:36:34,473] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 5 scrapers
+[2025-06-28 19:36:34,473] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-28 19:36:34,473] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-28 19:36:34,474] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-28 19:36:34,474] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-28 19:36:35,223] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: N/A...
+[2025-06-28 19:36:35,223] [ERROR] [src.data.processors] [NO_SESSION] - Data validation failed for URL https://www.ebay.com/itm/335930354247: Title is missing.
+[2025-06-28 19:36:35,224] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Job 1c011077 failed permanently: Data validation failed for URL https://www.ebay.com/itm/335930354247: Title is missing.
+[2025-06-28 19:36:35,274] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-28 19:36:35,275] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-28 19:37:01,682] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-28 19:37:01,691] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-28 19:37:01,693] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 1 bulk jobs to queue
+[2025-06-28 19:37:01,693] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-06-28 19:37:01,694] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-28 19:37:01,694] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-28 19:37:01,695] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-28 19:37:01,695] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-28 19:37:02,453] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: N/A...
+[2025-06-28 19:37:02,453] [ERROR] [src.data.processors] [NO_SESSION] - Data validation failed for URL https://www.ebay.com/itm/335930354247: Title is missing.
+[2025-06-28 19:37:02,453] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Job 2afb54ea failed permanently: Data validation failed for URL https://www.ebay.com/itm/335930354247: Title is missing.
+[2025-06-28 19:37:02,496] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-28 19:37:02,496] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-28 19:37:04,581] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-28 19:37:04,582] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-28 19:37:04,584] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 1 bulk jobs to queue
+[2025-06-28 19:37:04,584] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-06-28 19:37:04,584] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-28 19:37:04,585] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-28 19:37:04,585] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-28 19:37:04,585] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-28 19:37:05,393] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: N/A...
+[2025-06-28 19:37:05,393] [ERROR] [src.data.processors] [NO_SESSION] - Data validation failed for URL https://www.ebay.com/itm/335930354247: Title is missing.
+[2025-06-28 19:37:05,394] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Job ee68c6bc failed permanently: Data validation failed for URL https://www.ebay.com/itm/335930354247: Title is missing.
+[2025-06-28 19:37:05,491] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-28 19:37:05,492] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-28 19:37:09,058] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-28 19:37:09,313] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-28 19:37:09,517] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-28 19:37:09,518] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-28 19:37:10,295] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-28 19:37:10,295] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-28 19:37:10,314] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 1 bulk jobs to queue
+[2025-06-28 19:37:10,315] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-06-28 19:37:10,318] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 5 scrapers
+[2025-06-28 19:37:10,319] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-28 19:37:10,319] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-28 19:37:10,320] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-28 19:37:10,321] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-28 19:37:11,116] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: N/A...
+[2025-06-28 19:37:11,116] [ERROR] [src.data.processors] [NO_SESSION] - Data validation failed for URL https://www.ebay.com/itm/335930354247: Title is missing.
+[2025-06-28 19:37:11,116] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Job 5a1b0dfd failed permanently: Data validation failed for URL https://www.ebay.com/itm/335930354247: Title is missing.
+[2025-06-28 19:37:11,121] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-28 19:37:11,121] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-30 12:17:46,861] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 12:17:46,885] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-30 12:17:46,885] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 12:18:56,636] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 12:18:57,016] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 12:18:57,369] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-30 12:18:57,370] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 12:19:25,507] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-30 12:19:25,508] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 12:19:25,542] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 1 bulk jobs to queue
+[2025-06-30 12:19:25,542] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-06-30 12:19:25,543] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 5 scrapers
+[2025-06-30 12:19:25,543] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-30 12:19:25,544] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-30 12:19:25,544] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-30 12:19:25,544] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-30 12:19:27,307] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-30 12:19:27,339] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 93fd9300 completed successfully (1.76s) - ThreadPoolExecutor-0_0-93fd9300
+[2025-06-30 12:19:27,361] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-30 12:19:27,362] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-30 12:19:29,409] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-30 12:19:29,410] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 12:19:29,413] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 3 bulk jobs to queue
+[2025-06-30 12:19:29,413] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-06-30 12:19:29,414] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 12:19:29,415] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-30 12:19:29,417] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 12:19:29,418] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0863FR3S9
+[2025-06-30 12:19:31,420] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 12:19:31,420] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 12:19:31,420] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0863FR3S9
+[2025-06-30 12:19:31,969] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: Sony WH-1000XM4 Wireless Premium Noise Canceling O...
+[2025-06-30 12:19:31,997] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 90165179 completed successfully (2.56s) - ThreadPoolExecutor-1_0-90165179
+[2025-06-30 12:19:33,448] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 12:19:33,449] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 12:19:33,450] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0863FR3S9
+[2025-06-30 12:19:33,804] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: Sony WH-1000XM4 Wireless Premium Noise Canceling O...
+[2025-06-30 12:19:33,836] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 434a84db completed successfully (2.39s) - ThreadPoolExecutor-1_1-434a84db
+[2025-06-30 12:19:36,040] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: Sony WH-1000XM4 Wireless Premium Noise Canceling O...
+[2025-06-30 12:19:36,066] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 01716923 completed successfully (2.59s) - ThreadPoolExecutor-1_0-01716923
+[2025-06-30 12:19:36,090] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-30 12:19:36,091] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-30 12:19:37,579] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-30 12:19:37,579] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 12:19:37,581] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 1 bulk jobs to queue
+[2025-06-30 12:19:37,581] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-06-30 12:19:37,582] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-30 12:19:37,582] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-30 12:19:37,583] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-30 12:19:37,583] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-30 12:19:39,422] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-30 12:19:39,442] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 2f176084 completed successfully (1.84s) - ThreadPoolExecutor-2_0-2f176084
+[2025-06-30 12:19:39,500] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-30 12:19:39,501] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-30 12:19:39,501] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-06-30 12:19:39,501] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 12:19:39,505] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 3 bulk jobs to queue
+[2025-06-30 12:19:39,505] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-06-30 12:19:39,506] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 12:19:39,507] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-30 12:19:39,507] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 12:19:39,508] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0863FR3S9
+[2025-06-30 12:19:41,510] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 12:19:41,511] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 12:19:41,511] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0863FR3S9
+[2025-06-30 12:19:42,014] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: Sony WH-1000XM4 Wireless Premium Noise Canceling O...
+[2025-06-30 12:19:42,028] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job f558e33c completed successfully (2.51s) - ThreadPoolExecutor-3_0-f558e33c
+[2025-06-30 12:19:43,566] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 12:19:43,567] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 12:19:43,567] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0863FR3S9
+[2025-06-30 12:19:43,869] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: Sony WH-1000XM4 Wireless Premium Noise Canceling O...
+[2025-06-30 12:19:43,884] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 4fbdee5e completed successfully (2.36s) - ThreadPoolExecutor-3_1-4fbdee5e
+[2025-06-30 12:19:45,903] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: Sony WH-1000XM4 Wireless Premium Noise Canceling O...
+[2025-06-30 12:19:45,935] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 100fc782 completed successfully (2.34s) - ThreadPoolExecutor-3_0-100fc782
+[2025-06-30 12:19:45,990] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-30 12:19:45,991] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-30 12:20:15,668] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 12:20:15,837] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 12:20:17,374] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 12:20:17,545] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 12:20:17,865] [INFO] [src.data.database] [15c1a52a] - Database tables created successfully
+[2025-06-30 12:20:17,865] [INFO] [src.data.database] [15c1a52a] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 12:20:17,865] [INFO] [__main__] [15c1a52a] - CLI initialized with session ID: 15c1a52a
+[2025-06-30 12:20:22,707] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 12:20:22,896] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 12:20:23,184] [INFO] [src.data.database] [262a32c2] - Database tables created successfully
+[2025-06-30 12:20:23,184] [INFO] [src.data.database] [262a32c2] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 12:20:23,184] [INFO] [__main__] [262a32c2] - CLI initialized with session ID: 262a32c2
+[2025-06-30 12:20:24,272] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 12:20:24,520] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 12:20:24,889] [INFO] [src.data.database] [ced2f6b3] - Database tables created successfully
+[2025-06-30 12:20:24,889] [INFO] [src.data.database] [ced2f6b3] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 12:20:24,889] [INFO] [__main__] [ced2f6b3] - CLI initialized with session ID: ced2f6b3
+[2025-06-30 12:20:30,174] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 12:20:30,389] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 12:20:30,734] [INFO] [src.data.database] [c19a7310] - Database tables created successfully
+[2025-06-30 12:20:30,735] [INFO] [src.data.database] [c19a7310] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 12:20:30,735] [INFO] [__main__] [c19a7310] - CLI initialized with session ID: c19a7310
+[2025-06-30 12:20:30,736] [INFO] [src.cli.commands.scrape_commands] [c19a7310] - Starting concurrent scraping run with 2 workers.
+[2025-06-30 12:20:30,736] [INFO] [ConcurrentScrapingManager] [c19a7310] - Concurrent manager initialized: 2 workers, threading mode
+[2025-06-30 12:20:30,736] [INFO] [src.data.processors] [c19a7310] - DataProcessor initialized with validation rules.
+[2025-06-30 12:20:30,794] [INFO] [ConcurrentScrapingManager] [c19a7310] - Added 1 bulk jobs to queue
+[2025-06-30 12:20:30,795] [INFO] [ConcurrentScrapingManager] [c19a7310] - Started 2 threading workers
+[2025-06-30 12:20:30,796] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 5 scrapers
+[2025-06-30 12:20:30,796] [INFO] [ConcurrentScrapingManager] [c19a7310] - Concurrent scraping workers started
+[2025-06-30 12:20:30,797] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-30 12:20:30,798] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-30 12:20:30,798] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-30 12:20:32,427] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-30 12:20:32,478] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 811bad5a completed successfully (1.63s) - ThreadPoolExecutor-0_0-811bad5a
+[2025-06-30 12:20:32,514] [INFO] [ConcurrentScrapingManager] [c19a7310] - Stopping concurrent workers...
+[2025-06-30 12:20:32,515] [INFO] [ConcurrentScrapingManager] [c19a7310] - All workers stopped successfully
+[2025-06-30 12:20:32,516] [INFO] [src.cli.commands.scrape_commands] [c19a7310] - Scraping run completed. Results: {'started_at': datetime.datetime(2025, 6, 30, 8, 20, 30, 736604), 'jobs_queued': 1, 'jobs_completed': 1, 'jobs_failed': 0, 'total_processing_time': 1.6324694156646729, 'sites_processed': ['ebay'], 'elapsed_time': 1.779564, 'jobs_active': 0, 'queue_size': 0, 'avg_processing_time': 1.6324694156646729, 'throughput': 0.5619353954114603}
+[2025-06-30 12:20:33,550] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 12:20:33,806] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 12:20:34,173] [INFO] [src.data.database] [5f5b4957] - Database tables created successfully
+[2025-06-30 12:20:34,173] [INFO] [src.data.database] [5f5b4957] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 12:20:34,173] [INFO] [__main__] [5f5b4957] - CLI initialized with session ID: 5f5b4957
+[2025-06-30 12:21:19,933] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 12:21:20,405] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-30 12:21:20,406] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 12:21:20,435] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 2 workers, threading mode
+[2025-06-30 12:21:20,435] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 12:21:20,436] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 1 bulk jobs to queue
+[2025-06-30 12:21:20,436] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 2 threading workers
+[2025-06-30 12:21:20,437] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 5 scrapers
+[2025-06-30 12:21:20,437] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-30 12:21:20,438] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-30 12:21:20,439] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-30 12:21:20,439] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-30 12:21:22,240] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-30 12:21:22,261] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 93739d06 completed successfully (1.80s) - ThreadPoolExecutor-0_0-93739d06
+[2025-06-30 12:21:22,279] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-30 12:21:22,279] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-30 12:21:22,280] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 2 workers, threading mode
+[2025-06-30 12:21:22,280] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 12:21:22,281] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 1 bulk jobs to queue
+[2025-06-30 12:21:22,281] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 2 threading workers
+[2025-06-30 12:21:22,282] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 12:21:22,282] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-30 12:21:22,282] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 12:21:22,283] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0863FR3S9
+[2025-06-30 12:21:24,596] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: Sony WH-1000XM4 Wireless Premium Noise Canceling O...
+[2025-06-30 12:21:24,634] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 9de4a874 completed successfully (2.32s) - ThreadPoolExecutor-1_0-9de4a874
+[2025-06-30 12:21:24,697] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-30 12:21:24,697] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-30 12:21:24,698] [INFO] [src.analysis.statistics] [NO_SESSION] - StatisticsAnalyzer initialized.
+[2025-06-30 12:21:24,737] [INFO] [src.analysis.statistics] [NO_SESSION] - No price history found for product ID 2.
+[2025-06-30 12:42:57,656] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 12:42:57,842] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 12:42:58,228] [INFO] [src.data.database] [aaec939b] - Database tables created successfully
+[2025-06-30 12:42:58,229] [INFO] [src.data.database] [aaec939b] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 12:42:58,229] [INFO] [__main__] [aaec939b] - CLI initialized with session ID: aaec939b
+[2025-06-30 12:42:58,229] [INFO] [src.cli.commands.analysis_commands] [aaec939b] - Generating comprehensive report...
+[2025-06-30 12:42:58,711] [INFO] [matplotlib.font_manager] [aaec939b] - Failed to extract font properties from /usr/share/fonts/cantarell/Cantarell-VF.otf: Can not load face (SFNT font table missing; error code 0x8e)
+[2025-06-30 12:42:58,725] [INFO] [matplotlib.font_manager] [aaec939b] - Failed to extract font properties from /usr/share/fonts/noto/NotoColorEmoji.ttf: Can not load face (unknown file format; error code 0x2)
+[2025-06-30 12:42:59,645] [INFO] [matplotlib.font_manager] [aaec939b] - Failed to extract font properties from /usr/share/fonts/joypixels/JoyPixels.ttf: Can not load face (unknown file format; error code 0x2)
+[2025-06-30 12:43:01,003] [INFO] [matplotlib.font_manager] [aaec939b] - generated new fontManager
+[2025-06-30 12:43:02,010] [INFO] [src.analysis.statistics] [aaec939b] - StatisticsAnalyzer initialized.
+[2025-06-30 12:43:02,011] [INFO] [src.analysis.reports] [aaec939b] - ReportGenerator initialized
+[2025-06-30 12:43:02,011] [INFO] [src.analysis.reports] [aaec939b] - Generating comprehensive HTML report
+[2025-06-30 12:43:02,508] [INFO] [src.analysis.statistics] [aaec939b] - No price history found for product ID 2.
+[2025-06-30 12:43:02,514] [INFO] [src.analysis.statistics] [aaec939b] - No price history found for product ID 4.
+[2025-06-30 12:43:02,516] [INFO] [src.analysis.statistics] [aaec939b] - No price history found for product ID 5.
+[2025-06-30 12:43:02,523] [INFO] [src.analysis.statistics] [aaec939b] - No price history found for product ID 7.
+[2025-06-30 12:43:02,525] [INFO] [src.analysis.statistics] [aaec939b] - No price history found for product ID 8.
+[2025-06-30 12:43:02,528] [INFO] [src.analysis.statistics] [aaec939b] - No price history found for product ID 9.
+[2025-06-30 12:43:02,531] [INFO] [src.analysis.statistics] [aaec939b] - No price history found for product ID 10.
+[2025-06-30 12:43:03,877] [ERROR] [src.cli.commands.analysis_commands] [aaec939b] - Report generation failed: Parent instance <PriceHistory at 0x7f008df456a0> is not bound to a Session; lazy load operation of attribute 'product_url' cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+[2025-06-30 12:43:28,049] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 12:43:28,231] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 12:43:28,581] [INFO] [src.data.database] [d7e4fa40] - Database tables created successfully
+[2025-06-30 12:43:28,581] [INFO] [src.data.database] [d7e4fa40] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 12:43:28,581] [INFO] [__main__] [d7e4fa40] - CLI initialized with session ID: d7e4fa40
+[2025-06-30 12:43:28,582] [INFO] [src.cli.commands.analysis_commands] [d7e4fa40] - Generating comprehensive report...
+[2025-06-30 12:43:29,388] [INFO] [src.analysis.statistics] [d7e4fa40] - StatisticsAnalyzer initialized.
+[2025-06-30 12:43:29,389] [INFO] [src.analysis.reports] [d7e4fa40] - ReportGenerator initialized
+[2025-06-30 12:43:29,390] [INFO] [src.analysis.reports] [d7e4fa40] - Generating comprehensive HTML report
+[2025-06-30 12:43:29,991] [INFO] [src.analysis.statistics] [d7e4fa40] - No price history found for product ID 2.
+[2025-06-30 12:43:30,000] [INFO] [src.analysis.statistics] [d7e4fa40] - No price history found for product ID 4.
+[2025-06-30 12:43:30,004] [INFO] [src.analysis.statistics] [d7e4fa40] - No price history found for product ID 5.
+[2025-06-30 12:43:30,012] [INFO] [src.analysis.statistics] [d7e4fa40] - No price history found for product ID 7.
+[2025-06-30 12:43:30,014] [INFO] [src.analysis.statistics] [d7e4fa40] - No price history found for product ID 8.
+[2025-06-30 12:43:30,016] [INFO] [src.analysis.statistics] [d7e4fa40] - No price history found for product ID 9.
+[2025-06-30 12:43:30,018] [INFO] [src.analysis.statistics] [d7e4fa40] - No price history found for product ID 10.
+[2025-06-30 12:43:31,199] [INFO] [src.analysis.reports] [d7e4fa40] - HTML report generated: data_output/reports/comprehensive_report_20250630_124331.html
+[2025-06-30 12:43:42,308] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 12:43:42,998] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-30 12:43:42,998] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 12:43:43,828] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 2 workers, threading mode
+[2025-06-30 12:43:43,829] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 12:43:43,829] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 1 bulk jobs to queue
+[2025-06-30 12:43:43,829] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 2 threading workers
+[2025-06-30 12:43:43,829] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 5 scrapers
+[2025-06-30 12:43:43,830] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-30 12:43:43,830] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-30 12:43:43,830] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-30 12:43:43,830] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-30 12:43:46,983] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-30 12:43:47,012] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 3145192d completed successfully (3.15s) - ThreadPoolExecutor-0_0-3145192d
+[2025-06-30 12:43:47,113] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-30 12:43:47,113] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-30 12:43:47,113] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 2 workers, threading mode
+[2025-06-30 12:43:47,114] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 12:43:47,114] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 1 bulk jobs to queue
+[2025-06-30 12:43:47,114] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 2 threading workers
+[2025-06-30 12:43:47,114] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 12:43:47,115] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-30 12:43:47,115] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 12:43:47,115] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0863FR3S9
+[2025-06-30 12:43:49,419] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: Sony WH-1000XM4 Wireless Premium Noise Canceling O...
+[2025-06-30 12:43:49,450] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job d9997f43 completed successfully (2.31s) - ThreadPoolExecutor-1_0-d9997f43
+[2025-06-30 12:43:49,531] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-30 12:43:49,532] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-30 12:43:49,532] [INFO] [src.analysis.statistics] [NO_SESSION] - StatisticsAnalyzer initialized.
+[2025-06-30 12:43:49,582] [INFO] [src.analysis.statistics] [NO_SESSION] - No price history found for product ID 2.
+[2025-06-30 12:45:56,165] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 12:45:56,582] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-30 12:45:56,583] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 12:45:57,538] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 2 workers, threading mode
+[2025-06-30 12:45:57,538] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 12:45:57,538] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 1 bulk jobs to queue
+[2025-06-30 12:45:57,538] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 2 threading workers
+[2025-06-30 12:45:57,539] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 5 scrapers
+[2025-06-30 12:45:57,539] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-30 12:45:57,539] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-30 12:45:57,539] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-30 12:45:57,540] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-30 12:46:00,693] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-30 12:46:00,720] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 4565e065 completed successfully (3.16s) - ThreadPoolExecutor-0_0-4565e065
+[2025-06-30 12:46:00,756] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-30 12:46:00,757] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-30 12:46:00,757] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 2 workers, threading mode
+[2025-06-30 12:46:00,757] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 12:46:00,758] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 1 bulk jobs to queue
+[2025-06-30 12:46:00,758] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 2 threading workers
+[2025-06-30 12:46:00,759] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 12:46:00,759] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-30 12:46:00,759] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 12:46:00,760] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0863FR3S9
+[2025-06-30 12:46:03,102] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: Sony WH-1000XM4 Wireless Premium Noise Canceling O...
+[2025-06-30 12:46:03,124] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job b686a24e completed successfully (2.34s) - ThreadPoolExecutor-1_0-b686a24e
+[2025-06-30 12:46:03,173] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-30 12:46:03,174] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-30 12:46:03,175] [INFO] [src.analysis.statistics] [NO_SESSION] - StatisticsAnalyzer initialized.
+[2025-06-30 12:46:03,209] [INFO] [src.analysis.statistics] [NO_SESSION] - No price history found for product ID 2.
+[2025-06-30 12:46:13,994] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 12:46:14,156] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 12:46:14,435] [INFO] [src.data.database] [00bdcfce] - Database tables created successfully
+[2025-06-30 12:46:14,435] [INFO] [src.data.database] [00bdcfce] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 12:46:14,435] [INFO] [__main__] [00bdcfce] - CLI initialized with session ID: 00bdcfce
+[2025-06-30 12:46:14,435] [INFO] [src.cli.commands.analysis_commands] [00bdcfce] - Generating comprehensive report...
+[2025-06-30 12:46:15,226] [INFO] [src.analysis.statistics] [00bdcfce] - StatisticsAnalyzer initialized.
+[2025-06-30 12:46:15,227] [INFO] [src.analysis.reports] [00bdcfce] - ReportGenerator initialized
+[2025-06-30 12:46:15,228] [INFO] [src.analysis.reports] [00bdcfce] - Generating comprehensive HTML report
+[2025-06-30 12:46:15,558] [INFO] [src.analysis.statistics] [00bdcfce] - No price history found for product ID 2.
+[2025-06-30 12:46:15,566] [INFO] [src.analysis.statistics] [00bdcfce] - No price history found for product ID 4.
+[2025-06-30 12:46:15,568] [INFO] [src.analysis.statistics] [00bdcfce] - No price history found for product ID 5.
+[2025-06-30 12:46:15,575] [INFO] [src.analysis.statistics] [00bdcfce] - No price history found for product ID 7.
+[2025-06-30 12:46:15,577] [INFO] [src.analysis.statistics] [00bdcfce] - No price history found for product ID 8.
+[2025-06-30 12:46:15,579] [INFO] [src.analysis.statistics] [00bdcfce] - No price history found for product ID 9.
+[2025-06-30 12:46:15,583] [INFO] [src.analysis.statistics] [00bdcfce] - No price history found for product ID 10.
+[2025-06-30 12:46:16,707] [INFO] [src.analysis.reports] [00bdcfce] - HTML report generated: data_output/reports/comprehensive_report_20250630_124616.html
+[2025-06-30 12:46:19,764] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 12:46:19,921] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 12:46:20,191] [INFO] [src.data.database] [374469d9] - Database tables created successfully
+[2025-06-30 12:46:20,192] [INFO] [src.data.database] [374469d9] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 12:46:20,192] [INFO] [__main__] [374469d9] - CLI initialized with session ID: 374469d9
+[2025-06-30 12:46:20,193] [INFO] [src.cli.commands.scrape_commands] [374469d9] - Starting concurrent scraping run with 2 workers.
+[2025-06-30 12:46:20,193] [INFO] [ConcurrentScrapingManager] [374469d9] - Concurrent manager initialized: 2 workers, threading mode
+[2025-06-30 12:46:20,193] [INFO] [src.data.processors] [374469d9] - DataProcessor initialized with validation rules.
+[2025-06-30 12:46:20,252] [INFO] [ConcurrentScrapingManager] [374469d9] - Added 2 bulk jobs to queue
+[2025-06-30 12:46:20,252] [INFO] [ConcurrentScrapingManager] [374469d9] - Started 2 threading workers
+[2025-06-30 12:46:20,252] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 5 scrapers
+[2025-06-30 12:46:20,252] [INFO] [ConcurrentScrapingManager] [374469d9] - Concurrent scraping workers started
+[2025-06-30 12:46:20,253] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 12:46:20,253] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 12:46:20,253] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0863FR3S9
+[2025-06-30 12:46:22,259] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 12:46:22,260] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 12:46:22,260] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0863FR3S9
+[2025-06-30 12:46:22,476] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: Sony WH-1000XM4 Wireless Premium Noise Canceling O...
+[2025-06-30 12:46:22,501] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job cdbe369a completed successfully (2.22s) - ThreadPoolExecutor-0_0-cdbe369a
+[2025-06-30 12:46:24,574] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: Sony WH-1000XM4 Wireless Premium Noise Canceling O...
+[2025-06-30 12:46:24,598] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 54924aff completed successfully (2.32s) - ThreadPoolExecutor-0_1-54924aff
+[2025-06-30 12:46:24,675] [INFO] [ConcurrentScrapingManager] [374469d9] - Stopping concurrent workers...
+[2025-06-30 12:46:24,675] [INFO] [ConcurrentScrapingManager] [374469d9] - All workers stopped successfully
+[2025-06-30 12:46:24,676] [INFO] [src.cli.commands.scrape_commands] [374469d9] - Scraping run completed. Results: {'started_at': datetime.datetime(2025, 6, 30, 8, 46, 20, 193245), 'jobs_queued': 2, 'jobs_completed': 2, 'jobs_failed': 0, 'total_processing_time': 4.539755821228027, 'sites_processed': ['amazon'], 'elapsed_time': 4.482834, 'jobs_active': 0, 'queue_size': 0, 'avg_processing_time': 2.2698779106140137, 'throughput': 0.44614634403147646}
+[2025-06-30 12:46:39,482] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 12:46:39,625] [INFO] [scrapy.utils.log] [NO_SESSION] - Scrapy 2.13.0 started (bot: price_monitor)
+[2025-06-30 12:46:39,637] [INFO] [scrapy.utils.log] [NO_SESSION] - Versions:
+{'lxml': '4.9.3',
+ 'libxml2': '2.10.3',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '24.11.0',
+ 'Python': '3.12.2 (main, Apr  3 2025, 19:19:16) [GCC 14.2.1 20250207]',
+ 'pyOpenSSL': '25.0.0 (OpenSSL 3.2.1 30 Jan 2024)',
+ 'cryptography': '42.0.7',
+ 'Platform': 'Linux-6.15.2-zen1-1-zen-x86_64-with-glibc2.41'}
+[2025-06-30 12:46:39,639] [INFO] [amazon] [NO_SESSION] - Amazon spider initialized with 1 URLs
+[2025-06-30 12:46:39,639] [INFO] [scrapy.addons] [NO_SESSION] - Enabled addons:
+[]
+[2025-06-30 12:46:39,641] [WARNING] [py.warnings] [NO_SESSION] - /home/coder/.pyenv/versions/3.12.2/lib/python3.12/site-packages/scrapy/utils/request.py:120: ScrapyDeprecationWarning: 'REQUEST_FINGERPRINTER_IMPLEMENTATION' is a deprecated setting.
+It will be removed in a future version of Scrapy.
+  return cls(crawler)
+
+[2025-06-30 12:46:39,642] [DEBUG] [asyncio] [NO_SESSION] - Using selector: EpollSelector
+[2025-06-30 12:46:39,643] [DEBUG] [scrapy.utils.log] [NO_SESSION] - Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+[2025-06-30 12:46:39,644] [DEBUG] [scrapy.utils.log] [NO_SESSION] - Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+[2025-06-30 12:46:39,696] [CRITICAL] [twisted] [NO_SESSION] - Unhandled error in Deferred:
+[2025-06-30 12:46:39,699] [CRITICAL] [twisted] [NO_SESSION] - 
+Traceback (most recent call last):
+  File "/home/coder/.pyenv/versions/3.12.2/lib/python3.12/site-packages/twisted/internet/defer.py", line 2017, in _inlineCallbacks
+    result = context.run(gen.send, result)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/coder/.pyenv/versions/3.12.2/lib/python3.12/site-packages/scrapy/crawler.py", line 154, in crawl
+    self._apply_settings()
+  File "/home/coder/.pyenv/versions/3.12.2/lib/python3.12/site-packages/scrapy/crawler.py", line 131, in _apply_settings
+    self.extensions = ExtensionManager.from_crawler(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/coder/.pyenv/versions/3.12.2/lib/python3.12/site-packages/scrapy/middleware.py", line 77, in from_crawler
+    return cls._from_settings(crawler.settings, crawler)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/coder/.pyenv/versions/3.12.2/lib/python3.12/site-packages/scrapy/middleware.py", line 86, in _from_settings
+    mwcls = load_object(clspath)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/home/coder/.pyenv/versions/3.12.2/lib/python3.12/site-packages/scrapy/utils/misc.py", line 71, in load_object
+    mod = import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/coder/.pyenv/versions/3.12.2/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'src.scrapers.scrapy_crawler.extensions'
+[2025-06-30 12:46:42,350] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 12:46:42,654] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 12:46:43,186] [INFO] [src.data.database] [38ca2cdb] - Database tables created successfully
+[2025-06-30 12:46:43,186] [INFO] [src.data.database] [38ca2cdb] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 12:46:43,187] [INFO] [__main__] [38ca2cdb] - CLI initialized with session ID: 38ca2cdb
+[2025-06-30 12:47:31,040] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 12:47:31,220] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 12:47:31,528] [INFO] [src.data.database] [d16c38a5] - Database tables created successfully
+[2025-06-30 12:47:31,529] [INFO] [src.data.database] [d16c38a5] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 12:47:31,529] [INFO] [__main__] [d16c38a5] - CLI initialized with session ID: d16c38a5
+[2025-06-30 12:47:31,530] [INFO] [src.analysis.statistics] [d16c38a5] - StatisticsAnalyzer initialized.
+[2025-06-30 12:47:34,841] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 12:47:35,017] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 12:47:35,312] [INFO] [src.data.database] [a0f8e5dc] - Database tables created successfully
+[2025-06-30 12:47:35,312] [INFO] [src.data.database] [a0f8e5dc] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 12:47:35,312] [INFO] [__main__] [a0f8e5dc] - CLI initialized with session ID: a0f8e5dc
+[2025-06-30 12:47:37,930] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 12:47:38,119] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 12:47:38,405] [INFO] [src.data.database] [0962309e] - Database tables created successfully
+[2025-06-30 12:47:38,405] [INFO] [src.data.database] [0962309e] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 12:47:38,405] [INFO] [__main__] [0962309e] - CLI initialized with session ID: 0962309e
+[2025-06-30 12:47:44,852] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 12:47:45,050] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 12:47:48,194] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 12:47:48,617] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 12:47:49,046] [INFO] [src.data.database] [b8465ea4] - Database tables created successfully
+[2025-06-30 12:47:49,047] [INFO] [src.data.database] [b8465ea4] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 12:47:49,047] [INFO] [__main__] [b8465ea4] - CLI initialized with session ID: b8465ea4
+[2025-06-30 12:47:51,909] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 12:47:52,105] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 12:47:52,412] [INFO] [src.data.database] [c383363a] - Database tables created successfully
+[2025-06-30 12:47:52,412] [INFO] [src.data.database] [c383363a] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 12:47:52,412] [INFO] [__main__] [c383363a] - CLI initialized with session ID: c383363a
+[2025-06-30 12:47:59,555] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 12:47:59,734] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 12:48:00,019] [INFO] [src.data.database] [dfc9e035] - Database tables created successfully
+[2025-06-30 12:48:00,019] [INFO] [src.data.database] [dfc9e035] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 12:48:00,020] [INFO] [__main__] [dfc9e035] - CLI initialized with session ID: dfc9e035
+[2025-06-30 12:48:02,894] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 12:48:03,086] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 12:48:03,395] [INFO] [src.data.database] [fa3d329d] - Database tables created successfully
+[2025-06-30 12:48:03,395] [INFO] [src.data.database] [fa3d329d] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 12:48:03,395] [INFO] [__main__] [fa3d329d] - CLI initialized with session ID: fa3d329d
+[2025-06-30 12:48:12,579] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 12:48:12,748] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 12:48:13,035] [INFO] [src.data.database] [d460789e] - Database tables created successfully
+[2025-06-30 12:48:13,036] [INFO] [src.data.database] [d460789e] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 12:48:13,036] [INFO] [__main__] [d460789e] - CLI initialized with session ID: d460789e
+[2025-06-30 12:48:15,791] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 12:48:15,954] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-06-30 12:48:16,223] [INFO] [src.data.database] [1700417a] - Database tables created successfully
+[2025-06-30 12:48:16,224] [INFO] [src.data.database] [1700417a] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 12:48:16,224] [INFO] [__main__] [1700417a] - CLI initialized with session ID: 1700417a
+[2025-06-30 12:48:16,224] [INFO] [src.analysis.statistics] [1700417a] - StatisticsAnalyzer initialized.
+[2025-06-30 12:55:12,358] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-06-30 12:55:12,972] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-06-30 12:55:12,973] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-06-30 12:55:14,057] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 2 workers, threading mode
+[2025-06-30 12:55:14,057] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 12:55:14,057] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 1 bulk jobs to queue
+[2025-06-30 12:55:14,057] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 2 threading workers
+[2025-06-30 12:55:14,058] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 5 scrapers
+[2025-06-30 12:55:14,058] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-30 12:55:14,058] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-06-30 12:55:14,059] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-06-30 12:55:14,059] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-06-30 12:55:16,711] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-06-30 12:55:16,728] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 304e333e completed successfully (2.65s) - ThreadPoolExecutor-0_0-304e333e
+[2025-06-30 12:55:16,774] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-30 12:55:16,774] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-30 12:55:16,774] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 2 workers, threading mode
+[2025-06-30 12:55:16,775] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-06-30 12:55:16,775] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 1 bulk jobs to queue
+[2025-06-30 12:55:16,775] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 2 threading workers
+[2025-06-30 12:55:16,775] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-06-30 12:55:16,775] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-06-30 12:55:16,776] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-06-30 12:55:16,776] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0863FR3S9
+[2025-06-30 12:55:19,972] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: Sony WH-1000XM4 Wireless Premium Noise Canceling O...
+[2025-06-30 12:55:19,992] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job d45eac17 completed successfully (3.20s) - ThreadPoolExecutor-1_0-d45eac17
+[2025-06-30 12:55:20,086] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-06-30 12:55:20,087] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-06-30 12:55:20,087] [INFO] [src.analysis.statistics] [NO_SESSION] - StatisticsAnalyzer initialized.
+[2025-06-30 12:55:20,126] [INFO] [src.analysis.statistics] [NO_SESSION] - No price history found for product ID 2.

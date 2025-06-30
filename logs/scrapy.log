@@ -1,0 +1,46 @@
+2025-06-30 12:46:39 [scrapy.utils.log] INFO: Scrapy 2.13.0 started (bot: price_monitor)
+2025-06-30 12:46:39 [scrapy.utils.log] INFO: Versions:
+{'lxml': '4.9.3',
+ 'libxml2': '2.10.3',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '24.11.0',
+ 'Python': '3.12.2 (main, Apr  3 2025, 19:19:16) [GCC 14.2.1 20250207]',
+ 'pyOpenSSL': '25.0.0 (OpenSSL 3.2.1 30 Jan 2024)',
+ 'cryptography': '42.0.7',
+ 'Platform': 'Linux-6.15.2-zen1-1-zen-x86_64-with-glibc2.41'}
+2025-06-30 12:46:39 [amazon] INFO: Amazon spider initialized with 1 URLs
+2025-06-30 12:46:39 [scrapy.addons] INFO: Enabled addons:
+[]
+2025-06-30 12:46:39 [py.warnings] WARNING: /home/coder/.pyenv/versions/3.12.2/lib/python3.12/site-packages/scrapy/utils/request.py:120: ScrapyDeprecationWarning: 'REQUEST_FINGERPRINTER_IMPLEMENTATION' is a deprecated setting.
+It will be removed in a future version of Scrapy.
+  return cls(crawler)
+
+2025-06-30 12:46:39 [twisted] CRITICAL: Unhandled error in Deferred:
+2025-06-30 12:46:39 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "/home/coder/.pyenv/versions/3.12.2/lib/python3.12/site-packages/twisted/internet/defer.py", line 2017, in _inlineCallbacks
+    result = context.run(gen.send, result)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/coder/.pyenv/versions/3.12.2/lib/python3.12/site-packages/scrapy/crawler.py", line 154, in crawl
+    self._apply_settings()
+  File "/home/coder/.pyenv/versions/3.12.2/lib/python3.12/site-packages/scrapy/crawler.py", line 131, in _apply_settings
+    self.extensions = ExtensionManager.from_crawler(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/coder/.pyenv/versions/3.12.2/lib/python3.12/site-packages/scrapy/middleware.py", line 77, in from_crawler
+    return cls._from_settings(crawler.settings, crawler)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/coder/.pyenv/versions/3.12.2/lib/python3.12/site-packages/scrapy/middleware.py", line 86, in _from_settings
+    mwcls = load_object(clspath)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/home/coder/.pyenv/versions/3.12.2/lib/python3.12/site-packages/scrapy/utils/misc.py", line 71, in load_object
+    mod = import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/coder/.pyenv/versions/3.12.2/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'src.scrapers.scrapy_crawler.extensions'
