@@ -1897,3 +1897,312 @@ WHERE products.name = ?
 [2025-06-30 22:20:53,892] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
 [2025-06-30 22:20:53,912] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
 [2025-06-30 22:20:53,912] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-07-01 22:39:12,364] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-07-01 22:39:13,977] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-07-01 22:39:13,977] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-07-01 22:39:13,998] [ERROR] [src.data.database] [NO_SESSION] - Database session error: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-07-01 22:39:59,562] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-07-01 22:39:59,738] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-07-01 22:40:00,039] [INFO] [src.data.database] [699d5c65] - Database tables created successfully
+[2025-07-01 22:40:00,039] [INFO] [src.data.database] [699d5c65] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-07-01 22:40:00,039] [INFO] [__main__] [699d5c65] - CLI initialized with session ID: 699d5c65
+[2025-07-01 22:40:00,040] [INFO] [src.cli.commands.analysis_commands] [699d5c65] - Generating comprehensive report...
+[2025-07-01 22:40:00,895] [INFO] [src.analysis.statistics] [699d5c65] - StatisticsAnalyzer initialized.
+[2025-07-01 22:40:00,896] [INFO] [src.analysis.reports] [699d5c65] - ReportGenerator initialized
+[2025-07-01 22:40:00,896] [INFO] [src.analysis.reports] [699d5c65] - Generating comprehensive HTML report
+[2025-07-01 22:40:00,914] [ERROR] [src.data.database] [699d5c65] - Database session error: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products) AS anon_1]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-07-01 22:40:00,914] [ERROR] [src.data.database] [699d5c65] - Database session error: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products) AS anon_1]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-07-01 22:40:00,914] [ERROR] [src.cli.commands.analysis_commands] [699d5c65] - Report generation failed: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products) AS anon_1]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-07-01 22:40:11,911] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-07-01 22:40:12,078] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-07-01 22:40:12,369] [INFO] [src.data.database] [685b1348] - Database tables created successfully
+[2025-07-01 22:40:12,370] [INFO] [src.data.database] [685b1348] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-07-01 22:40:12,370] [INFO] [__main__] [685b1348] - CLI initialized with session ID: 685b1348
+[2025-07-01 22:40:12,371] [INFO] [src.analysis.statistics] [685b1348] - StatisticsAnalyzer initialized.
+[2025-07-01 22:42:59,490] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-07-01 22:43:00,767] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-07-01 22:43:02,291] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-07-01 22:43:02,291] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-07-01 22:43:08,931] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-07-01 22:43:08,932] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-07-01 22:43:09,053] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 1 bulk jobs to queue
+[2025-07-01 22:43:09,053] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-07-01 22:43:09,055] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 4 scrapers
+[2025-07-01 22:43:09,055] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-07-01 22:43:09,055] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: shop.ge -> ShopGeScraper
+[2025-07-01 22:43:09,056] [INFO] [ShopGeScraper] [NO_SESSION] - Initialized shopge scraper
+[2025-07-01 22:43:09,056] [INFO] [ShopGeScraper] [NO_SESSION] - Starting to scrape product: https://www.shop.ge/online-shop/sakancelario-nivtebi/saweri-kalami/troika-kalami-troika-construction-liliput-697455.html
+[2025-07-01 22:43:12,670] [INFO] [ShopGeScraper] [NO_SESSION] - Successfully scraped raw data for: Troika, კალამი "ტროიკა" - CONSTRUCTION LILIPUT...
+[2025-07-01 22:43:12,677] [ERROR] [src.data.database] [NO_SESSION] - Database session error: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products 
+WHERE products.name = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('Troika, კალამი "ტროიკა" - CONSTRUCTION LILIPUT', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-07-01 22:43:12,678] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Database storage failed: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products 
+WHERE products.name = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('Troika, კალამი "ტროიკა" - CONSTRUCTION LILIPUT', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-07-01 22:43:12,678] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job db92b493 completed successfully (3.62s) - ThreadPoolExecutor-0_0-db92b493
+[2025-07-01 22:43:12,764] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-07-01 22:43:12,764] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-07-01 22:45:09,425] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-07-01 22:45:09,992] [INFO] [src.data.database] [NO_SESSION] - DatabaseManager initialized
+[2025-07-01 22:45:10,360] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-07-01 22:45:10,361] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-07-01 22:45:15,990] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-07-01 22:45:15,990] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-07-01 22:45:16,032] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 1 bulk jobs to queue
+[2025-07-01 22:45:16,033] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-07-01 22:45:16,034] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 4 scrapers
+[2025-07-01 22:45:16,035] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-07-01 22:45:16,036] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-07-01 22:45:16,038] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-07-01 22:45:16,039] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/365662264378?_trksid=p4375194.c101959.m146925
+[2025-07-01 22:45:17,514] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Google Pixel 8a, Fully Unlocked | 128 GB, Blue, 6....
+[2025-07-01 22:45:17,531] [ERROR] [src.data.database] [NO_SESSION] - Database session error: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products 
+WHERE products.name = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('Google Pixel 8a, Fully Unlocked | 128 GB, Blue, 6.1 in | B- Grade | GA04432-US', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-07-01 22:45:17,534] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Database storage failed: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products 
+WHERE products.name = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('Google Pixel 8a, Fully Unlocked | 128 GB, Blue, 6.1 in | B- Grade | GA04432-US', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-07-01 22:45:17,535] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 25816bf3 completed successfully (1.48s) - ThreadPoolExecutor-0_0-25816bf3
+[2025-07-01 22:45:17,549] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-07-01 22:45:17,551] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-07-01 22:45:26,603] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-07-01 22:45:26,603] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-07-01 22:45:26,612] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 1 bulk jobs to queue
+[2025-07-01 22:45:26,612] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-07-01 22:45:26,613] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-07-01 22:45:26,613] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-07-01 22:45:26,614] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-07-01 22:45:26,614] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/BERIBES-Bluetooth-Headphones-Microphone-Lightweight/dp/B09LYF2ST7?_encoding=UTF8&content-id=amzn1.sym.f0670b1b-e1fd-4c67-a2b1-b8a347243628&dib=eyJ2IjoiMSJ9.Pfix3I77yjMkN8wajdeQJx6zpcL_ntk5tWSLbZ9poiySHVVFus7OVw0EceEy_TaU-ITLULZcoxv0rXyPyX74Ups2mrVGaE6yAGEpTtourXld-fUJ7-1b82y0x-uk2MaQRD9-gabhvG7z76MH_BbUIuFrVGMXvx4dNNl3Lo_meQdPIpuoRivAYSwGCDiwU4Jm4OJ9w9JCRYu1JEVEUe6owWcCg3p1XF7XOvgEzXT1j_k.Skt0ZSDfpMJzhlvvZr3tN1KYLFJJSA4p1yxzgwLZRMs&dib_tag=se&keywords=headphones&pd_rd_r=ac801a6a-d84e-4903-9acf-52d1d479b268&pd_rd_w=h1ur4&pd_rd_wg=xSuye&qid=1751306960&sr=8-1
+[2025-07-01 22:45:29,302] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: BERIBES Bluetooth Headphones Over Ear, 65H Playtim...
+[2025-07-01 22:45:29,307] [ERROR] [src.data.database] [NO_SESSION] - Database session error: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products 
+WHERE products.name = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('BERIBES Bluetooth Headphones Over Ear, 65H Playtime and 6 EQ Music Modes Wireless Headphones with Microphone, HiFi Stereo Foldable Lightweight Headsets, Deep Bass for Home Office Cellphone PC Ect.', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-07-01 22:45:29,310] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Database storage failed: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products 
+WHERE products.name = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('BERIBES Bluetooth Headphones Over Ear, 65H Playtime and 6 EQ Music Modes Wireless Headphones with Microphone, HiFi Stereo Foldable Lightweight Headsets, Deep Bass for Home Office Cellphone PC Ect.', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-07-01 22:45:29,311] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 4013a0c3 completed successfully (2.69s) - ThreadPoolExecutor-1_0-4013a0c3
+[2025-07-01 22:45:29,335] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-07-01 22:45:29,337] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-07-01 22:45:33,359] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-07-01 22:45:33,359] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-07-01 22:45:33,364] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 1 bulk jobs to queue
+[2025-07-01 22:45:33,364] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-07-01 22:45:33,366] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: shop.ge -> ShopGeScraper
+[2025-07-01 22:45:33,367] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-07-01 22:45:33,370] [INFO] [ShopGeScraper] [NO_SESSION] - Initialized shopge scraper
+[2025-07-01 22:45:33,371] [INFO] [ShopGeScraper] [NO_SESSION] - Starting to scrape product: https://www.shop.ge/online-shop/sakancelario-nivtebi/saweri-kalami/troika-kalami-troika-construction-liliput-697455.html
+[2025-07-01 22:45:35,215] [INFO] [ShopGeScraper] [NO_SESSION] - Successfully scraped raw data for: Troika, კალამი "ტროიკა" - CONSTRUCTION LILIPUT...
+[2025-07-01 22:45:35,226] [ERROR] [src.data.database] [NO_SESSION] - Database session error: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products 
+WHERE products.name = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('Troika, კალამი "ტროიკა" - CONSTRUCTION LILIPUT', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-07-01 22:45:35,228] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Database storage failed: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products 
+WHERE products.name = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('Troika, კალამი "ტროიკა" - CONSTRUCTION LILIPUT', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-07-01 22:45:35,228] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job c20bf4f6 completed successfully (1.85s) - ThreadPoolExecutor-2_0-c20bf4f6
+[2025-07-01 22:45:35,278] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-07-01 22:45:35,278] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-07-01 22:45:36,767] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-07-01 22:45:36,768] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-07-01 22:45:36,774] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 1 bulk jobs to queue
+[2025-07-01 22:45:36,774] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-07-01 22:45:36,777] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-07-01 22:45:36,777] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-07-01 22:45:36,778] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-07-01 22:45:36,778] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/BERIBES-Bluetooth-Headphones-Microphone-Lightweight/dp/B09LYF2ST7?_encoding=UTF8&content-id=amzn1.sym.f0670b1b-e1fd-4c67-a2b1-b8a347243628&dib=eyJ2IjoiMSJ9.Pfix3I77yjMkN8wajdeQJx6zpcL_ntk5tWSLbZ9poiySHVVFus7OVw0EceEy_TaU-ITLULZcoxv0rXyPyX74Ups2mrVGaE6yAGEpTtourXld-fUJ7-1b82y0x-uk2MaQRD9-gabhvG7z76MH_BbUIuFrVGMXvx4dNNl3Lo_meQdPIpuoRivAYSwGCDiwU4Jm4OJ9w9JCRYu1JEVEUe6owWcCg3p1XF7XOvgEzXT1j_k.Skt0ZSDfpMJzhlvvZr3tN1KYLFJJSA4p1yxzgwLZRMs&dib_tag=se&keywords=headphones&pd_rd_r=ac801a6a-d84e-4903-9acf-52d1d479b268&pd_rd_w=h1ur4&pd_rd_wg=xSuye&qid=1751306960&sr=8-1
+[2025-07-01 22:45:39,494] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: BERIBES Bluetooth Headphones Over Ear, 65H Playtim...
+[2025-07-01 22:45:39,497] [ERROR] [src.data.database] [NO_SESSION] - Database session error: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products 
+WHERE products.name = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('BERIBES Bluetooth Headphones Over Ear, 65H Playtime and 6 EQ Music Modes Wireless Headphones with Microphone, HiFi Stereo Foldable Lightweight Headsets, Deep Bass for Home Office Cellphone PC Ect.', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-07-01 22:45:39,499] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Database storage failed: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products 
+WHERE products.name = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('BERIBES Bluetooth Headphones Over Ear, 65H Playtime and 6 EQ Music Modes Wireless Headphones with Microphone, HiFi Stereo Foldable Lightweight Headsets, Deep Bass for Home Office Cellphone PC Ect.', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-07-01 22:45:39,500] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job a1d33bda completed successfully (2.72s) - ThreadPoolExecutor-3_0-a1d33bda
+[2025-07-01 22:45:39,501] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-07-01 22:45:39,502] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-07-01 22:45:39,503] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-07-01 22:45:39,504] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-07-01 22:45:39,512] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 1 bulk jobs to queue
+[2025-07-01 22:45:39,513] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-07-01 22:45:39,513] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-07-01 22:45:39,514] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-07-01 22:45:39,514] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-07-01 22:45:39,514] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/365662264378?_trksid=p4375194.c101959.m146925
+[2025-07-01 22:45:40,924] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Google Pixel 8a, Fully Unlocked | 128 GB, Blue, 6....
+[2025-07-01 22:45:40,927] [ERROR] [src.data.database] [NO_SESSION] - Database session error: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products 
+WHERE products.name = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('Google Pixel 8a, Fully Unlocked | 128 GB, Blue, 6.1 in | B- Grade | GA04432-US', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-07-01 22:45:40,928] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Database storage failed: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products 
+WHERE products.name = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('Google Pixel 8a, Fully Unlocked | 128 GB, Blue, 6.1 in | B- Grade | GA04432-US', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-07-01 22:45:40,928] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 0831a61f completed successfully (1.41s) - ThreadPoolExecutor-4_0-0831a61f
+[2025-07-01 22:45:41,027] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-07-01 22:45:41,028] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-07-01 22:45:41,028] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-07-01 22:45:41,029] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-07-01 22:45:41,034] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 1 bulk jobs to queue
+[2025-07-01 22:45:41,035] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-07-01 22:45:41,038] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: shop.ge -> ShopGeScraper
+[2025-07-01 22:45:41,039] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-07-01 22:45:41,039] [INFO] [ShopGeScraper] [NO_SESSION] - Initialized shopge scraper
+[2025-07-01 22:45:41,041] [INFO] [ShopGeScraper] [NO_SESSION] - Starting to scrape product: https://www.shop.ge/online-shop/sakancelario-nivtebi/saweri-kalami/troika-kalami-troika-construction-liliput-697455.html
+[2025-07-01 22:45:42,883] [INFO] [ShopGeScraper] [NO_SESSION] - Successfully scraped raw data for: Troika, კალამი "ტროიკა" - CONSTRUCTION LILIPUT...
+[2025-07-01 22:45:42,893] [ERROR] [src.data.database] [NO_SESSION] - Database session error: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products 
+WHERE products.name = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('Troika, კალამი "ტროიკა" - CONSTRUCTION LILIPUT', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-07-01 22:45:42,894] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Database storage failed: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products 
+WHERE products.name = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('Troika, კალამი "ტროიკა" - CONSTRUCTION LILIPUT', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-07-01 22:45:42,894] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 0d9829bc completed successfully (1.85s) - ThreadPoolExecutor-5_0-0d9829bc
+[2025-07-01 22:45:42,943] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-07-01 22:45:42,943] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-07-01 22:47:14,553] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-07-01 22:47:16,937] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-07-01 22:47:16,937] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-07-01 22:47:16,938] [INFO] [src.scrapers.factory] [NO_SESSION] - ScraperFactory initialized with 4 scrapers
+[2025-07-01 22:47:16,938] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-07-01 22:47:16,939] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-07-01 22:47:16,939] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-07-01 22:47:16,939] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-07-01 22:47:16,942] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 1 workers, threading mode
+[2025-07-01 22:47:16,943] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-07-01 22:47:16,943] [INFO] [src.analysis.trends] [NO_SESSION] - TrendAnalyzer initialized.
+[2025-07-01 22:47:16,943] [INFO] [src.analysis.statistics] [NO_SESSION] - StatisticsAnalyzer initialized.
+[2025-07-01 22:47:16,944] [INFO] [src.analysis.trends] [NO_SESSION] - TrendAnalyzer initialized.
+[2025-07-01 22:47:16,945] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-07-01 22:47:16,946] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-07-01 22:47:16,989] [INFO] [src.analysis.statistics] [NO_SESSION] - StatisticsAnalyzer initialized.
+[2025-07-01 22:47:16,990] [INFO] [src.analysis.reports] [NO_SESSION] - ReportGenerator initialized
+[2025-07-01 22:47:16,991] [INFO] [src.analysis.reports] [NO_SESSION] - Generating summary HTML report
+[2025-07-01 22:47:16,995] [ERROR] [src.data.database] [NO_SESSION] - Database session error: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products) AS anon_1]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-07-01 22:47:16,997] [ERROR] [src.data.database] [NO_SESSION] - Database session error: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products) AS anon_1]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-07-01 22:47:16,998] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent manager initialized: 3 workers, threading mode
+[2025-07-01 22:47:16,998] [INFO] [src.data.processors] [NO_SESSION] - DataProcessor initialized with validation rules.
+[2025-07-01 22:47:16,999] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Added 2 bulk jobs to queue
+[2025-07-01 22:47:17,000] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Started 3 threading workers
+[2025-07-01 22:47:17,006] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: amazon -> AmazonScraper
+[2025-07-01 22:47:17,007] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Concurrent scraping workers started
+[2025-07-01 22:47:17,007] [INFO] [src.scrapers.factory] [NO_SESSION] - Creating scraper: ebay -> EbayScraper
+[2025-07-01 22:47:17,008] [INFO] [AmazonScraper] [NO_SESSION] - Initialized amazon scraper
+[2025-07-01 22:47:17,009] [INFO] [EbayScraper] [NO_SESSION] - Initialized ebay scraper
+[2025-07-01 22:47:17,010] [INFO] [AmazonScraper] [NO_SESSION] - Starting to scrape product: https://www.amazon.com/dp/B0863FR3S9
+[2025-07-01 22:47:17,010] [INFO] [EbayScraper] [NO_SESSION] - Starting to scrape product: https://www.ebay.com/itm/335930354247
+[2025-07-01 22:47:18,905] [INFO] [EbayScraper] [NO_SESSION] - Successfully scraped raw data for: Invicta Men's Pro Diver 45mm Quartz Rubber Strap W...
+[2025-07-01 22:47:18,922] [ERROR] [src.data.database] [NO_SESSION] - Database session error: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products 
+WHERE products.name = ?
+ LIMIT ? OFFSET ?]
+[parameters: ("Invicta Men's Pro Diver 45mm Quartz Rubber Strap Watch - Choice of Color", 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-07-01 22:47:18,922] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Database storage failed: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products 
+WHERE products.name = ?
+ LIMIT ? OFFSET ?]
+[parameters: ("Invicta Men's Pro Diver 45mm Quartz Rubber Strap Watch - Choice of Color", 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-07-01 22:47:18,922] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 10fdc1e6 completed successfully (1.90s) - ThreadPoolExecutor-0_1-10fdc1e6
+[2025-07-01 22:47:19,670] [INFO] [AmazonScraper] [NO_SESSION] - Successfully scraped raw data for: Sony WH-1000XM4 Wireless Premium Noise Canceling O...
+[2025-07-01 22:47:19,674] [ERROR] [src.data.database] [NO_SESSION] - Database session error: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products 
+WHERE products.name = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('Sony WH-1000XM4 Wireless Premium Noise Canceling Overhead Headphones with Mic for Phone-Call and Alexa Voice Control, Silver WH1000XM4', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-07-01 22:47:19,676] [ERROR] [ConcurrentScrapingManager] [NO_SESSION] - Database storage failed: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products 
+WHERE products.name = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('Sony WH-1000XM4 Wireless Premium Noise Canceling Overhead Headphones with Mic for Phone-Call and Alexa Voice Control, Silver WH1000XM4', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[2025-07-01 22:47:19,677] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Job 88257df7 completed successfully (2.66s) - ThreadPoolExecutor-0_0-88257df7
+[2025-07-01 22:47:19,748] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - Stopping concurrent workers...
+[2025-07-01 22:47:19,751] [INFO] [ConcurrentScrapingManager] [NO_SESSION] - All workers stopped successfully
+[2025-07-01 22:47:31,392] [INFO] [LoggerManager] [NO_SESSION] - Logging system initialized successfully
+[2025-07-01 22:47:31,956] [INFO] [src.data.database] [NO_SESSION] - Database tables created successfully
+[2025-07-01 22:47:31,956] [INFO] [src.data.database] [NO_SESSION] - Database initialized with URL: sqlite:///data/price_monitor.db
+[2025-07-01 22:47:31,993] [ERROR] [src.data.database] [NO_SESSION] - Database session error: (sqlite3.OperationalError) no such column: products.updated_at
+[SQL: SELECT products.id AS products_id, products.name AS products_name, products.category AS products_category, products.brand AS products_brand, products.model AS products_model, products.created_at AS products_created_at, products.updated_at AS products_updated_at, products.status AS products_status 
+FROM products]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)

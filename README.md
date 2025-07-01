@@ -2,6 +2,16 @@
 
 Advanced multi-source data collection system for monitoring product prices across e-commerce platforms.
 
+## 🎥 Video Demonstration
+
+**Watch the complete system demonstration:**
+
+[![E-Commerce Price Monitoring System Demo](https://img.shields.io/badge/🎬_Video_Demo-Watch_Now-red?style=for-the-badge)](./scraping_final_video.mp4)
+
+> **📹 Demo Video**: [`scraping_final_video.mp4`](./scraping_final_video.mp4) - Complete walkthrough of all features including scraping, analysis, and report generation.
+
+---
+
 ## Project Overview
 
 This system scrapes product data from Amazon, eBay, and Walmart, performs statistical analysis, and generates reports. It uses concurrent processing, database storage, and a modular architecture.
@@ -83,6 +93,7 @@ final-project/
 ├── main.py                          # Main application entry point
 ├── test_implementation.py           # Comprehensive test suite
 ├── bulk_data_generator.py           # Sample data generator
+├── scraping_final_video.mp4         # 📹 Video demonstration
 ├── requirements.txt                 # Python dependencies
 ├── setup.py                         # Package setup
 └── README.md                        # This file
@@ -111,6 +122,19 @@ final-project/
    ```bash
    python main.py  # Initializes database on first run
    ```
+
+## 🎬 Quick Start Demo
+
+**Want to see it in action first?** Watch the video demonstration:
+- **File**: [`scraping_final_video.mp4`](./scraping_final_video.mp4)
+- **Duration**: Complete system walkthrough
+- **Content**: Live scraping, analysis, and report generation
+
+**Then try it yourself:**
+```bash
+python main.py                    # Interactive scraping
+python view_results.py            # View results and generate reports
+```
 
 ## Usage Examples
 
@@ -267,6 +291,19 @@ $ python -m src.cli.interface analyze volatility --top-n 5
 44           65        Unilever Bandages Model 6902   31.73      29.80         0.939
 ```
 
+## 📹 Video Documentation
+
+This project includes a comprehensive video demonstration showing:
+
+- ✅ **System Setup**: Installation and configuration
+- ✅ **Interactive Scraping**: Using `python main.py` to scrape sites
+- ✅ **Data Analysis**: Statistical analysis and trend detection
+- ✅ **Report Generation**: HTML reports with charts and visualizations
+- ✅ **CLI Commands**: Advanced command-line usage
+- ✅ **Results Viewing**: Multiple ways to view and export data
+
+**📺 Watch the demo**: [`scraping_final_video.mp4`](./scraping_final_video.mp4)
+
 ## Bonus Features Implemented
 
 This project successfully implements **6 out of 7 bonus features**, earning the **maximum 5 bonus points** available.
@@ -277,6 +314,14 @@ This project successfully implements **6 out of 7 bonus features**, earning the 
 - **✅ Mobile-Respoclearnsive Reports (1 point)**: HTML reports with responsive CSS
 - **✅ Performance Optimization (1 point)**: Concurrent processing, caching, memory management
 - **✅ Docker Implementation (1 point)**: Full containerization with Docker and Docker Compose
+
+## 🚀 Getting Started
+
+1. **📹 Watch the video**: [`scraping_final_video.mp4`](./scraping_final_video.mp4) for a complete walkthrough
+2. **⚙️ Install dependencies**: Follow the installation steps above
+3. **🕷️ Start scraping**: Run `python main.py` and select a site
+4. **📊 View results**: Run `python view_results.py` to see your data
+5. **📋 Generate reports**: Use CLI commands for advanced analysis
 
 ---
 
