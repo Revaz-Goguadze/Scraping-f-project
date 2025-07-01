@@ -2,36 +2,10 @@
 
 Advanced multi-source data collection system for monitoring product prices across e-commerce platforms.
 
-## 🎥 Video Demonstration
+##  Video Demonstration
 
-**Watch the complete system demonstration:**
-
-<div align="center">
-  
-https://github.com/user-attachments/assets/scraping_final_video.mp4
-
-</div>
-
-> **📹 Demo Video**: Complete walkthrough of all features including scraping, analysis, and report generation.
->
 > **Alternative links**:
 > - [Direct Download](./scraping_final_video.mp4)
-> - [View in Browser](./scraping_final_video.mp4)
-
-<details>
-<summary>📋 <strong>Video Content Overview</strong></summary>
-
-**What you'll see in the demo:**
-- ✅ System setup and initialization
-- ✅ Interactive scraping with `python main.py`
-- ✅ Real-time data collection from Amazon, eBay, and Shop.ge
-- ✅ Statistical analysis and price volatility detection
-- ✅ HTML report generation with charts
-- ✅ CLI commands demonstration
-- ✅ Results viewing and data export
-
-</details>
-
 ---
 
 ## Project Overview
