@@ -5,6 +5,7 @@ Scraper factory for creating scraper instances.
 from typing import Dict, Type
 from .base_scraper import AbstractScraper
 from .static_scraper import AmazonScraper, EbayScraper, ShopGeScraper
+from .selenium_scraper import AmazonSeleniumScraper, EbaySeleniumScraper, ShopGeSeleniumScraper
 from ..cli.utils.config import config_manager
 from ..cli.utils.logger import get_logger
 
@@ -31,6 +32,12 @@ class ScraperFactory:
         cls._scrapers['ebay'] = EbayScraper
         cls._scrapers['shopge'] = ShopGeScraper
         cls._scrapers['shop.ge'] = ShopGeScraper  # Allow both shopge and shop.ge
+
+        # Register Selenium-based dynamic scrapers
+        cls._scrapers['amazon_selenium'] = AmazonSeleniumScraper
+        cls._scrapers['ebay_selenium'] = EbaySeleniumScraper
+        cls._scrapers['shopge_selenium'] = ShopGeSeleniumScraper
+        cls._scrapers['shop.ge_selenium'] = ShopGeSeleniumScraper
         
         cls._initialized = True
         logger.info(f"ScraperFactory initialized with {len(cls._scrapers)} scrapers")

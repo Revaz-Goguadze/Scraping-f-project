@@ -74,20 +74,22 @@ def trend(product_id: int):
 
 @analyze.command()
 @click.option('--type', default='comprehensive', help='Report type (comprehensive, summary, trends)')
-def generate_report(type):
-    """Generate HTML report with charts and visualizations."""
+@click.option('--all', 'generate_all', is_flag=True, help='Generate all report types')
+def generate_report(type, generate_all):
+    """Generate HTML report(s) with charts and visualizations."""
     logger = get_logger(__name__)
-    logger.info(f"Generating {type} report...")
+    report_types = ['comprehensive', 'summary', 'trends'] if generate_all else [type]
+    logger.info(f"Generating report(s): {', '.join(report_types)}")
     
     try:
         from src.analysis.reports import ReportGenerator
         
         generator = ReportGenerator()
-        report_path = generator.generate_html_report(type)
-        
-        print(f"✅ Report generated successfully!")
-        print(f"📄 Location: {report_path}")
-        print(f"🌐 Open in browser: file://{os.path.abspath(report_path)}")
+        for report_type in report_types:
+            report_path = generator.generate_html_report(report_type)
+            print(f"✅ {report_type.title()} report generated successfully!")
+            print(f"📄 Location: {report_path}")
+            print(f"🌐 Open in browser: file://{os.path.abspath(report_path)}")
         
     except ImportError as e:
         print(f"❌ Missing dependencies for report generation: {e}")

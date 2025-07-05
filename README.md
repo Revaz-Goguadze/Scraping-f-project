@@ -123,9 +123,30 @@ final-project/
 
 **Want to see it in action first?** Watch the embedded video demonstration above, then try it yourself:
 
+
+```bash
+python3 test_selenium.py # test selenium
+
+```
+
 ```bash
 python main.py                    # Interactive scraping
 python view_results.py            # View results and generate reports
+```
+## Real-Time Monitoring
+
+Start continuous price monitoring using the CLI:
+
+```bash
+python main.py monitor realtime \
+  --sites amazon,ebay,shopge \
+  --interval 30
+```
+
+Or via Docker Compose (service `realtime-monitor`):
+
+```bash
+docker-compose up realtime-monitor
 ```
 
 ## Usage Examples
@@ -152,6 +173,11 @@ python -m src.cli.interface scrape run --site ebay --delay 2.0 --workers 2
 **Generate comprehensive HTML report:**
 ```bash
 python -m src.cli.interface analyze generate-report --type comprehensive
+```
+
+**Generate all report types:**
+```bash
+python -m src.cli.interface analyze generate-report --all
 ```
 
 **Analyze specific product:**
@@ -212,6 +238,19 @@ python -m src.cli.interface analyze trend <product_id> --days 30
 
 # Market analysis
 python -m src.cli.interface analyze volatility --top-n 10
+```
+
+### Database Commands
+
+```bash
+# Initialize the database
+python -m src.cli.interface db init
+
+# Reset the database (CAUTION: deletes all data)
+python -m src.cli.interface db reset
+
+# Show details of the last scraped product
+python -m src.cli.interface db show-last-product
 ```
 
 ### Configuration
